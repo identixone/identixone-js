@@ -1,0 +1,86 @@
+{
+  "coverage": "21.27%",
+  "expectCount": 47,
+  "actualCount": 10,
+  "files": {
+    "src/Api.js": {
+      "expectCount": 5,
+      "actualCount": 0,
+      "undocumentLines": [
+        1,
+        2,
+        4,
+        7,
+        8
+      ]
+    },
+    "src/IdxApi.js": {
+      "expectCount": 10,
+      "actualCount": 0,
+      "undocumentLines": [
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        27
+      ]
+    },
+    "src/auth/index.js": {
+      "expectCount": 6,
+      "actualCount": 5,
+      "undocumentLines": [
+        13
+      ]
+    },
+    "src/notifications/index.js": {
+      "expectCount": 7,
+      "actualCount": 5,
+      "undocumentLines": [
+        11,
+        17
+      ]
+    },
+    "src/records/index.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        11,
+        12,
+        16
+      ]
+    },
+    "src/sources/index.js": {
+      "expectCount": 7,
+      "actualCount": 0,
+      "undocumentLines": [
+        11,
+        14,
+        15,
+        19,
+        27,
+        35,
+        43
+      ]
+    },
+    "src/users/index.js": {
+      "expectCount": 8,
+      "actualCount": 0,
+      "undocumentLines": [
+        11,
+        14,
+        15,
+        19,
+        27,
+        35,
+        43,
+        51
+      ]
+    }
+  }
+}

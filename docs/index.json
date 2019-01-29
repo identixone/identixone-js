@@ -1,0 +1,1812 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/Api.js",
+    "content": "export default class Api {\n    constructor({token, endpoint}){\n        this.setToken(token);\n        this.endpoint = endpoint\n    }\n\n    setToken(token) {\n        this.token = token;\n    }\n}",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/Api.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "Api",
+    "memberof": "src/Api.js",
+    "static": true,
+    "longname": "src/Api.js~Api",
+    "access": "public",
+    "export": true,
+    "importPath": "identix-api-lib-js/src/Api.js",
+    "importStyle": "Api",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Api.js~Api",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Api.js~Api#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "endpoint",
+    "memberof": "src/Api.js~Api",
+    "static": false,
+    "longname": "src/Api.js~Api#endpoint",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "method",
+    "name": "setToken",
+    "memberof": "src/Api.js~Api",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Api.js~Api#setToken",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [
+      {
+        "name": "token",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 53,
+    "kind": "member",
+    "name": "token",
+    "memberof": "src/Api.js~Api",
+    "static": false,
+    "longname": "src/Api.js~Api#token",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "src/IdxApi.js",
+    "content": "import Users from './users/index.js'\nimport Auth from './auth/index.js'\nimport Records from './records/index.js'\nimport Notifications from './notifications/index.js'\nimport Sources from './Sources/index.js'\n\nexport default class IDXApi {\n    constructor({token = null, endpoint = null}) {\n        this.endpoint = endpoint;\n\n        this.auth = new Auth({token, endpoint});\n        this.users = new Users({token, endpoint});\n        this.records = new Records({token, endpoint});\n        this.notifications = new Notifications({token, endpoint});\n        this.sources = new Sources({token, endpoint});\n    }\n\n    init(username, password) {\n        return this.auth.login(username, password).then((body) => {\n            const {token} = body;\n            this.setToken(token.key);\n\n            return body\n        });\n    }\n\n    setToken(token){\n        this.auth.setToken(token);\n        this.users.setToken(token);\n        this.records.setToken(token);\n        this.notifications.setToken(token);\n        this.sources.setToken(token);\n    }\n}\n\n\n",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/IdxApi.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "class",
+    "name": "IDXApi",
+    "memberof": "src/IdxApi.js",
+    "static": true,
+    "longname": "src/IdxApi.js~IDXApi",
+    "access": "public",
+    "export": true,
+    "importPath": "identix-api-lib-js/src/IdxApi.js",
+    "importStyle": "IDXApi",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 56,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/IdxApi.js~IDXApi",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IdxApi.js~IDXApi#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true
+  },
+  {
+    "__docId__": 57,
+    "kind": "member",
+    "name": "endpoint",
+    "memberof": "src/IdxApi.js~IDXApi",
+    "static": false,
+    "longname": "src/IdxApi.js~IDXApi#endpoint",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "member",
+    "name": "auth",
+    "memberof": "src/IdxApi.js~IDXApi",
+    "static": false,
+    "longname": "src/IdxApi.js~IDXApi#auth",
+    "access": "public",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "member",
+    "name": "users",
+    "memberof": "src/IdxApi.js~IDXApi",
+    "static": false,
+    "longname": "src/IdxApi.js~IDXApi#users",
+    "access": "public",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "member",
+    "name": "records",
+    "memberof": "src/IdxApi.js~IDXApi",
+    "static": false,
+    "longname": "src/IdxApi.js~IDXApi#records",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "member",
+    "name": "notifications",
+    "memberof": "src/IdxApi.js~IDXApi",
+    "static": false,
+    "longname": "src/IdxApi.js~IDXApi#notifications",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "member",
+    "name": "sources",
+    "memberof": "src/IdxApi.js~IDXApi",
+    "static": false,
+    "longname": "src/IdxApi.js~IDXApi#sources",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "init",
+    "memberof": "src/IdxApi.js~IDXApi",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IdxApi.js~IDXApi#init",
+    "access": "public",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "params": [
+      {
+        "name": "username",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "password",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "setToken",
+    "memberof": "src/IdxApi.js~IDXApi",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IdxApi.js~IDXApi#setToken",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "params": [
+      {
+        "name": "token",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 65,
+    "kind": "file",
+    "name": "src/auth/index.js",
+    "content": "import {\n    post,\n    deletes,\n    headersAddBearerToken\n} from '../request.js';\n\nimport Api from '../Api'\n\n/**\n * Authorization Identix api.\n */\nexport default class Auth extends Api {\n    constructor(props){\n        super(props);\n    }\n\n    /**\n     * @param {string} username - user name.\n     * @param {string} password - user password.\n     * @return {Promise} Promise object represents the response object\n     */\n    login(username, password) {\n        return post(`${this.endpoint}/login/`, {username, password})\n            .then(body => {\n                return {\n                    token: body.token,\n                    user: body.user\n                };\n            });\n    }\n\n    /**\n     * @return {Promise} Promise object represents the response object\n     */\n    generateToken() {\n        const headers = headersAddBearerToken(this.token);\n        return post(`${this.endpoint}/login/`, null, headers)\n            .then(body => {\n                return {\n                    token: body.token,\n                    user: body.user\n                };\n            });\n    }\n\n    /**\n     * @param {string} username - user name.\n     * @param {string} password - user password.\n     * @return {Promise} Promise object represents the response object\n     */\n    generatePermanentToken(username, password) {\n        const headers = headersAddBearerToken(this.token);\n        return post(`${this.endpoint}/login/permanent/`,  {username, password}, headers)\n            .then(body => {\n                return {\n                    token: body.token,\n                    user: body.user\n                };\n            });\n    }\n\n    //TODO: save auth tokenId and add by default into this logout\n    /**\n     * @param {string} tokenId - token id (got it with login response).\n     * @return {Promise} Promise object represents the response object\n     */\n    logout(tokenId) {\n        const headers = headersAddBearerToken(this.token);\n        return deletes(\n            `${this.endpoint}/users/tokens/${tokenId}/`,\n            JSON.stringify(''),\n            headers\n        );\n    }\n}",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/auth/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 66,
+    "kind": "class",
+    "name": "Auth",
+    "memberof": "src/auth/index.js",
+    "static": true,
+    "longname": "src/auth/index.js~Auth",
+    "access": "public",
+    "export": true,
+    "importPath": "identix-api-lib-js/src/auth/index.js",
+    "importStyle": "Auth",
+    "description": "Authorization Identix api.",
+    "lineNumber": 12,
+    "interface": false,
+    "extends": [
+      "src/Api.js~Api"
+    ]
+  },
+  {
+    "__docId__": 67,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/auth/index.js~Auth",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/auth/index.js~Auth#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "login",
+    "memberof": "src/auth/index.js~Auth",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/auth/index.js~Auth#login",
+    "access": "public",
+    "description": "",
+    "lineNumber": 22,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "username",
+        "description": "user name."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "password",
+        "description": "user password."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "Promise object represents the response object"
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "generateToken",
+    "memberof": "src/auth/index.js~Auth",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/auth/index.js~Auth#generateToken",
+    "access": "public",
+    "description": "",
+    "lineNumber": 35,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "Promise object represents the response object"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "generatePermanentToken",
+    "memberof": "src/auth/index.js~Auth",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/auth/index.js~Auth#generatePermanentToken",
+    "access": "public",
+    "description": "",
+    "lineNumber": 51,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "username",
+        "description": "user name."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "password",
+        "description": "user password."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "Promise object represents the response object"
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "logout",
+    "memberof": "src/auth/index.js~Auth",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/auth/index.js~Auth#logout",
+    "access": "public",
+    "description": "",
+    "lineNumber": 67,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "tokenId",
+        "description": "token id (got it with login response)."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "Promise object represents the response object"
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "import IdxApi  from './IdxApi.js'\n\nexport default IdxApi\n",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 73,
+    "kind": "file",
+    "name": "src/notifications/__stubs__/index.js",
+    "content": "/* eslint-disable quote-props */\nimport {IDX_ENDPOINT} from '../../../../../configs/api.js';\nimport records from './records.js'\n\nexport default {\n    pattern: `${IDX_ENDPOINT}/records/`,\n\n    fixtures(match, params, headers) {\n        return {\n            \"result\": \"ok\",\n            \"totalqty\": 64,\n            \"records\": records,\n            \"sources\": [{\n                \"name\": \"new\",\n                \"qty\": 63,\n                \"new\": 38,\n                \"exact\": 20,\n                \"ha\": 1,\n                \"junk\": 3,\n                \"det\": 0,\n                \"reinit\": 0,\n                \"nm\": 1\n            }, {\"name\": \"upload\", \"qty\": 1, \"new\": 1, \"exact\": 0, \"ha\": 0, \"junk\": 0, \"det\": 0, \"reinit\": 0, \"nm\": 0}]\n        };\n\n    },\n\n    post(match, data) {\n        return {\n            ok: true,\n            body: data\n        };\n    },\n\n    get(match, data) {\n        return {\n            ok: true,\n            body: data\n        };\n    }\n};\n",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/notifications/__stubs__/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "name": "src/notifications/__stubs__/records.js",
+    "content": "export default [{\n    \"id\": 267134,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/67/52/cc/24/7cccf74aa88647fb60bfe4cdbb71ffc8b4a3830f6042f4908437b06d201fafac.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/b6/5d/b6/31/b95544debae414adfcbe3474a9ae62a027866b92e57cc42210dd70283ee59277.png\",\n    \"idxid\": \"fd695572-6fc7-4a48-a792-eff7e6d9660e\",\n    \"facesize\": 46440,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:43:40.630Z\",\n    \"created\": \"2018-12-09T11:47:32.361Z\",\n    \"age\": 6,\n    \"sex\": 1,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266709,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d9/cb/42/21/3106779c50852dc41cab4e413eeadf893be839ad495a4a913899f7811d69a5c9.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 71556,\n    \"conf\": \"ha\",\n    \"detected\": \"2018-12-10T10:38:41.118Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 28,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266695,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/a9/b6/90/f9/8368985b60f5791f9d3b967493ccc8b4bc6c5d8168986868e16d98e94be11f70.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 65536,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:35.961Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 31,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266685,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/11/87/f5/33/d849d674d2f11e5ea133c748ea53a9cb172242787104ece9bcb18b9da84199f8.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 63504,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:30.936Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 27,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266679,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/e9/8e/37/5b/5ba9f9e7ec8c14d7de251951075e12d071a7645bfc5d0d40464d1b68bb3217ee.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 68644,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:26.480Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 34,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266673,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/53/83/a1/c7/f1f81561b6fe05d586355dc21b93093331770cc475d311a8c632f421e0dcf5ba.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 69960,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:21.782Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 41,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266668,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/45/41/03/f6/f579f78f102648b5abb5fc3c5389288d5d14fed08185740ea76fd386771e6063.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:17.581Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 35,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266663,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/af/bf/8d/11/3626b86649133db0c46e99b59094129cf228e782bc1cef12d60d217b3d3380bc.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 112560,\n    \"conf\": \"junk\",\n    \"detected\": \"2018-12-10T10:38:10.661Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 24,\n    \"sex\": 0,\n    \"mood\": \"sadness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266448,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/19/cb/47/e0/ee410793c8d94777879b9f1df1aee91ece2b16f48d13892a7fd5a3bf59473c84.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 65536,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:58.541Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 31,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266433,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/1a/a4/93/1a/0f4e93cce9ce203da58007f723d0a6b52d9d95ae3a009d2b41c544e07ee5948d.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 63504,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:32.160Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 27,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266426,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/70/43/60/ae/f962dbdab6dc7017c0c804737192d1ef3da3e709e4539efe1464fd246c9e2fd5.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 68644,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:25.727Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 34,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266421,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d0/eb/1a/f0/930c298102c35cb243b014685a2dcf93ef026415dc93b772afd22b9a48b5b9aa.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 69960,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:19.583Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 41,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266417,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/8e/b9/c2/43/e2b037968223074e6094b7534adc4bc51c1eae0c2f6a3bddac61821493cd4c19.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:12.925Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 35,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266389,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/7a/f7/67/d0/669a721b9dfa5af2d9dcf7048437be601794744e142083e40faa4580c5ee722c.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:33:36.484Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248387,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d3/b6/20/84/c44027610f167e4df6e0eaaa5354dce7448e604285cb05ab33cf648bbaed2c27.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d3/b6/20/84/c44027610f167e4df6e0eaaa5354dce7448e604285cb05ab33cf648bbaed2c27.png\",\n    \"idxid\": \"41cb3f02-8f75-4f97-8ee2-7fe723e145e7\",\n    \"facesize\": 90601,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:42.190Z\",\n    \"created\": \"2018-12-09T11:48:42.190Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248385,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/3a/f0/5a/6a/13300f767e4b4b4967a6048614d7cffe753033d7ad28df27569e0e3ef63d551a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/3a/f0/5a/6a/13300f767e4b4b4967a6048614d7cffe753033d7ad28df27569e0e3ef63d551a.png\",\n    \"idxid\": \"640b0d16-000d-4a4d-8051-db6464bf6cad\",\n    \"facesize\": 99540,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:37.397Z\",\n    \"created\": \"2018-12-09T11:48:37.397Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248384,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/30/05/0b/c8/6a20b88428c6625e3c5441be426248ce6a566e14f85456894656b9b375dbde99.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/30/05/0b/c8/6a20b88428c6625e3c5441be426248ce6a566e14f85456894656b9b375dbde99.png\",\n    \"idxid\": \"20383f41-9492-4632-b23c-d0debd348550\",\n    \"facesize\": 82656,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:32.842Z\",\n    \"created\": \"2018-12-09T11:48:32.842Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248380,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/9a/8e/0f/03/3259dd121ace597a000c2951832c80bc0b6f7f8099b67ae75c55ef4d3323d325.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/fc/73/48/29/e8dcf07bc13d6dcdc8a95b04fb103eb2ed34aba1fa965f1378879fc222a4cbd8.png\",\n    \"idxid\": \"e3336b33-1da4-41da-9a94-d29a88177680\",\n    \"facesize\": 121801,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-09T11:48:28.009Z\",\n    \"created\": \"2018-12-09T11:01:20.442Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248374,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/78/36/38/ef/971f7d6f19e2f60390d2e3c10a45b694830d1f17482337adae9034c778a69c73.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/78/36/38/ef/971f7d6f19e2f60390d2e3c10a45b694830d1f17482337adae9034c778a69c73.png\",\n    \"idxid\": \"86865edf-d4bb-43ee-bcbf-0c22d1b3bf58\",\n    \"facesize\": 94864,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:23.604Z\",\n    \"created\": \"2018-12-09T11:48:23.604Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248373,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/f6/04/87/ab/a0c63d9fa61f89d98b295a41f96e5bc18ed4c33645a4c0e15a7c36264c2faaa6.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/0a/5d/2b/00/9cf1de98e2fc40510c950b78d51e8ea6e282a59071e074efa10c9814d48188ef.png\",\n    \"idxid\": \"933ad321-740f-4d8c-9321-783ae89daa93\",\n    \"facesize\": 124962,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-09T11:48:19.298Z\",\n    \"created\": \"2018-12-09T10:55:04.967Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}]",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/notifications/__stubs__/records.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 75,
+    "kind": "file",
+    "name": "src/notifications/index.js",
+    "content": "import {\n    post,\n    put,\n    get,\n    deletes,\n    headersAddBearerToken,\n    CONTENT_TYPE_HEADERS\n} from '../request.js';\nimport Api from '../Api'\n\nconst SETTINGS_NOTIFICATIONS = \"settings/notifications\";\n\n/**\n * Notifications Identix api.\n */\nexport default class Notifications extends Api {\n    constructor(props){\n        super(props);\n    }\n\n    /**\n     * @return {Promise} Promise object represents the response object\n     */\n    getNotifications() {\n        const headers = headersAddBearerToken(this.token);\n        return get(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/`, null, headers)\n            .then(body => {\n                return body\n            });\n    }\n\n    /**\n     * @param {object} params - parameters of new notification.\n     * @return {Promise} Promise object represents the response object\n     */\n    addNotification(params) {\n        const headers = headersAddBearerToken(this.token);\n        return post(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/`, params, headers)\n            .then(body => {\n                return body\n            });\n    }\n\n    /**\n     * @param {object} params - parameters for update notification.\n     * @return {Promise} Promise object represents the response object\n     */\n    updateNotification(notification) {\n        const headers = headersAddBearerToken(this.token);\n        return put(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/${notification.id}/`, notification, headers)\n            .then(body => {\n                return body\n            });\n    }\n\n    /**\n     * @param {string} id - id of the deleted item.\n     * @return {Promise} Promise object represents the response object\n     */\n    deleteNotification(id) {\n        const headers = headersAddBearerToken(this.token);\n        return deletes(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/${id}/`, {}, headers)\n            .then(body => {\n                return body\n            });\n    }\n\n}\n",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/notifications/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 76,
+    "kind": "variable",
+    "name": "SETTINGS_NOTIFICATIONS",
+    "memberof": "src/notifications/index.js",
+    "static": true,
+    "longname": "src/notifications/index.js~SETTINGS_NOTIFICATIONS",
+    "access": "public",
+    "export": false,
+    "importPath": "identix-api-lib-js/src/notifications/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 77,
+    "kind": "class",
+    "name": "Notifications",
+    "memberof": "src/notifications/index.js",
+    "static": true,
+    "longname": "src/notifications/index.js~Notifications",
+    "access": "public",
+    "export": true,
+    "importPath": "identix-api-lib-js/src/notifications/index.js",
+    "importStyle": "Notifications",
+    "description": "Notifications Identix api.",
+    "lineNumber": 16,
+    "interface": false,
+    "extends": [
+      "src/Api.js~Api"
+    ]
+  },
+  {
+    "__docId__": 78,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/notifications/index.js~Notifications",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/notifications/index.js~Notifications#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true
+  },
+  {
+    "__docId__": 79,
+    "kind": "method",
+    "name": "getNotifications",
+    "memberof": "src/notifications/index.js~Notifications",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/notifications/index.js~Notifications#getNotifications",
+    "access": "public",
+    "description": "",
+    "lineNumber": 24,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "Promise object represents the response object"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 80,
+    "kind": "method",
+    "name": "addNotification",
+    "memberof": "src/notifications/index.js~Notifications",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/notifications/index.js~Notifications#addNotification",
+    "access": "public",
+    "description": "",
+    "lineNumber": 36,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "parameters of new notification."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "Promise object represents the response object"
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "method",
+    "name": "updateNotification",
+    "memberof": "src/notifications/index.js~Notifications",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/notifications/index.js~Notifications#updateNotification",
+    "access": "public",
+    "description": "",
+    "lineNumber": 48,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "parameters for update notification."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "Promise object represents the response object"
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "method",
+    "name": "deleteNotification",
+    "memberof": "src/notifications/index.js~Notifications",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/notifications/index.js~Notifications#deleteNotification",
+    "access": "public",
+    "description": "",
+    "lineNumber": 60,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": "id of the deleted item."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "Promise object represents the response object"
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "file",
+    "name": "src/records/__stubs__/index.js",
+    "content": "/* eslint-disable quote-props */\nimport {IDX_ENDPOINT} from '../../../../../configs/api.js';\nimport records from './records.js'\n\nexport default {\n    pattern: `${IDX_ENDPOINT}/records/`,\n\n    fixtures(match, params, headers) {\n        return {\n            \"result\": \"ok\",\n            \"totalqty\": 64,\n            \"records\": records,\n            \"sources\": [{\n                \"name\": \"new\",\n                \"qty\": 63,\n                \"new\": 38,\n                \"exact\": 20,\n                \"ha\": 1,\n                \"junk\": 3,\n                \"det\": 0,\n                \"reinit\": 0,\n                \"nm\": 1\n            }, {\"name\": \"upload\", \"qty\": 1, \"new\": 1, \"exact\": 0, \"ha\": 0, \"junk\": 0, \"det\": 0, \"reinit\": 0, \"nm\": 0}]\n        };\n\n    },\n\n    post(match, data) {\n        return {\n            ok: true,\n            body: data\n        };\n    },\n\n    get(match, data) {\n        return {\n            ok: true,\n            body: data\n        };\n    }\n};\n",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/records/__stubs__/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
+    "name": "src/records/__stubs__/records.js",
+    "content": "export default [{\n    \"id\": 267134,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/67/52/cc/24/7cccf74aa88647fb60bfe4cdbb71ffc8b4a3830f6042f4908437b06d201fafac.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/b6/5d/b6/31/b95544debae414adfcbe3474a9ae62a027866b92e57cc42210dd70283ee59277.png\",\n    \"idxid\": \"fd695572-6fc7-4a48-a792-eff7e6d9660e\",\n    \"facesize\": 46440,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:43:40.630Z\",\n    \"created\": \"2018-12-09T11:47:32.361Z\",\n    \"age\": 6,\n    \"sex\": 1,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266709,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d9/cb/42/21/3106779c50852dc41cab4e413eeadf893be839ad495a4a913899f7811d69a5c9.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 71556,\n    \"conf\": \"ha\",\n    \"detected\": \"2018-12-10T10:38:41.118Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 28,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266695,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/a9/b6/90/f9/8368985b60f5791f9d3b967493ccc8b4bc6c5d8168986868e16d98e94be11f70.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 65536,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:35.961Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 31,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266685,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/11/87/f5/33/d849d674d2f11e5ea133c748ea53a9cb172242787104ece9bcb18b9da84199f8.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 63504,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:30.936Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 27,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266679,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/e9/8e/37/5b/5ba9f9e7ec8c14d7de251951075e12d071a7645bfc5d0d40464d1b68bb3217ee.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 68644,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:26.480Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 34,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266673,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/53/83/a1/c7/f1f81561b6fe05d586355dc21b93093331770cc475d311a8c632f421e0dcf5ba.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 69960,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:21.782Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 41,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266668,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/45/41/03/f6/f579f78f102648b5abb5fc3c5389288d5d14fed08185740ea76fd386771e6063.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:17.581Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 35,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266663,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/af/bf/8d/11/3626b86649133db0c46e99b59094129cf228e782bc1cef12d60d217b3d3380bc.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 112560,\n    \"conf\": \"junk\",\n    \"detected\": \"2018-12-10T10:38:10.661Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 24,\n    \"sex\": 0,\n    \"mood\": \"sadness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266448,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/19/cb/47/e0/ee410793c8d94777879b9f1df1aee91ece2b16f48d13892a7fd5a3bf59473c84.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 65536,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:58.541Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 31,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266433,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/1a/a4/93/1a/0f4e93cce9ce203da58007f723d0a6b52d9d95ae3a009d2b41c544e07ee5948d.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 63504,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:32.160Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 27,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266426,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/70/43/60/ae/f962dbdab6dc7017c0c804737192d1ef3da3e709e4539efe1464fd246c9e2fd5.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 68644,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:25.727Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 34,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266421,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d0/eb/1a/f0/930c298102c35cb243b014685a2dcf93ef026415dc93b772afd22b9a48b5b9aa.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 69960,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:19.583Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 41,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266417,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/8e/b9/c2/43/e2b037968223074e6094b7534adc4bc51c1eae0c2f6a3bddac61821493cd4c19.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:12.925Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 35,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266389,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/7a/f7/67/d0/669a721b9dfa5af2d9dcf7048437be601794744e142083e40faa4580c5ee722c.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:33:36.484Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248387,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d3/b6/20/84/c44027610f167e4df6e0eaaa5354dce7448e604285cb05ab33cf648bbaed2c27.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d3/b6/20/84/c44027610f167e4df6e0eaaa5354dce7448e604285cb05ab33cf648bbaed2c27.png\",\n    \"idxid\": \"41cb3f02-8f75-4f97-8ee2-7fe723e145e7\",\n    \"facesize\": 90601,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:42.190Z\",\n    \"created\": \"2018-12-09T11:48:42.190Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248385,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/3a/f0/5a/6a/13300f767e4b4b4967a6048614d7cffe753033d7ad28df27569e0e3ef63d551a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/3a/f0/5a/6a/13300f767e4b4b4967a6048614d7cffe753033d7ad28df27569e0e3ef63d551a.png\",\n    \"idxid\": \"640b0d16-000d-4a4d-8051-db6464bf6cad\",\n    \"facesize\": 99540,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:37.397Z\",\n    \"created\": \"2018-12-09T11:48:37.397Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248384,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/30/05/0b/c8/6a20b88428c6625e3c5441be426248ce6a566e14f85456894656b9b375dbde99.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/30/05/0b/c8/6a20b88428c6625e3c5441be426248ce6a566e14f85456894656b9b375dbde99.png\",\n    \"idxid\": \"20383f41-9492-4632-b23c-d0debd348550\",\n    \"facesize\": 82656,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:32.842Z\",\n    \"created\": \"2018-12-09T11:48:32.842Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248380,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/9a/8e/0f/03/3259dd121ace597a000c2951832c80bc0b6f7f8099b67ae75c55ef4d3323d325.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/fc/73/48/29/e8dcf07bc13d6dcdc8a95b04fb103eb2ed34aba1fa965f1378879fc222a4cbd8.png\",\n    \"idxid\": \"e3336b33-1da4-41da-9a94-d29a88177680\",\n    \"facesize\": 121801,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-09T11:48:28.009Z\",\n    \"created\": \"2018-12-09T11:01:20.442Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248374,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/78/36/38/ef/971f7d6f19e2f60390d2e3c10a45b694830d1f17482337adae9034c778a69c73.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/78/36/38/ef/971f7d6f19e2f60390d2e3c10a45b694830d1f17482337adae9034c778a69c73.png\",\n    \"idxid\": \"86865edf-d4bb-43ee-bcbf-0c22d1b3bf58\",\n    \"facesize\": 94864,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:23.604Z\",\n    \"created\": \"2018-12-09T11:48:23.604Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248373,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/f6/04/87/ab/a0c63d9fa61f89d98b295a41f96e5bc18ed4c33645a4c0e15a7c36264c2faaa6.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/0a/5d/2b/00/9cf1de98e2fc40510c950b78d51e8ea6e282a59071e074efa10c9814d48188ef.png\",\n    \"idxid\": \"933ad321-740f-4d8c-9321-783ae89daa93\",\n    \"facesize\": 124962,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-09T11:48:19.298Z\",\n    \"created\": \"2018-12-09T10:55:04.967Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}]",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/records/__stubs__/records.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 85,
+    "kind": "file",
+    "name": "src/records/index.js",
+    "content": "import {\n    post,\n    get,\n    headersAddBearerToken,\n    CONTENT_TYPE_HEADERS\n} from '../request.js';\nimport Api from '../Api'\n\nconst RECORDS = \"records\";\n\nexport default class Records extends Api {\n    constructor(props){\n        super(props);\n    }\n\n    records(filters) {\n        const headers = headersAddBearerToken(this.token);\n        return get(`${this.endpoint}/${RECORDS}/`, filters, headers)\n            .then(body => {\n                return body\n            });\n    }\n}",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/records/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 86,
+    "kind": "variable",
+    "name": "RECORDS",
+    "memberof": "src/records/index.js",
+    "static": true,
+    "longname": "src/records/index.js~RECORDS",
+    "access": "public",
+    "export": false,
+    "importPath": "identix-api-lib-js/src/records/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "class",
+    "name": "Records",
+    "memberof": "src/records/index.js",
+    "static": true,
+    "longname": "src/records/index.js~Records",
+    "access": "public",
+    "export": true,
+    "importPath": "identix-api-lib-js/src/records/index.js",
+    "importStyle": "Records",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/Api.js~Api"
+    ]
+  },
+  {
+    "__docId__": 88,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/records/index.js~Records",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/records/index.js~Records#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true
+  },
+  {
+    "__docId__": 89,
+    "kind": "method",
+    "name": "records",
+    "memberof": "src/records/index.js~Records",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/records/index.js~Records#records",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "params": [
+      {
+        "name": "filters",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 90,
+    "kind": "file",
+    "name": "src/sources/__stubs__/index.js",
+    "content": "/* eslint-disable quote-props */\nimport {IDX_ENDPOINT} from '../../../../../configs/api.js';\nimport records from './records.js'\n\nexport default {\n    pattern: `${IDX_ENDPOINT}/records/`,\n\n    fixtures(match, params, headers) {\n        return {\n            \"result\": \"ok\",\n            \"totalqty\": 64,\n            \"records\": records,\n            \"sources\": [{\n                \"name\": \"new\",\n                \"qty\": 63,\n                \"new\": 38,\n                \"exact\": 20,\n                \"ha\": 1,\n                \"junk\": 3,\n                \"det\": 0,\n                \"reinit\": 0,\n                \"nm\": 1\n            }, {\"name\": \"upload\", \"qty\": 1, \"new\": 1, \"exact\": 0, \"ha\": 0, \"junk\": 0, \"det\": 0, \"reinit\": 0, \"nm\": 0}]\n        };\n\n    },\n\n    post(match, data) {\n        return {\n            ok: true,\n            body: data\n        };\n    },\n\n    get(match, data) {\n        return {\n            ok: true,\n            body: data\n        };\n    }\n};\n",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/sources/__stubs__/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 91,
+    "kind": "file",
+    "name": "src/sources/__stubs__/records.js",
+    "content": "export default [{\n    \"id\": 267134,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/67/52/cc/24/7cccf74aa88647fb60bfe4cdbb71ffc8b4a3830f6042f4908437b06d201fafac.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/b6/5d/b6/31/b95544debae414adfcbe3474a9ae62a027866b92e57cc42210dd70283ee59277.png\",\n    \"idxid\": \"fd695572-6fc7-4a48-a792-eff7e6d9660e\",\n    \"facesize\": 46440,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:43:40.630Z\",\n    \"created\": \"2018-12-09T11:47:32.361Z\",\n    \"age\": 6,\n    \"sex\": 1,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266709,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d9/cb/42/21/3106779c50852dc41cab4e413eeadf893be839ad495a4a913899f7811d69a5c9.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 71556,\n    \"conf\": \"ha\",\n    \"detected\": \"2018-12-10T10:38:41.118Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 28,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266695,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/a9/b6/90/f9/8368985b60f5791f9d3b967493ccc8b4bc6c5d8168986868e16d98e94be11f70.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 65536,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:35.961Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 31,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266685,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/11/87/f5/33/d849d674d2f11e5ea133c748ea53a9cb172242787104ece9bcb18b9da84199f8.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 63504,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:30.936Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 27,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266679,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/e9/8e/37/5b/5ba9f9e7ec8c14d7de251951075e12d071a7645bfc5d0d40464d1b68bb3217ee.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 68644,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:26.480Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 34,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266673,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/53/83/a1/c7/f1f81561b6fe05d586355dc21b93093331770cc475d311a8c632f421e0dcf5ba.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 69960,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:21.782Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 41,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266668,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/45/41/03/f6/f579f78f102648b5abb5fc3c5389288d5d14fed08185740ea76fd386771e6063.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:17.581Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 35,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266663,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/af/bf/8d/11/3626b86649133db0c46e99b59094129cf228e782bc1cef12d60d217b3d3380bc.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 112560,\n    \"conf\": \"junk\",\n    \"detected\": \"2018-12-10T10:38:10.661Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 24,\n    \"sex\": 0,\n    \"mood\": \"sadness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266448,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/19/cb/47/e0/ee410793c8d94777879b9f1df1aee91ece2b16f48d13892a7fd5a3bf59473c84.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 65536,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:58.541Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 31,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266433,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/1a/a4/93/1a/0f4e93cce9ce203da58007f723d0a6b52d9d95ae3a009d2b41c544e07ee5948d.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 63504,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:32.160Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 27,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266426,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/70/43/60/ae/f962dbdab6dc7017c0c804737192d1ef3da3e709e4539efe1464fd246c9e2fd5.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 68644,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:25.727Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 34,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266421,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d0/eb/1a/f0/930c298102c35cb243b014685a2dcf93ef026415dc93b772afd22b9a48b5b9aa.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 69960,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:19.583Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 41,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266417,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/8e/b9/c2/43/e2b037968223074e6094b7534adc4bc51c1eae0c2f6a3bddac61821493cd4c19.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:12.925Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 35,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266389,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/7a/f7/67/d0/669a721b9dfa5af2d9dcf7048437be601794744e142083e40faa4580c5ee722c.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:33:36.484Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248387,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d3/b6/20/84/c44027610f167e4df6e0eaaa5354dce7448e604285cb05ab33cf648bbaed2c27.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d3/b6/20/84/c44027610f167e4df6e0eaaa5354dce7448e604285cb05ab33cf648bbaed2c27.png\",\n    \"idxid\": \"41cb3f02-8f75-4f97-8ee2-7fe723e145e7\",\n    \"facesize\": 90601,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:42.190Z\",\n    \"created\": \"2018-12-09T11:48:42.190Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248385,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/3a/f0/5a/6a/13300f767e4b4b4967a6048614d7cffe753033d7ad28df27569e0e3ef63d551a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/3a/f0/5a/6a/13300f767e4b4b4967a6048614d7cffe753033d7ad28df27569e0e3ef63d551a.png\",\n    \"idxid\": \"640b0d16-000d-4a4d-8051-db6464bf6cad\",\n    \"facesize\": 99540,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:37.397Z\",\n    \"created\": \"2018-12-09T11:48:37.397Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248384,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/30/05/0b/c8/6a20b88428c6625e3c5441be426248ce6a566e14f85456894656b9b375dbde99.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/30/05/0b/c8/6a20b88428c6625e3c5441be426248ce6a566e14f85456894656b9b375dbde99.png\",\n    \"idxid\": \"20383f41-9492-4632-b23c-d0debd348550\",\n    \"facesize\": 82656,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:32.842Z\",\n    \"created\": \"2018-12-09T11:48:32.842Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248380,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/9a/8e/0f/03/3259dd121ace597a000c2951832c80bc0b6f7f8099b67ae75c55ef4d3323d325.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/fc/73/48/29/e8dcf07bc13d6dcdc8a95b04fb103eb2ed34aba1fa965f1378879fc222a4cbd8.png\",\n    \"idxid\": \"e3336b33-1da4-41da-9a94-d29a88177680\",\n    \"facesize\": 121801,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-09T11:48:28.009Z\",\n    \"created\": \"2018-12-09T11:01:20.442Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248374,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/78/36/38/ef/971f7d6f19e2f60390d2e3c10a45b694830d1f17482337adae9034c778a69c73.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/78/36/38/ef/971f7d6f19e2f60390d2e3c10a45b694830d1f17482337adae9034c778a69c73.png\",\n    \"idxid\": \"86865edf-d4bb-43ee-bcbf-0c22d1b3bf58\",\n    \"facesize\": 94864,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:23.604Z\",\n    \"created\": \"2018-12-09T11:48:23.604Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248373,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/f6/04/87/ab/a0c63d9fa61f89d98b295a41f96e5bc18ed4c33645a4c0e15a7c36264c2faaa6.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/0a/5d/2b/00/9cf1de98e2fc40510c950b78d51e8ea6e282a59071e074efa10c9814d48188ef.png\",\n    \"idxid\": \"933ad321-740f-4d8c-9321-783ae89daa93\",\n    \"facesize\": 124962,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-09T11:48:19.298Z\",\n    \"created\": \"2018-12-09T10:55:04.967Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}]",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/sources/__stubs__/records.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 92,
+    "kind": "file",
+    "name": "src/sources/index.js",
+    "content": "import {\n    post,\n    put,\n    get,\n    deletes,\n    headersAddBearerToken,\n    CONTENT_TYPE_HEADERS\n} from '../request.js';\nimport Api from '../Api'\n\nconst SOURCES = \"sources\";\n\n\nexport default class Sources extends Api {\n    constructor(props) {\n        super(props);\n    }\n\n    getSources() {\n        const headers = headersAddBearerToken(this.token);\n        return get(`${this.endpoint}/${SOURCES}/`, null, headers)\n            .then(body => {\n                return body\n            });\n    }\n    \n    addSource(props) {\n        const headers = headersAddBearerToken(this.token);\n        return post(`${this.endpoint}/${SOURCES}/`, props, headers)\n            .then(body => {\n                return body\n            });\n    }\n    \n    updateSource(source) {\n        const headers = headersAddBearerToken(this.token);\n        return put(`${this.endpoint}/${SOURCES}/${source.id}/`, source, headers)\n            .then(body => {\n                return body\n            });\n    }\n\n    deleteSource(id) {\n        const headers = headersAddBearerToken(this.token);\n        return deletes(`${this.endpoint}/${SOURCES}/${id}/`, {}, headers)\n            .then(body => {\n                return body\n            });\n    }\n\n}\n",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/sources/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 93,
+    "kind": "variable",
+    "name": "SOURCES",
+    "memberof": "src/sources/index.js",
+    "static": true,
+    "longname": "src/sources/index.js~SOURCES",
+    "access": "public",
+    "export": false,
+    "importPath": "identix-api-lib-js/src/sources/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 94,
+    "kind": "class",
+    "name": "Sources",
+    "memberof": "src/sources/index.js",
+    "static": true,
+    "longname": "src/sources/index.js~Sources",
+    "access": "public",
+    "export": true,
+    "importPath": "identix-api-lib-js/src/sources/index.js",
+    "importStyle": "Sources",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/Api.js~Api"
+    ]
+  },
+  {
+    "__docId__": 95,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/sources/index.js~Sources",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/sources/index.js~Sources#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true
+  },
+  {
+    "__docId__": 96,
+    "kind": "method",
+    "name": "getSources",
+    "memberof": "src/sources/index.js~Sources",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/sources/index.js~Sources#getSources",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "method",
+    "name": "addSource",
+    "memberof": "src/sources/index.js~Sources",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/sources/index.js~Sources#addSource",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "method",
+    "name": "updateSource",
+    "memberof": "src/sources/index.js~Sources",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/sources/index.js~Sources#updateSource",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "params": [
+      {
+        "name": "source",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "deleteSource",
+    "memberof": "src/sources/index.js~Sources",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/sources/index.js~Sources#deleteSource",
+    "access": "public",
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "params": [
+      {
+        "name": "id",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "file",
+    "name": "src/users/__stubs__/index.js",
+    "content": "/* eslint-disable quote-props */\nimport {IDX_ENDPOINT} from '../../../../../../configs/api.js';\nimport records from './records.js'\n\nexport default {\n    pattern: `${IDX_ENDPOINT}/records/`,\n\n    fixtures(match, params, headers) {\n        return {\n            \"result\": \"ok\",\n            \"totalqty\": 64,\n            \"records\": records,\n            \"sources\": [{\n                \"name\": \"new\",\n                \"qty\": 63,\n                \"new\": 38,\n                \"exact\": 20,\n                \"ha\": 1,\n                \"junk\": 3,\n                \"det\": 0,\n                \"reinit\": 0,\n                \"nm\": 1\n            }, {\"name\": \"upload\", \"qty\": 1, \"new\": 1, \"exact\": 0, \"ha\": 0, \"junk\": 0, \"det\": 0, \"reinit\": 0, \"nm\": 0}]\n        };\n\n    },\n\n    post(match, data) {\n        return {\n            ok: true,\n            body: data\n        };\n    },\n\n    get(match, data) {\n        return {\n            ok: true,\n            body: data\n        };\n    }\n};\n",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/users/__stubs__/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 101,
+    "kind": "file",
+    "name": "src/users/__stubs__/records.js",
+    "content": "export default [{\n    \"id\": 267134,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/67/52/cc/24/7cccf74aa88647fb60bfe4cdbb71ffc8b4a3830f6042f4908437b06d201fafac.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/b6/5d/b6/31/b95544debae414adfcbe3474a9ae62a027866b92e57cc42210dd70283ee59277.png\",\n    \"idxid\": \"fd695572-6fc7-4a48-a792-eff7e6d9660e\",\n    \"facesize\": 46440,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:43:40.630Z\",\n    \"created\": \"2018-12-09T11:47:32.361Z\",\n    \"age\": 6,\n    \"sex\": 1,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266709,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d9/cb/42/21/3106779c50852dc41cab4e413eeadf893be839ad495a4a913899f7811d69a5c9.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 71556,\n    \"conf\": \"ha\",\n    \"detected\": \"2018-12-10T10:38:41.118Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 28,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266695,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/a9/b6/90/f9/8368985b60f5791f9d3b967493ccc8b4bc6c5d8168986868e16d98e94be11f70.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 65536,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:35.961Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 31,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266685,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/11/87/f5/33/d849d674d2f11e5ea133c748ea53a9cb172242787104ece9bcb18b9da84199f8.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 63504,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:30.936Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 27,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266679,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/e9/8e/37/5b/5ba9f9e7ec8c14d7de251951075e12d071a7645bfc5d0d40464d1b68bb3217ee.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 68644,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:26.480Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 34,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266673,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/53/83/a1/c7/f1f81561b6fe05d586355dc21b93093331770cc475d311a8c632f421e0dcf5ba.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 69960,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:21.782Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 41,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266668,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/45/41/03/f6/f579f78f102648b5abb5fc3c5389288d5d14fed08185740ea76fd386771e6063.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:38:17.581Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 35,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266663,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/af/bf/8d/11/3626b86649133db0c46e99b59094129cf228e782bc1cef12d60d217b3d3380bc.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 112560,\n    \"conf\": \"junk\",\n    \"detected\": \"2018-12-10T10:38:10.661Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 24,\n    \"sex\": 0,\n    \"mood\": \"sadness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266448,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/19/cb/47/e0/ee410793c8d94777879b9f1df1aee91ece2b16f48d13892a7fd5a3bf59473c84.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 65536,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:58.541Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 31,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266433,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/1a/a4/93/1a/0f4e93cce9ce203da58007f723d0a6b52d9d95ae3a009d2b41c544e07ee5948d.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 63504,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:32.160Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 27,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266426,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/70/43/60/ae/f962dbdab6dc7017c0c804737192d1ef3da3e709e4539efe1464fd246c9e2fd5.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 68644,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:25.727Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 34,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266421,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d0/eb/1a/f0/930c298102c35cb243b014685a2dcf93ef026415dc93b772afd22b9a48b5b9aa.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 69960,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:19.583Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 41,\n    \"sex\": 0,\n    \"mood\": \"happiness\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266417,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/8e/b9/c2/43/e2b037968223074e6094b7534adc4bc51c1eae0c2f6a3bddac61821493cd4c19.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:34:12.925Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": 35,\n    \"sex\": 0,\n    \"mood\": \"neutral\",\n    \"source\": \"new\"\n}, {\n    \"id\": 266389,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/04/37/29/9f/af7c4de0e860005dbdd9d665bc5cc5dd30bbe9314761b6aa9b5f2c09ce25595a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/7a/f7/67/d0/669a721b9dfa5af2d9dcf7048437be601794744e142083e40faa4580c5ee722c.png\",\n    \"idxid\": \"a7367e9f-09fb-4436-a832-b12a9856eb77\",\n    \"facesize\": 197136,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-10T10:33:36.484Z\",\n    \"created\": \"2018-12-08T09:21:17.031Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248387,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d3/b6/20/84/c44027610f167e4df6e0eaaa5354dce7448e604285cb05ab33cf648bbaed2c27.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/d3/b6/20/84/c44027610f167e4df6e0eaaa5354dce7448e604285cb05ab33cf648bbaed2c27.png\",\n    \"idxid\": \"41cb3f02-8f75-4f97-8ee2-7fe723e145e7\",\n    \"facesize\": 90601,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:42.190Z\",\n    \"created\": \"2018-12-09T11:48:42.190Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248385,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/3a/f0/5a/6a/13300f767e4b4b4967a6048614d7cffe753033d7ad28df27569e0e3ef63d551a.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/3a/f0/5a/6a/13300f767e4b4b4967a6048614d7cffe753033d7ad28df27569e0e3ef63d551a.png\",\n    \"idxid\": \"640b0d16-000d-4a4d-8051-db6464bf6cad\",\n    \"facesize\": 99540,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:37.397Z\",\n    \"created\": \"2018-12-09T11:48:37.397Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248384,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/30/05/0b/c8/6a20b88428c6625e3c5441be426248ce6a566e14f85456894656b9b375dbde99.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/30/05/0b/c8/6a20b88428c6625e3c5441be426248ce6a566e14f85456894656b9b375dbde99.png\",\n    \"idxid\": \"20383f41-9492-4632-b23c-d0debd348550\",\n    \"facesize\": 82656,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:32.842Z\",\n    \"created\": \"2018-12-09T11:48:32.842Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248380,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/9a/8e/0f/03/3259dd121ace597a000c2951832c80bc0b6f7f8099b67ae75c55ef4d3323d325.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/fc/73/48/29/e8dcf07bc13d6dcdc8a95b04fb103eb2ed34aba1fa965f1378879fc222a4cbd8.png\",\n    \"idxid\": \"e3336b33-1da4-41da-9a94-d29a88177680\",\n    \"facesize\": 121801,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-09T11:48:28.009Z\",\n    \"created\": \"2018-12-09T11:01:20.442Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248374,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/78/36/38/ef/971f7d6f19e2f60390d2e3c10a45b694830d1f17482337adae9034c778a69c73.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/78/36/38/ef/971f7d6f19e2f60390d2e3c10a45b694830d1f17482337adae9034c778a69c73.png\",\n    \"idxid\": \"86865edf-d4bb-43ee-bcbf-0c22d1b3bf58\",\n    \"facesize\": 94864,\n    \"conf\": \"new\",\n    \"detected\": \"2018-12-09T11:48:23.604Z\",\n    \"created\": \"2018-12-09T11:48:23.604Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}, {\n    \"id\": 248373,\n    \"initial_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/f6/04/87/ab/a0c63d9fa61f89d98b295a41f96e5bc18ed4c33645a4c0e15a7c36264c2faaa6.png\",\n    \"detected_photo\": \"https://dl.identix.one/b7eccd0059d6d7dc2ef76c35d6de0048cc8c029d/0a/5d/2b/00/9cf1de98e2fc40510c950b78d51e8ea6e282a59071e074efa10c9814d48188ef.png\",\n    \"idxid\": \"933ad321-740f-4d8c-9321-783ae89daa93\",\n    \"facesize\": 124962,\n    \"conf\": \"exact\",\n    \"detected\": \"2018-12-09T11:48:19.298Z\",\n    \"created\": \"2018-12-09T10:55:04.967Z\",\n    \"age\": null,\n    \"sex\": null,\n    \"mood\": \"\",\n    \"source\": \"new\"\n}]",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/users/__stubs__/records.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 102,
+    "kind": "file",
+    "name": "src/users/index.js",
+    "content": "import {\n    post,\n    put,\n    get,\n    deletes,\n    headersAddBearerToken,\n    CONTENT_TYPE_HEADERS\n} from '../request.js';\nimport Api from '../Api'\n\nconst USERS_TOKENS = \"users/tokens\";\n\n\nexport default class Users extends Api {\n    constructor(props){\n        super(props);\n    }\n\n    getTokens(props = {}) {\n        const headers = headersAddBearerToken(this.token);\n        return get(`${this.endpoint}/${USERS_TOKENS}/`, props, headers)\n            .then(body => {\n                return body\n            });\n    }\n\n    addToken(props) {\n        const headers = headersAddBearerToken(this.token);\n        return post(`${this.endpoint}/login/permanent/`, props, headers)\n            .then(body => {\n                return body\n            });\n    }\n\n    updateToken(source) {\n        const headers = headersAddBearerToken(this.token);\n        return put(`${this.endpoint}/${USERS_TOKENS}/${source.id}/`, source, headers)\n            .then(body => {\n                return body\n            });\n    }\n\n    deleteToken(id) {\n        const headers = headersAddBearerToken(this.token);\n        return deletes(`${this.endpoint}/${USERS_TOKENS}/${id}/`, {}, headers)\n            .then(body => {\n                return body\n            });\n    }\n\n    deleteTokens({permanent}) {\n        const headers = headersAddBearerToken(this.token);\n        return deletes(`${this.endpoint}/${USERS_TOKENS}/`, {permanent}, headers)\n            .then(body => {\n                return body\n            });\n    }\n}\n\n",
+    "static": true,
+    "longname": "/Users/nikita/projects/identix-api-lib-js/src/users/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 103,
+    "kind": "variable",
+    "name": "USERS_TOKENS",
+    "memberof": "src/users/index.js",
+    "static": true,
+    "longname": "src/users/index.js~USERS_TOKENS",
+    "access": "public",
+    "export": false,
+    "importPath": "identix-api-lib-js/src/users/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 104,
+    "kind": "class",
+    "name": "Users",
+    "memberof": "src/users/index.js",
+    "static": true,
+    "longname": "src/users/index.js~Users",
+    "access": "public",
+    "export": true,
+    "importPath": "identix-api-lib-js/src/users/index.js",
+    "importStyle": "Users",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/Api.js~Api"
+    ]
+  },
+  {
+    "__docId__": 105,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/users/index.js~Users",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/users/index.js~Users#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true
+  },
+  {
+    "__docId__": 106,
+    "kind": "method",
+    "name": "getTokens",
+    "memberof": "src/users/index.js~Users",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/users/index.js~Users#getTokens",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 107,
+    "kind": "method",
+    "name": "addToken",
+    "memberof": "src/users/index.js~Users",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/users/index.js~Users#addToken",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "method",
+    "name": "updateToken",
+    "memberof": "src/users/index.js~Users",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/users/index.js~Users#updateToken",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "params": [
+      {
+        "name": "source",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "method",
+    "name": "deleteToken",
+    "memberof": "src/users/index.js~Users",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/users/index.js~Users#deleteToken",
+    "access": "public",
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "params": [
+      {
+        "name": "id",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "method",
+    "name": "deleteTokens",
+    "memberof": "src/users/index.js~Users",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/users/index.js~Users#deleteTokens",
+    "access": "public",
+    "description": null,
+    "lineNumber": 51,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"permanent\": *}"
+        ],
+        "defaultRaw": {
+          "permanent": null
+        },
+        "defaultValue": "{\"permanent\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# identix-api-lib-js\n\n## Installation\n\nUsing :\n\n    $ npm install --save identix-api-lib-js\n\n```js\n// using ES6 modules\nimport IDXApi from \"identix-api-lib-js\";\n// using CommonJS modules\nconst IDXApi = require(\"identix-api-lib-js\");\n```\n\nThe UMD build is also available on [unpkg](https://unpkg.com):\n\n```html\n<script src=\"https://unpkg.com/identix-api-lib-js@0.0.0/dist/index.js\"></script>\n```\n\nYou can find the library on `window.IDXApi`.\n\n## Issues\n\n<!--If you find a bug, please file an issue on [our issue tracker on GitHub](https://github.com/ReactTraining/react-router/issues).-->\n",
+    "longname": "/Users/nikita/projects/identix-api-lib-js/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"identix-api-lib-js\",\n  \"version\": \"0.0.10511\",\n  \"description\": \"Library for work with identix server api\",\n  \"main\": \"dist/index.js\",\n  \"scripts\": {\n    \"transpile\": \"babel src -d dist --copy-files\",\n    \"prepublishOnly\": \"npm run transpile\",\n    \"deploy\": \"gh-pages -d /dist\",\n    \"publish-demo\": \"npm run build && npm run deploy\",\n    \"prepublish\": \"babel src --out-dir dist\"\n  },\n  \"keywords\": [\n    \"identix\",\n    \"idx\",\n    \"api\",\n    \"query\"\n  ],\n  \"devDependencies\": {\n    \"@babel/core\": \"^7.2.2\",\n    \"@babel/plugin-proposal-class-properties\": \"^7.2.3\",\n    \"@babel/plugin-proposal-decorators\": \"^7.3.0\",\n    \"@babel/plugin-proposal-object-rest-spread\": \"^7.2.0\",\n    \"@babel/polyfill\": \"^7.2.5\",\n    \"@babel/preset-env\": \"^7.2.3\",\n    \"@babel/preset-react\": \"^7.0.0\",\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-eslint\": \"^10.0.1\",\n    \"babel-loader\": \"^8.0.5\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"gh-pages\": \"^2.0.1\"\n  },\n  \"dependencies\": {\n    \"@babel/preset-es2015\": \"^7.0.0-beta.53\",\n    \"babel-preset-env\": \"^1.7.0\",\n    \"babel-preset-es2015\": \"^6.24.1\",\n    \"babel-preset-stage-2\": \"^6.24.1\"\n  },\n  \"author\": \"Nikita Kashtanov\",\n  \"license\": \"ISC\"\n}\n",
+    "longname": "/Users/nikita/projects/identix-api-lib-js/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

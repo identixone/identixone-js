@@ -1,10 +1,10 @@
 export default class Api {
     constructor({token, endpoint}){
-        this.token = token;
+        this.setToken(token);
         this.endpoint = endpoint
     }
 
     setToken(token) {
-        this.token = token
+        this.token = token;
     }
 }

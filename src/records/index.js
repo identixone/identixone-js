@@ -14,9 +14,7 @@ export default class Records extends Api {
     }
 
     records(filters) {
-        const headers = {
-            Authorization: `Token ${this.token}`
-        };
+        const headers = headersAddBearerToken(this.token);
         return get(`${this.endpoint}/${RECORDS}/`, filters, headers)
             .then(body => {
                 return body

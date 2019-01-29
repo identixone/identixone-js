@@ -10,15 +10,14 @@ import Api from '../Api'
 
 const SOURCES = "sources";
 
+
 export default class Sources extends Api {
     constructor(props) {
         super(props);
     }
 
     getSources() {
-        const headers = {
-            Authorization: `Token ${this.token}`
-        };
+        const headers = headersAddBearerToken(this.token);
         return get(`${this.endpoint}/${SOURCES}/`, null, headers)
             .then(body => {
                 return body
@@ -26,11 +25,7 @@ export default class Sources extends Api {
     }
     
     addSource(props) {
-
-        const headers = {
-            Authorization: `Token ${this.token}`
-        };
-
+        const headers = headersAddBearerToken(this.token);
         return post(`${this.endpoint}/${SOURCES}/`, props, headers)
             .then(body => {
                 return body
@@ -38,9 +33,7 @@ export default class Sources extends Api {
     }
     
     updateSource(source) {
-        const headers = {
-            Authorization: `Token ${this.token}`
-        };
+        const headers = headersAddBearerToken(this.token);
         return put(`${this.endpoint}/${SOURCES}/${source.id}/`, source, headers)
             .then(body => {
                 return body
@@ -48,9 +41,7 @@ export default class Sources extends Api {
     }
 
     deleteSource(id) {
-        const headers = {
-            Authorization: `Token ${this.token}`
-        };
+        const headers = headersAddBearerToken(this.token);
         return deletes(`${this.endpoint}/${SOURCES}/${id}/`, {}, headers)
             .then(body => {
                 return body

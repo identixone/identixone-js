@@ -8,49 +8,57 @@ import {
 } from '../request.js';
 import Api from '../Api'
 
-const SETTINGS_NOTIFICATIONS = "settings/notifications"
+const SETTINGS_NOTIFICATIONS = "settings/notifications";
 
+/**
+ * Notifications Identix api.
+ */
 export default class Notifications extends Api {
     constructor(props){
         super(props);
     }
 
+    /**
+     * @return {Promise} Promise object represents the response object
+     */
     getNotifications() {
-        //const deviceInfo = getBrowserFingerprint();
-        const headers = {
-            Authorization: `Token ${this.token}`
-        };
+        const headers = headersAddBearerToken(this.token);
         return get(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/`, null, headers)
             .then(body => {
                 return body
             });
     }
-    addNotification(props) {
 
-        const headers = {
-            Authorization: `Token ${this.token}`
-        };
-
-        return post(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/`, props, headers)
+    /**
+     * @param {object} params - parameters of new notification.
+     * @return {Promise} Promise object represents the response object
+     */
+    addNotification(params) {
+        const headers = headersAddBearerToken(this.token);
+        return post(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/`, params, headers)
             .then(body => {
                 return body
             });
     }
 
-    updateNotification(source) {
-        const headers = {
-            Authorization: `Token ${this.token}`
-        };
-        return put(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/${source.id}/`, source, headers)
+    /**
+     * @param {object} params - parameters for update notification.
+     * @return {Promise} Promise object represents the response object
+     */
+    updateNotification(notification) {
+        const headers = headersAddBearerToken(this.token);
+        return put(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/${notification.id}/`, notification, headers)
             .then(body => {
                 return body
             });
     }
 
+    /**
+     * @param {string} id - id of the deleted item.
+     * @return {Promise} Promise object represents the response object
+     */
     deleteNotification(id) {
-        const headers = {
-            Authorization: `Token ${this.token}`
-        };
+        const headers = headersAddBearerToken(this.token);
         return deletes(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/${id}/`, {}, headers)
             .then(body => {
                 return body

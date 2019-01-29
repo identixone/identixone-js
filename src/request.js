@@ -1,12 +1,9 @@
 import superagent from 'superagent';
-//import storage from '../../utils/storage.js';
-
 
 const EMPTY_OBJ = {};
 
 
 export const CONTENT_TYPE_HEADERS = {'Content-Type': 'application/json'};
-
 
 export function post(url, params, headers = EMPTY_OBJ) {
     return new Promise((resolve, reject) => {
@@ -14,7 +11,6 @@ export function post(url, params, headers = EMPTY_OBJ) {
         if (headers) {
             req = req.set(headers);
         }
-        //requestAddDeviceId(req);
         return req.end((err, res) => {
             if (err || !res.ok) {
                 reject(err || res);
@@ -31,7 +27,6 @@ export function put(url, params, headers = EMPTY_OBJ) {
         if (headers) {
             req = req.set(headers);
         }
-        //requestAddDeviceId(req);
         return req.end((err, res) => {
             if (err || !res.ok) {
                 reject(err || res);
@@ -48,7 +43,6 @@ export function deletes(url, params, headers = EMPTY_OBJ) {
         if (headers) {
             req = req.set(headers);
         }
-        //requestAddDeviceId(req);
         return req.end((err, res) => {
             if (err || !res.ok) {
                 reject(err || res);
@@ -65,7 +59,6 @@ export function get(url, query, headers = EMPTY_OBJ) {
         if (headers) {
             req = req.set(headers);
         }
-        //requestAddDeviceId(req);
         return req.end((err, res) => {
             if (err || !res.ok) {
                 reject(err || res);
@@ -74,4 +67,14 @@ export function get(url, query, headers = EMPTY_OBJ) {
             }
         });
     });
+}
+
+export function headersAddBearerToken(token, headers) {
+    if (!token) {
+        return headers;
+    }
+    return {
+        ...(headers || EMPTY_OBJ),
+        Authorization: `Token ${token}`
+    };
 }
