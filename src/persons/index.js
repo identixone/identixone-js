@@ -33,6 +33,6 @@ export default class Persons extends Api {
 
   deletePerson(id) {
     const headers = headersAddBearerToken(this.token);
-    return post(`${this.endpoint}/persons/${id}/`, null, headers);
+    return deletes(`${this.endpoint}/persons/${id}/`, null, headers);
   }
 }
