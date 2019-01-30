@@ -1,6 +1,6 @@
 {
   "name": "identix-api-lib-js",
-  "version": "0.0.105117",
+  "version": "0.0.105118",
   "description": "Library for work with identix server api",
   "main": "dist/index.js",
   "scripts": {
