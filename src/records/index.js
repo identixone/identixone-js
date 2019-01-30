@@ -20,4 +20,12 @@ export default class Records extends Api {
                 return body
             });
     }
+
+    selectRecord({id}) {
+        const headers = headersAddBearerToken(this.token);
+        return get(`${this.endpoint}/${RECORDS}/${id}`, {}, headers)
+            .then(body => {
+                return body
+            });
+    }
 }
