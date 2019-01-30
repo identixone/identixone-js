@@ -21,9 +21,9 @@ export default class Records extends Api {
             });
     }
 
-    selectRecord({id}) {
+    record({id, filters = {}}) {
         const headers = headersAddBearerToken(this.token);
-        return get(`${this.endpoint}/${RECORDS}/${id}`, {}, headers)
+        return get(`${this.endpoint}/${RECORDS}/${id}`, filters, headers)
             .then(body => {
                 return body
             });
