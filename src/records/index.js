@@ -28,4 +28,12 @@ export default class Records extends Api {
                 return body
             });
     }
+
+    deleteRecord(id) {
+        const headers = headersAddBearerToken(this.token);
+        return get(`${this.endpoint}/${RECORDS}/${id}/`, null, headers)
+            .then(body => {
+                return body
+            });
+    }
 }
