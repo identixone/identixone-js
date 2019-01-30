@@ -3,6 +3,7 @@ import Auth from "./auth/index.js";
 import Records from "./records/index.js";
 import Notifications from "./notifications/index.js";
 import Sources from "./sources/index.js";
+import Utility from "./utility";
 import Persons from "./persons";
 
 export default class IDXApi {
@@ -15,6 +16,7 @@ export default class IDXApi {
     this.notifications = new Notifications({ token, endpoint });
     this.sources = new Sources({ token, endpoint });
     this.persons = new Persons({ token, endpoint });
+    this.utility = new Utility({ token, endpoint });
   }
 
   init(username, password) {
@@ -33,5 +35,6 @@ export default class IDXApi {
     this.notifications.setToken(token);
     this.sources.setToken(token);
     this.persons.setToken(token);
+    this.utility.setToken(token);
   }
 }
