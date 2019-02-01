@@ -13,7 +13,7 @@ export default ({
       this.endpoint = endpoint;
 
       this.httpClient = new HttpClient({
-        baseUrl: endpoint,
+        baseURL: endpoint,
         token,
       });
 

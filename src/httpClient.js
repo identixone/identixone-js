@@ -12,22 +12,22 @@ export class HttpClient {
   }
 
   setToken(token) {
-    this._client.defaults.headers.common["Authorization"] = `Token ${token}`;
+    this._client.defaults.headers["Authorization"] = `Token ${token}`;
   }
 
   post(url, data) {
-    return this._client.post(url, { data });
+    return this._client.post(url, data).then(({ data }) => data);
   }
 
   get(url, params) {
-    return this._client.get(url, { params });
+    return this._client.get(url, { params }).then(({ data }) => data);
   }
 
-  put(url, params) {
-    return this._client.put(url, { params });
+  put(url, data) {
+    return this._client.put(url, data).then(({ data }) => data);
   }
 
   delete(url) {
-    return this._client.delete(url);
+    return this._client.delete(url).then(({ data }) => ({ data }));
   }
 }
