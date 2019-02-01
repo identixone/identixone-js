@@ -1,6 +1,6 @@
-import { post, headersAddBearerToken } from "../request";
-import { dataURItoBlob } from "../utils/helpers";
 import Api from "../Api";
+
+import { dataURItoBlob } from "../utils/helpers";
 
 export default class Utility extends Api {
   comparePhotos({ photo1, photo2, ...restData }) {
@@ -13,8 +13,6 @@ export default class Utility extends Api {
       data.append(key, restData[key]);
     });
 
-    const headers = headersAddBearerToken(this.token);
-
-    return post(`${this.endpoint}/utility/compare/`, data, headers);
+    return this.httpClient.post(`utility/compare/`, data);
   }
 }

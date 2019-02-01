@@ -1,51 +1,21 @@
-import {
-  post,
-  put,
-  get,
-  deletes,
-  headersAddBearerToken,
-  CONTENT_TYPE_HEADERS,
-} from "../request.js";
 import Api from "../Api";
 
-const SOURCES = "sources";
+const SOURCES = "sources/";
 
 export default class Sources extends Api {
-  constructor(props) {
-    super(props);
-  }
-
   getSources() {
-    const headers = headersAddBearerToken(this.token);
-    return get(`${this.endpoint}/${SOURCES}/`, null, headers).then(body => {
-      return body;
-    });
+    return this.httpClient.get(SOURCES);
   }
 
-  addSource(props) {
-    const headers = headersAddBearerToken(this.token);
-    return post(`${this.endpoint}/${SOURCES}/`, props, headers).then(body => {
-      return body;
-    });
+  addSource(data) {
+    return this.httpClient.post(SOURCES, data);
   }
 
   updateSource(source) {
-    const headers = headersAddBearerToken(this.token);
-    return put(
-      `${this.endpoint}/${SOURCES}/${source.id}/`,
-      source,
-      headers
-    ).then(body => {
-      return body;
-    });
+    return this.httpClient.put(`${SOURCES}/${source.id}/`, source);
   }
 
   deleteSource(id) {
-    const headers = headersAddBearerToken(this.token);
-    return deletes(`${this.endpoint}/${SOURCES}/${id}/`, {}, headers).then(
-      body => {
-        return body;
-      }
-    );
+    return this.httpClient.delete(`${SOURCES}/${id}/`);
   }
 }

@@ -1,66 +1,25 @@
-import {
-  post,
-  put,
-  get,
-  deletes,
-  headersAddBearerToken,
-  CONTENT_TYPE_HEADERS,
-} from "../request.js";
 import Api from "../Api";
 
-const USERS_TOKENS = "users/tokens";
+const USERS_TOKENS = "users/tokens/";
 
 export default class Users extends Api {
-  constructor(props) {
-    super(props);
+  getTokens(params = {}) {
+    return this.httpClient.get(USERS_TOKENS, params);
   }
 
-  getTokens(props = {}) {
-    const headers = headersAddBearerToken(this.token);
-    return get(`${this.endpoint}/${USERS_TOKENS}/`, props, headers).then(
-      body => {
-        return body;
-      }
-    );
-  }
-
-  addToken(props) {
-    const headers = headersAddBearerToken(this.token);
-    return post(`${this.endpoint}/login/permanent/`, props, headers).then(
-      body => {
-        return body;
-      }
-    );
+  addToken(data) {
+    return this.httpClient.post(`login/permanent/`, data);
   }
 
   updateToken(source) {
-    const headers = headersAddBearerToken(this.token);
-    return put(
-      `${this.endpoint}/${USERS_TOKENS}/${source.id}/`,
-      source,
-      headers
-    ).then(body => {
-      return body;
-    });
+    return this.httpClient.put(`${USERS_TOKENS}${source.id}/`, source);
   }
 
   deleteToken(id) {
-    const headers = headersAddBearerToken(this.token);
-    return deletes(`${this.endpoint}/${USERS_TOKENS}/${id}/`, {}, headers).then(
-      body => {
-        return body;
-      }
-    );
+    return this.httpClient.delete(`${USERS_TOKENS}${id}/`);
   }
 
   deleteTokens({ permanent }) {
-    const headers = headersAddBearerToken(this.token);
-    return deletes(
-      `${this.endpoint}/${USERS_TOKENS}/`,
-      { permanent },
-      headers
-    ).then(body => {
-      return body;
-    });
+    return this.httpClient.delete(USERS_TOKENS, { permanent });
   }
 }

@@ -1,40 +1,41 @@
-import Users from "./users/index.js";
-import Auth from "./auth/index.js";
-import Records from "./records/index.js";
-import Notifications from "./notifications/index.js";
-import Sources from "./sources/index.js";
-import Utility from "./utility";
-import Persons from "./persons";
+export default ({
+  HttpClient,
+  Auth,
+  Users,
+  Records,
+  Notifications,
+  Sources,
+  Persons,
+  Utility,
+}) =>
+  class IDXApi {
+    constructor({ token = null, endpoint = null }) {
+      this.endpoint = endpoint;
 
-export default class IDXApi {
-  constructor({ token = null, endpoint = null }) {
-    this.endpoint = endpoint;
+      this.httpClient = new HttpClient({
+        baseUrl: endpoint,
+        token,
+      });
 
-    this.auth = new Auth({ token, endpoint });
-    this.users = new Users({ token, endpoint });
-    this.records = new Records({ token, endpoint });
-    this.notifications = new Notifications({ token, endpoint });
-    this.sources = new Sources({ token, endpoint });
-    this.persons = new Persons({ token, endpoint });
-    this.utility = new Utility({ token, endpoint });
-  }
+      this.auth = new Auth({ httpClient: this.httpClient });
+      this.users = new Users({ httpClient: this.httpClient });
+      this.records = new Records({ httpClient: this.httpClient });
+      this.notifications = new Notifications({ httpClient: this.httpClient });
+      this.sources = new Sources({ httpClient: this.httpClient });
+      this.persons = new Persons({ httpClient: this.httpClient });
+      this.utility = new Utility({ httpClient: this.httpClient });
+    }
 
-  init(username, password) {
-    return this.auth.login(username, password).then(body => {
-      const { token } = body;
-      this.setToken(token.key);
+    init(username, password) {
+      return this.auth.login(username, password).then(body => {
+        const { token } = body;
+        this.setToken(token.key);
 
-      return body;
-    });
-  }
+        return body;
+      });
+    }
 
-  setToken(token) {
-    this.auth.setToken(token);
-    this.users.setToken(token);
-    this.records.setToken(token);
-    this.notifications.setToken(token);
-    this.sources.setToken(token);
-    this.persons.setToken(token);
-    this.utility.setToken(token);
-  }
-}
+    setToken(token) {
+      this.httpClient.setToken(token);
+    }
+  };

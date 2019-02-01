@@ -1,6 +1,6 @@
-import { post, deletes, headersAddBearerToken } from "../request";
-import { dataURItoBlob } from "../utils/helpers";
 import Api from "../Api";
+
+import { dataURItoBlob } from "../utils/helpers";
 
 export default class Persons extends Api {
   searchPersonByImage({ photo, ...restData }) {
@@ -12,9 +12,7 @@ export default class Persons extends Api {
       data.append(key, restData[key]);
     });
 
-    const headers = headersAddBearerToken(this.token);
-
-    return post(`${this.endpoint}/persons/search/`, data, headers);
+    return this.httpClient.post(`persons/search/`, data);
   }
 
   createPerson({ photo, ...restData }) {
@@ -26,13 +24,10 @@ export default class Persons extends Api {
       data.append(key, restData[key]);
     });
 
-    const headers = headersAddBearerToken(this.token);
-
-    return post(`${this.endpoint}/persons/`, data, headers);
+    return this.httpClient.post(`${this.endpoint}/persons/`, data);
   }
 
   deletePerson(id) {
-    const headers = headersAddBearerToken(this.token);
-    return deletes(`${this.endpoint}/persons/${id}/`, null, headers);
+    return this.httpClient.delete(`persons/${id}/`);
   }
 }
