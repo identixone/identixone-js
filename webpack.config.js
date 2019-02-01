@@ -18,6 +18,7 @@ const createConfig = ({ libraryTarget }) => {
       path: PATHS.dist,
       filename: "IDXApi." + libraryTarget + ".js",
       pathinfo: false,
+      globalObject: "this",
       library: "IDXApi",
       libraryTarget
     },
@@ -75,7 +76,7 @@ const createConfig = ({ libraryTarget }) => {
 
 module.exports = createVariants(
   {
-    libraryTarget: ["var", "commonjs2", "umd", "global"]
+    libraryTarget: ["commonjs2", "umd"]
   },
   createConfig
 );
