@@ -1,6 +1,7 @@
 import {
     post,
     get,
+    deletes,
     headersAddBearerToken,
     CONTENT_TYPE_HEADERS
 } from '../request.js';
@@ -24,6 +25,14 @@ export default class Records extends Api {
     record({id, filters = {}}) {
         const headers = headersAddBearerToken(this.token);
         return get(`${this.endpoint}/${RECORDS}/${id}/`, filters, headers)
+            .then(body => {
+                return body
+            });
+    }
+
+    deleteRecord(id) {
+        const headers = headersAddBearerToken(this.token);
+        return deletes(`${this.endpoint}/entry/${id}/`, null, headers)
             .then(body => {
                 return body
             });

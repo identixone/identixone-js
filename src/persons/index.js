@@ -1,4 +1,4 @@
-import { post, headersAddBearerToken } from "../request";
+import { post, deletes, headersAddBearerToken } from "../request";
 import { dataURItoBlob } from "../utils/helpers";
 import Api from "../Api";
 
@@ -29,5 +29,10 @@ export default class Persons extends Api {
     const headers = headersAddBearerToken(this.token);
 
     return post(`${this.endpoint}/persons/`, data, headers);
+  }
+
+  deletePerson(id) {
+    const headers = headersAddBearerToken(this.token);
+    return deletes(`${this.endpoint}/persons/${id}/`, null, headers);
   }
 }
