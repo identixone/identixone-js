@@ -3,3 +3,4 @@
 /webpack/
 /.npmignore/
 /src/
+/node_modules/

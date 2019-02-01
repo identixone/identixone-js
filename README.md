@@ -3,14 +3,14 @@
 ## Installation
 
 Using :
-
-    $ npm install --save identix-api-lib-js
+\$ npm install --save identix-api-lib-js
 
 ```js
-// using ES6 modules
+// ES2015 module import:
 import IDXApi from "identix-api-lib-js";
-// using CommonJS modules
-const IDXApi = require("identix-api-lib-js");
+
+// CommonJS module require:
+var IDXApi = require("identix-api-lib-js");
 ```
 
 The UMD build is also available on [unpkg](https://unpkg.com):
