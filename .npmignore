@@ -1,6 +1,8 @@
 /.idea/
 /.npmignore/
 /node_modules/
+/docs/
 
 .gitignore
 webpack.config.js
+.eslintrc.js
