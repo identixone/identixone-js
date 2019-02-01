@@ -3,23 +3,23 @@ module.exports = {
     browser: true,
     commonjs: true,
     es6: true,
-    node: true
+    node: true,
   },
   extends: ["eslint:recommended", "prettier"],
   parser: "babel-eslint",
   parserOptions: {
     sourceType: "module",
     ecmaFeatures: {
-      modules: true
-    }
+      modules: true,
+    },
   },
   plugins: ["prettier"],
   rules: {
     "prettier/prettier": [
       "error",
       {
-        trailingComma: "es5"
-      }
-    ]
-  }
+        trailingComma: "es5",
+      },
+    ],
+  },
 };

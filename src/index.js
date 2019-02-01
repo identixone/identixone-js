@@ -1,3 +1,3 @@
-import IdxApi  from './IdxApi.js'
+import IdxApi from "./IdxApi.js";
 
-export default IdxApi
+export default IdxApi;

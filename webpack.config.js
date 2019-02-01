@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 const PATHS = {
   src: path.resolve(__dirname, "src"),
-  dist: path.resolve(__dirname, "dist")
+  dist: path.resolve(__dirname, "dist"),
 };
 
 const { NODE_ENV = "development" } = process.env;
@@ -20,7 +20,7 @@ const createConfig = ({ libraryTarget }) => {
       pathinfo: false,
       globalObject: "this",
       library: "IDXApi",
-      libraryTarget
+      libraryTarget,
     },
 
     module: {
@@ -42,41 +42,41 @@ const createConfig = ({ libraryTarget }) => {
                           "last 2 versions",
                           "safari >= 7",
                           "ie > 10",
-                          "not op_mini all"
-                        ]
-                      }
-                    }
-                  ]
+                          "not op_mini all",
+                        ],
+                      },
+                    },
+                  ],
                 ],
-                plugins: ["@babel/plugin-proposal-object-rest-spread"]
-              }
-            }
-          ]
-        }
-      ]
+                plugins: ["@babel/plugin-proposal-object-rest-spread"],
+              },
+            },
+          ],
+        },
+      ],
     },
 
     plugins: [
       new webpack.DefinePlugin({
         "process.env": {
-          NODE_ENV: JSON.stringify(NODE_ENV)
-        }
+          NODE_ENV: JSON.stringify(NODE_ENV),
+        },
       }),
 
-      new CleanWebpackPlugin(PATHS.dist)
+      new CleanWebpackPlugin(PATHS.dist),
     ],
 
     optimization: {
       removeAvailableModules: false,
       removeEmptyChunks: false,
-      splitChunks: false
-    }
+      splitChunks: false,
+    },
   };
 };
 
 module.exports = createVariants(
   {
-    libraryTarget: ["commonjs2", "umd"]
+    libraryTarget: ["commonjs2", "umd"],
   },
   createConfig
 );
