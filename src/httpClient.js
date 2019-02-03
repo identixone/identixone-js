@@ -6,13 +6,15 @@ export class HttpClient {
       baseURL,
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Token ${token}`,
+        Authorization: token && `Token ${token}`,
       },
     });
   }
 
   setToken(token) {
-    this._client.defaults.headers["Authorization"] = `Token ${token}`;
+    if (token) {
+      this._client.defaults.headers["Authorization"] = `Token ${token}`;
+    }
   }
 
   post(url, data) {

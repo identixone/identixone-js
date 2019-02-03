@@ -12,7 +12,7 @@ export default class Persons extends Api {
       data.append(key, restData[key]);
     });
 
-    return this.httpClient.post(`persons/search/`, data);
+    return this.httpClient.post("persons/search/", data);
   }
 
   createPerson({ photo, ...restData }) {
@@ -24,7 +24,7 @@ export default class Persons extends Api {
       data.append(key, restData[key]);
     });
 
-    return this.httpClient.post(`${this.endpoint}/persons/`, data);
+    return this.httpClient.post("persons/", data);
   }
 
   deletePerson(id) {
