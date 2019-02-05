@@ -20,6 +20,23 @@ const comparingResult = IDXApi.utilities.comparePhotos({
 });
 
 comparingResult.then(comparingResult => {
-  console.log({ utilcomparingResultities });
+  console.log({ comparingResult });
+});
+```
+
+## Find out customer
+
+[Identix API](https://kb.identix.one/#/utilities?id=who-is-a-customer)
+
+```js
+import IDXApi from "identix-api-lib-js";
+
+const customer = IDXApi.utilities.findOutCustomer({
+  source: "webcam",
+  offset: 10
+});
+
+comparingResult.then(customer => {
+  console.log({ customer });
 });
 ```

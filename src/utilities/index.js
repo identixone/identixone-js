@@ -13,6 +13,10 @@ export default class Utilities extends Api {
       data.append(key, restData[key]);
     });
 
-    return this.httpClient.post(`utility/compare/`, data);
+    return this.httpClient.post("utility/compare/", data);
+  }
+
+  findOutCustomer({ source, offset }) {
+    return this.httpClient.get("utility/customer/", { source, offset });
   }
 }
