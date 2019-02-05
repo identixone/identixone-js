@@ -13,10 +13,10 @@
 ```js
 import IDXApi from "identix-api-lib-js";
 
-const records = IDXApi.records.getRecords();
+const haRecords = IDXApi.records.getRecords({ ha: true });
 
-records.then(records => {
-  console.log({ records });
+haRecords.then(haRecords => {
+  console.log({ haRecords });
 });
 ```
 
