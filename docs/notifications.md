@@ -20,6 +20,22 @@ notifications.then(notifications => {
 });
 ```
 
+## Get notification
+
+[Identix API](https://kb.identix.one/#/notifications?id=request-of-the-notification-profile-settings)
+
+```js
+import IDXApi from "identix-api-lib-js";
+
+const notificationId = 1;
+
+const notification = IDXApi.notifications.getNotification(notificationId);
+
+notification.then(notification => {
+  console.log({ notification });
+});
+```
+
 ## Create notification
 
 [Identix API](https://kb.identix.one/#/notifications?id=creating-notification-profile)

@@ -13,6 +13,10 @@ export default class Notifications extends Api {
     return this.httpClient.get(SETTINGS_NOTIFICATIONS);
   }
 
+  getNotification(notificationId) {
+    return this.httpClient.get(`${SETTINGS_NOTIFICATIONS}${notificationId}/`);
+  }
+
   /**
    * @param {object} data - parameters of new notification.
    * @return {Promise} Promise object represents the response object

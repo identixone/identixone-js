@@ -2,7 +2,7 @@
 
   - [Quick start](README.md)
 
-- API reference
+- REST API reference
 
   - [Authorization](authorization.md)
   - [User tokens](user-tokens.md)
