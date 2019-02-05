@@ -20,6 +20,22 @@ sources.then(sources => {
 });
 ```
 
+## Get source
+
+[Identix API](https://kb.identix.one/#/sources?id=source-settings-request)
+
+```js
+import IDXApi from "identix-api-lib-js";
+
+const sourceId = 1;
+
+const source = IDXApi.sources.getSource(sourceId);
+
+source.then(source => {
+  console.log({ source });
+});
+```
+
 ## Create source
 
 [Identix API](https://kb.identix.one/#/sources?id=source-creation)
