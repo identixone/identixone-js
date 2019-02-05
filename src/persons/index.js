@@ -1,12 +1,12 @@
 import Api from "../Api";
 
-import { dataURItoBlob } from "../utils/helpers";
+import { addFileToFormData } from "../utils";
 
 export default class Persons extends Api {
   searchPersonByImage({ photo, ...restData }) {
     const data = new FormData();
 
-    data.append("photo", dataURItoBlob(photo));
+    addFileToFormData(data, photo, "photo");
 
     Object.keys(restData).forEach(key => {
       data.append(key, restData[key]);
@@ -18,7 +18,7 @@ export default class Persons extends Api {
   createPerson({ photo, ...restData }) {
     const data = new FormData();
 
-    data.append("photo", dataURItoBlob(photo));
+    addFileToFormData(data, photo, "photo");
 
     Object.keys(restData).forEach(key => {
       data.append(key, restData[key]);
