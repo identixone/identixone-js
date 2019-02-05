@@ -15,6 +15,8 @@ export default class Records extends Api {
     period_start,
     period_end,
     source,
+    qty,
+    pgn_start,
   }) => ({
     new: is_new,
     reinit,
@@ -27,6 +29,8 @@ export default class Records extends Api {
     period_start,
     period_end,
     source,
+    qty,
+    pgn_start,
   });
 
   getRecords(data = {}) {
