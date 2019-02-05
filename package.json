@@ -8,7 +8,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "prepublish": "npm run build",
-    "doc:serve": "npx docsify serve ./docs"
+    "docs:serve": "npx docsify serve ./docs"
   },
   "keywords": [
     "identix",
