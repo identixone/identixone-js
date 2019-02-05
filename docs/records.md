@@ -28,7 +28,7 @@ import IDXApi from "identix-api-lib-js";
 const personId = 1;
 
 const records = IDXApi.records.getRecordsByPersonId({
-  id: personId,
+  personId,
   filters: { ha: true }
 });
 

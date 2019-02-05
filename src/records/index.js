@@ -7,8 +7,8 @@ export default class Records extends Api {
     return this.httpClient.get(RECORDS, filters);
   }
 
-  getRecordsByPersonId({ id, filters = {} }) {
-    return this.httpClient.get(`${RECORDS}${id}/`, filters);
+  getRecordsByPersonId({ personId, filters = {} }) {
+    return this.httpClient.get(`${RECORDS}${personId}/`, filters);
   }
 
   deleteRecord(id) {
