@@ -6,6 +6,32 @@ const SETTINGS_NOTIFICATIONS = "settings/notifications/";
  * Notifications Identix api.
  */
 export default class Notifications extends Api {
+  static getNotificationData = ({
+    name,
+    is_active,
+    transport,
+    http_method,
+    destination_url,
+    conf_thresholds,
+    age_from,
+    age_to,
+    sex,
+    moods,
+    sources,
+  }) => ({
+    name,
+    is_active,
+    transport,
+    http_method,
+    destination_url,
+    conf_thresholds,
+    age_from,
+    age_to,
+    sex,
+    moods,
+    sources,
+  });
+
   /**
    * @return {Promise} Promise object represents the response object
    */
@@ -17,22 +43,17 @@ export default class Notifications extends Api {
     return this.httpClient.get(`${SETTINGS_NOTIFICATIONS}${id}/`);
   }
 
-  /**
-   * @param {object} data - parameters of new notification.
-   * @return {Promise} Promise object represents the response object
-   */
   createNotification(data) {
-    return this.httpClient.post(SETTINGS_NOTIFICATIONS, data);
+    return this.httpClient.post(
+      SETTINGS_NOTIFICATIONS,
+      Notifications.getNotificationData(data)
+    );
   }
 
-  /**
-   * @param {object} notification - parameters for update notification.
-   * @return {Promise} Promise object represents the response object
-   */
-  updateNotification(notification) {
+  updateNotification({ id, ...restData }) {
     return this.httpClient.put(
-      `${SETTINGS_NOTIFICATIONS}${notification.id}/`,
-      notification
+      `${SETTINGS_NOTIFICATIONS}${id}/`,
+      Notifications.getNotificationData(restData)
     );
   }
 
