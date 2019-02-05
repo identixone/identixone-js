@@ -4,7 +4,6 @@
   "description": "Library for work with identix server api",
   "source": "src/index.js",
   "main": "dist/IDXApi.umd.js",
-  "module": "src/index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "prepublish": "npm run build",
