@@ -13,8 +13,8 @@ export default class Notifications extends Api {
     return this.httpClient.get(SETTINGS_NOTIFICATIONS);
   }
 
-  getNotification(notificationId) {
-    return this.httpClient.get(`${SETTINGS_NOTIFICATIONS}${notificationId}/`);
+  getNotification(id) {
+    return this.httpClient.get(`${SETTINGS_NOTIFICATIONS}${id}/`);
   }
 
   /**

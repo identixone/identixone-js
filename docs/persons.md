@@ -58,3 +58,44 @@ person.then(person => {
   console.log({ person });
 });
 ```
+
+## Reinitialize person by record
+
+[Identix API](https://kb.identix.one/#/personas?id=reinitialization-by-record)
+
+```js
+import IDXApi from "identix-api-lib-js";
+
+const recordId = 1;
+
+const person = IDXApi.persons.reinitializePersonByRecord({
+  recordId,
+  faceSize: 100
+});
+
+person.then(person => {
+  console.log({ person });
+});
+```
+
+## Reinitialize person by image
+
+[Identix API](https://kb.identix.one/#/personas?id=reinitialization-by-image)
+
+```js
+import IDXApi from "identix-api-lib-js";
+
+const personId = 1;
+
+const person = IDXApi.persons.reinitializePersonByImage({
+  personId,
+  photo: "dataURIPhoto",
+  source: "webcam",
+  facesize: 100,
+  conf: "ha"
+});
+
+person.then(person => {
+  console.log({ person });
+});
+```
