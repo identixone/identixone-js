@@ -40,7 +40,7 @@ export default class Sources extends Api {
   }
 
   getSource(id) {
-    return this.httpClient.get(`${SOURCES}/${id}/`);
+    return this.httpClient.get(`${SOURCES}${id}/`);
   }
 
   createSource(data) {
@@ -49,12 +49,12 @@ export default class Sources extends Api {
 
   updateSource({ id, ...restData }) {
     return this.httpClient.put(
-      `${SOURCES}/${id}/`,
+      `${SOURCES}${id}/`,
       Sources.getSorceData(restData)
     );
   }
 
   deleteSource(id) {
-    return this.httpClient.delete(`${SOURCES}/${id}/`);
+    return this.httpClient.delete(`${SOURCES}${id}/`);
   }
 }
