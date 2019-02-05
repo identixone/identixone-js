@@ -1,6 +1,7 @@
 - Getting started
 
   - [Quick start](README.md)
+  - [Usage Guide](guide.md)
 
 - REST API reference
 
