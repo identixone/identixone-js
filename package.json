@@ -1,6 +1,6 @@
 {
   "name": "identix-api-lib-js",
-  "version": "0.0.1-beta.6",
+  "version": "0.0.1-beta.7",
   "description": "Library for work with identix server api",
   "source": "src/index.js",
   "main": "dist/IDXApi.umd.js",
