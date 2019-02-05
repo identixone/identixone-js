@@ -1,40 +1,46 @@
-import {
-    post,
-    get,
-    deletes,
-    headersAddBearerToken,
-    CONTENT_TYPE_HEADERS
-} from '../request.js';
-import Api from '../Api'
+import Api from "../Api";
 
-const RECORDS = "records";
+const RECORDS = "records/";
 
 export default class Records extends Api {
-    constructor(props){
-        super(props);
-    }
+  static getFiltersData = ({
+    is_new,
+    reinit,
+    exact,
+    ha,
+    junk,
+    nm,
+    det,
+    id,
+    period_start,
+    period_end,
+    source,
+  }) => ({
+    new: is_new,
+    reinit,
+    exact,
+    ha,
+    junk,
+    nm,
+    det,
+    id,
+    period_start,
+    period_end,
+    source,
+  });
 
-    records(filters) {
-        const headers = headersAddBearerToken(this.token);
-        return get(`${this.endpoint}/${RECORDS}/`, filters, headers)
-            .then(body => {
-                return body
-            });
-    }
+  getRecords(data = {}) {
+    return this.httpClient.get(RECORDS, Records.getFiltersData(data));
+  }
 
-    record({id, filters = {}}) {
-        const headers = headersAddBearerToken(this.token);
-        return get(`${this.endpoint}/${RECORDS}/${id}/`, filters, headers)
-            .then(body => {
-                return body
-            });
-    }
+  getRecordsByPersonId({ personId, filters = {} }) {
+    return this.httpClient.get(
+      `${RECORDS}${personId}/`,
+      Records.getFiltersData(filters)
+    );
+  }
 
-    deleteRecord(id) {
-        const headers = headersAddBearerToken(this.token);
-        return deletes(`${this.endpoint}/entry/${id}/`, null, headers)
-            .then(body => {
-                return body
-            });
-    }
+  deleteRecord(id) {
+    return this.httpClient.delete(`/entry/${id}/`);
+  }
 }
