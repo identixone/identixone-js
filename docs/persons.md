@@ -51,7 +51,9 @@ person.then(() => {
 import IDXApi from "identix-api-lib-js";
 
 const person = IDXApi.persons.searchPersonByImage({
-  photo: "dataURIPhoto"
+  photo: "dataURIPhoto",
+  asm: true,
+  liveness: false
 });
 
 person.then(person => {
@@ -70,7 +72,7 @@ const recordId = 1;
 
 const person = IDXApi.persons.reinitializePersonByRecord({
   recordId,
-  faceSize: 100
+  facesize: 100
 });
 
 person.then(person => {
