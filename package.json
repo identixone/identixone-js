@@ -7,7 +7,8 @@
   "module": "src/index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "doc:serve": "npx docsify serve ./docs"
   },
   "keywords": [
     "identix",
@@ -26,6 +27,7 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
+    "docsify-cli": "^4.3.0",
     "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-prettier": "^3.0.1",

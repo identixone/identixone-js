@@ -3,7 +3,7 @@ import Auth from "./auth/index.js";
 import Records from "./records/index.js";
 import Notifications from "./notifications/index.js";
 import Sources from "./sources/index.js";
-import Utility from "./utility";
+import Utilities from "./Utilities";
 import Persons from "./persons";
 import { HttpClient } from "./httpClient.js";
 
@@ -15,7 +15,7 @@ export default createIdxApi({
   Records,
   Notifications,
   Sources,
-  Utility,
+  Utilities,
   Persons,
   HttpClient,
 });

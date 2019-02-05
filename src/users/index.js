@@ -7,12 +7,13 @@ export default class Users extends Api {
     return this.httpClient.get(USERS_TOKENS, params);
   }
 
-  addToken(data) {
+  /** Спросить у Никиты зачем повторяются 2 ручки */
+  createToken(data) {
     return this.httpClient.post(`login/permanent/`, data);
   }
 
-  updateToken(source) {
-    return this.httpClient.put(`${USERS_TOKENS}${source.id}/`, source);
+  updateToken(token) {
+    return this.httpClient.put(`${USERS_TOKENS}${token.id}/`, token);
   }
 
   deleteToken(id) {

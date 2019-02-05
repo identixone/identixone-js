@@ -17,7 +17,7 @@ export default class Notifications extends Api {
    * @param {object} data - parameters of new notification.
    * @return {Promise} Promise object represents the response object
    */
-  addNotification(data) {
+  createNotification(data) {
     return this.httpClient.post(SETTINGS_NOTIFICATIONS, data);
   }
 

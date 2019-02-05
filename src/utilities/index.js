@@ -2,7 +2,7 @@ import Api from "../Api";
 
 import { dataURItoBlob } from "../utils/helpers";
 
-export default class Utility extends Api {
+export default class Utilities extends Api {
   comparePhotos({ photo1, photo2, ...restData }) {
     const data = new FormData();
 

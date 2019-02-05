@@ -7,7 +7,7 @@ export default class Sources extends Api {
     return this.httpClient.get(SOURCES);
   }
 
-  addSource(data) {
+  createSource(data) {
     return this.httpClient.post(SOURCES, data);
   }
 

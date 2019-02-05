@@ -6,7 +6,7 @@ export default ({
   Notifications,
   Sources,
   Persons,
-  Utility,
+  Utilities,
 }) =>
   class IDXApi {
     constructor({ token = null, endpoint = null }) {
@@ -23,7 +23,7 @@ export default ({
       this.notifications = new Notifications({ httpClient: this.httpClient });
       this.sources = new Sources({ httpClient: this.httpClient });
       this.persons = new Persons({ httpClient: this.httpClient });
-      this.utility = new Utility({ httpClient: this.httpClient });
+      this.utilities = new Utilities({ httpClient: this.httpClient });
     }
 
     init(username, password) {
