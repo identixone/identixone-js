@@ -1,68 +1,67 @@
-import {
-    post,
-    put,
-    get,
-    deletes,
-    headersAddBearerToken,
-    CONTENT_TYPE_HEADERS
-} from '../request.js';
-import Api from '../Api'
+import Api from "../Api";
 
-const SETTINGS_NOTIFICATIONS = "settings/notifications";
+const SETTINGS_NOTIFICATIONS = "settings/notifications/";
 
 /**
  * Notifications Identix api.
  */
 export default class Notifications extends Api {
-    constructor(props){
-        super(props);
-    }
+  static getNotificationData = ({
+    name,
+    is_active,
+    transport,
+    http_method,
+    destination_url,
+    conf_thresholds,
+    age_from,
+    age_to,
+    sex,
+    moods,
+    sources,
+  }) => ({
+    name,
+    is_active,
+    transport,
+    http_method,
+    destination_url,
+    conf_thresholds,
+    age_from,
+    age_to,
+    sex,
+    moods,
+    sources,
+  });
 
-    /**
-     * @return {Promise} Promise object represents the response object
-     */
-    getNotifications() {
-        const headers = headersAddBearerToken(this.token);
-        return get(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/`, null, headers)
-            .then(body => {
-                return body
-            });
-    }
+  /**
+   * @return {Promise} Promise object represents the response object
+   */
+  getNotifications() {
+    return this.httpClient.get(SETTINGS_NOTIFICATIONS);
+  }
 
-    /**
-     * @param {object} params - parameters of new notification.
-     * @return {Promise} Promise object represents the response object
-     */
-    addNotification(params) {
-        const headers = headersAddBearerToken(this.token);
-        return post(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/`, params, headers)
-            .then(body => {
-                return body
-            });
-    }
+  getNotification(id) {
+    return this.httpClient.get(`${SETTINGS_NOTIFICATIONS}${id}/`);
+  }
 
-    /**
-     * @param {object} params - parameters for update notification.
-     * @return {Promise} Promise object represents the response object
-     */
-    updateNotification(notification) {
-        const headers = headersAddBearerToken(this.token);
-        return put(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/${notification.id}/`, notification, headers)
-            .then(body => {
-                return body
-            });
-    }
+  createNotification(data) {
+    return this.httpClient.post(
+      SETTINGS_NOTIFICATIONS,
+      Notifications.getNotificationData(data)
+    );
+  }
 
-    /**
-     * @param {string} id - id of the deleted item.
-     * @return {Promise} Promise object represents the response object
-     */
-    deleteNotification(id) {
-        const headers = headersAddBearerToken(this.token);
-        return deletes(`${this.endpoint}/${SETTINGS_NOTIFICATIONS}/${id}/`, {}, headers)
-            .then(body => {
-                return body
-            });
-    }
+  updateNotification({ id, ...restData }) {
+    return this.httpClient.put(
+      `${SETTINGS_NOTIFICATIONS}${id}/`,
+      Notifications.getNotificationData(restData)
+    );
+  }
 
+  /**
+   * @param {string} id - id of the deleted item.
+   * @return {Promise} Promise object represents the response object
+   */
+  deleteNotification(id) {
+    return this.httpClient.delete(`${SETTINGS_NOTIFICATIONS}${id}/`);
+  }
 }

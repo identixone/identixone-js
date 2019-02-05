@@ -1,51 +1,60 @@
-import {
-    post,
-    put,
-    get,
-    deletes,
-    headersAddBearerToken,
-    CONTENT_TYPE_HEADERS
-} from '../request.js';
-import Api from '../Api'
+import Api from "../Api";
 
-const SOURCES = "sources";
-
+const SOURCES = "sources/";
 
 export default class Sources extends Api {
-    constructor(props) {
-        super(props);
-    }
+  static getSorceData = ({
+    name,
+    identify_facesize_threshold,
+    pps_timestamp,
+    manual_create_facesize_threshold,
+    manual_create_on_ha,
+    manual_create_on_junk,
+    manual_check_asm,
+    auto_create_persons,
+    auto_create_facesize_threshold,
+    auto_create_on_ha,
+    auto_create_on_junk,
+    auto_check_face_angle,
+    auto_check_angle_treshold,
+    auto_check_asm,
+  }) => ({
+    name,
+    identify_facesize_threshold,
+    pps_timestamp,
+    manual_create_facesize_threshold,
+    manual_create_on_ha,
+    manual_create_on_junk,
+    manual_check_asm,
+    auto_create_persons,
+    auto_create_facesize_threshold,
+    auto_create_on_ha,
+    auto_create_on_junk,
+    auto_check_face_angle,
+    auto_check_angle_treshold,
+    auto_check_asm,
+  });
 
-    getSources() {
-        const headers = headersAddBearerToken(this.token);
-        return get(`${this.endpoint}/${SOURCES}/`, null, headers)
-            .then(body => {
-                return body
-            });
-    }
-    
-    addSource(props) {
-        const headers = headersAddBearerToken(this.token);
-        return post(`${this.endpoint}/${SOURCES}/`, props, headers)
-            .then(body => {
-                return body
-            });
-    }
-    
-    updateSource(source) {
-        const headers = headersAddBearerToken(this.token);
-        return put(`${this.endpoint}/${SOURCES}/${source.id}/`, source, headers)
-            .then(body => {
-                return body
-            });
-    }
+  getSources() {
+    return this.httpClient.get(SOURCES);
+  }
 
-    deleteSource(id) {
-        const headers = headersAddBearerToken(this.token);
-        return deletes(`${this.endpoint}/${SOURCES}/${id}/`, {}, headers)
-            .then(body => {
-                return body
-            });
-    }
+  getSource(id) {
+    return this.httpClient.get(`${SOURCES}${id}/`);
+  }
 
+  createSource(data) {
+    return this.httpClient.post(SOURCES, Sources.getSorceData(data));
+  }
+
+  updateSource({ id, ...restData }) {
+    return this.httpClient.put(
+      `${SOURCES}${id}/`,
+      Sources.getSorceData(restData)
+    );
+  }
+
+  deleteSource(id) {
+    return this.httpClient.delete(`${SOURCES}${id}/`);
+  }
 }
