@@ -8,7 +8,8 @@
     "build": "NODE_ENV=production webpack",
     "prepublish": "npm run build",
     "docs:serve": "npx docsify serve ./docs",
-    "test": "npx jest"
+    "test": "npx jest",
+    "test:coverage": "npx jest --coverage"
   },
   "keywords": [
     "identix",
@@ -42,7 +43,6 @@
     "eslint-plugin-jest": "^22.2.2",
     "eslint-plugin-prettier": "^3.0.1",
     "file-api": "^0.10.4",
-    "install": "^0.12.2",
     "jest": "^24.1.0",
     "npm": "^6.7.0",
     "parallel-webpack": "^2.3.0",

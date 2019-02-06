@@ -3,8 +3,9 @@
 /node_modules/
 /docs/
 
+/coverage/
+/__tests__/
+
 .gitignore
 webpack.config.js
 .eslintrc.js
-
-__tests__
