@@ -44,6 +44,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "file-api": "^0.10.4",
     "jest": "^24.1.0",
+    "jest-mock-axios": "^2.1.11",
     "npm": "^6.7.0",
     "parallel-webpack": "^2.3.0",
     "prettier": "^1.16.4",

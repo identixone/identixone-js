@@ -31,7 +31,7 @@ export default class Auth extends Api {
    */
   generatePermanentToken(username, password) {
     return this.httpClient
-      .post(`login/permanent/`, { username, password })
+      .post("login/permanent/", { username, password })
       .then(({ token, user }) => ({ token, user }));
   }
 
