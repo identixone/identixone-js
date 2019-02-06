@@ -1,12 +1,13 @@
-import Users from "./users/index.js";
 import Auth from "./auth/index.js";
+import Users from "./users/index.js";
 import Records from "./records/index.js";
 import Notifications from "./notifications/index.js";
 import Sources from "./sources/index.js";
 import Utilities from "./Utilities";
 import Persons from "./persons";
-import { HttpClient } from "./httpClient.js";
 
+import axios from "axios";
+import createHttpClient from "./httpClient.js";
 import createIdxApi from "./IdxApi.js";
 
 export default createIdxApi({
@@ -17,5 +18,5 @@ export default createIdxApi({
   Sources,
   Utilities,
   Persons,
-  HttpClient,
+  HttpClient: createHttpClient(axios),
 });
