@@ -9,6 +9,7 @@
     "prepublish": "npm run build",
     "docs:serve": "npx docsify serve ./docs",
     "test": "npx jest",
+    "test:watch": "npx jest --watch",
     "test:coverage": "npx jest --coverage"
   },
   "keywords": [
@@ -25,7 +26,8 @@
     ]
   },
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "form-data": "^2.3.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -49,7 +51,7 @@
     "parallel-webpack": "^2.3.0",
     "prettier": "^1.16.4",
     "prettier-eslint": "^8.8.2",
-    "webpack": "^4.29.1",
+    "webpack": "^4.29.2",
     "webpack-cli": "^3.2.3"
   },
   "author": "Nikita Kashtanov",

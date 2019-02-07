@@ -1,3 +1,5 @@
+import { FormData } from "form-data";
+
 import Api from "../Api";
 
 import { addFileToFormData } from "../utils";
