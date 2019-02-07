@@ -1,5 +1,7 @@
 import Api from "../Api";
 
+import { removeEmpty } from "../utils";
+
 const SETTINGS_NOTIFICATIONS = "settings/notifications/";
 
 /**
@@ -43,17 +45,17 @@ export default class Notifications extends Api {
     return this.httpClient.get(`${SETTINGS_NOTIFICATIONS}${id}/`);
   }
 
-  createNotification(data) {
+  createNotification(data = {}) {
     return this.httpClient.post(
       SETTINGS_NOTIFICATIONS,
-      Notifications.getNotificationData(data)
+      removeEmpty(Notifications.getNotificationData(data))
     );
   }
 
-  updateNotification({ id, ...restData }) {
+  updateNotification({ id, ...restData } = {}) {
     return this.httpClient.put(
       `${SETTINGS_NOTIFICATIONS}${id}/`,
-      Notifications.getNotificationData(restData)
+      removeEmpty(Notifications.getNotificationData(restData))
     );
   }
 

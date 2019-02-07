@@ -10,18 +10,20 @@ const PATHS = {
 
 const { NODE_ENV = "development" } = process.env;
 
-const createConfig = ({ libraryTarget }) => {
+const createConfig = ({ target }) => {
   return {
     mode: NODE_ENV,
 
     output: {
       path: PATHS.dist,
-      filename: "IDXApi." + libraryTarget + ".js",
+      filename: "IDXApi." + target + ".js",
       pathinfo: false,
       globalObject: "this",
       library: "IDXApi",
-      libraryTarget,
+      libraryTarget: "umd",
     },
+
+    target,
 
     module: {
       rules: [
@@ -79,7 +81,7 @@ const createConfig = ({ libraryTarget }) => {
 
 module.exports = createVariants(
   {
-    libraryTarget: ["commonjs2", "umd"],
+    target: ["web", "node"],
   },
   createConfig
 );

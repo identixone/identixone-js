@@ -1,12 +1,15 @@
-import Users from "./users/index.js";
-import Auth from "./auth/index.js";
-import Records from "./records/index.js";
-import Notifications from "./notifications/index.js";
-import Sources from "./sources/index.js";
-import Utilities from "./Utilities";
-import Persons from "./persons";
-import { HttpClient } from "./httpClient.js";
+import "isomorphic-form-data";
 
+import Auth from "./auth";
+import Users from "./users";
+import Records from "./records";
+import Notifications from "./notifications";
+import Sources from "./sources";
+import Utilities from "./utilities";
+import Persons from "./persons";
+
+import axios from "axios";
+import createHttpClient from "./httpClient.js";
 import createIdxApi from "./IdxApi.js";
 
 export default createIdxApi({
@@ -17,5 +20,5 @@ export default createIdxApi({
   Sources,
   Utilities,
   Persons,
-  HttpClient,
+  HttpClient: createHttpClient({ client: axios }),
 });

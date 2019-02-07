@@ -3,6 +3,10 @@
 /node_modules/
 /docs/
 
+/coverage/
+/__tests__/
+
 .gitignore
 webpack.config.js
+babel.config.js
 .eslintrc.js
