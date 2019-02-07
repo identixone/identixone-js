@@ -485,4 +485,45 @@ describe("IdxApi test", () => {
       });
     });
   });
+
+  describe("Utilities module test", () => {
+    test("comparePhotos: should send POST request with correct data", () => {
+      const mockedDataToCompare = {
+        photo1: mockedFile,
+        photo2: mockedFile,
+        conf: "ha",
+      };
+
+      const expectedData = {
+        conf: "ha",
+        photo1: {
+          filename: "handsome.jpg",
+          value: mockedFile,
+        },
+        photo2: {
+          filename: "handsome.jpg",
+          value: mockedFile,
+        },
+      };
+
+      api.utilities.comparePhotos(mockedDataToCompare).then(thenFn);
+
+      expect(axios.post).toHaveBeenCalledWith("utility/compare/", {
+        _data: expectedData,
+      });
+    });
+
+    test("findOutCustomer: should send POST request with correct data", () => {
+      const mockedData = {
+        source: "webcam",
+        offset: 100,
+      };
+
+      api.utilities.findOutCustomer(mockedData).then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith("utility/customer/", {
+        params: mockedData,
+      });
+    });
+  });
 });
