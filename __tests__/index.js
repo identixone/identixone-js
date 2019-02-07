@@ -22,6 +22,8 @@ const pathToMockedImage = path.resolve(__dirname, "./__mocks__/mock.jpg");
 global.FormData = FormData;
 
 describe("IdxApi test", () => {
+  const HttpClient = createHttpCilent({ client: axios });
+
   const ApiCreator = createIdxApi({
     Auth,
     Users,
@@ -30,10 +32,16 @@ describe("IdxApi test", () => {
     Sources,
     Utilities,
     Persons,
-    HttpClient: createHttpCilent({ client: axios }),
+    HttpClient,
   });
 
   const api = new ApiCreator({ endpoint, token: "mocked token" });
+
+  api.httpClient._client.defaults = {
+    headers: {
+      Authorization: null,
+    },
+  };
 
   let thenFn;
   let mockedFile;
@@ -52,6 +60,41 @@ describe("IdxApi test", () => {
 
   afterEach(() => {
     axios.reset();
+  });
+
+  describe("Init test", () => {
+    test("should call login with correct params, call setToken, return correct body", () => {
+      const username = "Jane Doe";
+      const password = "04.09.2001";
+
+      const mockedData = {
+        user: "Jane",
+        token: "mocked token",
+      };
+
+      api.init(username, password).then(thenFn);
+
+      expect(axios.post).toHaveBeenCalledWith("login/", {
+        username,
+        password,
+      });
+
+      axios.mockResponse({ data: mockedData });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedData);
+    });
+  });
+
+  describe("SetToken test", () => {
+    test("should set default AUTH header with token to the client instance", () => {
+      const mockedToken = "mocked token";
+
+      api.setToken(mockedToken);
+
+      expect(api.httpClient._client.defaults.headers.Authorization).toEqual(
+        `Token ${mockedToken}`
+      );
+    });
   });
 
   describe("Auth module test", () => {
