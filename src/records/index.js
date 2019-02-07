@@ -1,5 +1,7 @@
 import Api from "../Api";
 
+import { removeEmpty } from "../utils";
+
 const RECORDS = "records/";
 
 export default class Records extends Api {
@@ -34,17 +36,20 @@ export default class Records extends Api {
   });
 
   getRecords(data = {}) {
-    return this.httpClient.get(RECORDS, Records.getFiltersData(data));
+    return this.httpClient.get(
+      RECORDS,
+      removeEmpty(Records.getFiltersData(data))
+    );
   }
 
   getRecordsByPersonId({ personId, filters = {} }) {
     return this.httpClient.get(
       `${RECORDS}${personId}/`,
-      Records.getFiltersData(filters)
+      removeEmpty(Records.getFiltersData(filters))
     );
   }
 
   deleteRecord(id) {
-    return this.httpClient.delete(`/entry/${id}/`);
+    return this.httpClient.delete(`entry/${id}/`);
   }
 }

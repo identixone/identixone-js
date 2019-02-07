@@ -318,4 +318,60 @@ describe("IdxApi test", () => {
       expect(thenFn).toHaveBeenCalledWith(mockedPerson);
     });
   });
+
+  describe("Records module test", () => {
+    const mockedRecord = {
+      id: 1,
+      initial_photo: "https://mocked.com/records/initial/1",
+      detected_photo: "https://mocked.com/records/detected/1",
+      facesize: 10,
+      conf: "ha",
+      detected: "2008-09-15T15:53:00",
+      created: "2008-09-15T15:53:00",
+      age: 12,
+      sex: 0,
+      mood: "fear",
+      source: "webcam",
+    };
+
+    test("getRecords: should return correct array of records", () => {
+      const mockedRecords = [mockedRecord];
+
+      api.records.getRecords().then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith("records/", {
+        params: {},
+      });
+
+      axios.mockResponse({ data: mockedRecords });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedRecords);
+    });
+
+    test("getRecordsByPersonId: should return correct array of records", () => {
+      const personId = 1;
+
+      api.records
+        .getRecordsByPersonId({ personId, filters: { exact: true } })
+        .then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith(`records/${personId}/`, {
+        params: {
+          exact: true,
+        },
+      });
+
+      axios.mockResponse({ data: mockedRecord });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedRecord);
+    });
+
+    test("deleteRecord: should send DELETE request with correct data", () => {
+      const recordId = 1;
+
+      api.records.deleteRecord(recordId).then(thenFn);
+
+      expect(axios.delete).toHaveBeenCalledWith(`entry/${recordId}/`);
+    });
+  });
 });
