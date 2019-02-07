@@ -35,17 +35,17 @@ export default class Records extends Api {
     pgn_start,
   });
 
-  getRecords(data = {}) {
+  getRecords(filters) {
     return this.httpClient.get(
       RECORDS,
-      removeEmpty(Records.getFiltersData(data))
+      filters ? removeEmpty(Records.getFiltersData(filters)) : undefined
     );
   }
 
-  getRecordsByPersonId({ personId, filters = {} } = {}) {
+  getRecordsByPersonId({ personId, filters } = {}) {
     return this.httpClient.get(
       `${RECORDS}${personId}/`,
-      removeEmpty(Records.getFiltersData(filters))
+      filters ? removeEmpty(Records.getFiltersData(filters)) : undefined
     );
   }
 

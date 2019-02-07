@@ -3,3 +3,7 @@ export function removeEmpty(obj) {
     .filter(key => obj[key] !== undefined)
     .reduce((newObj, key) => ({ ...newObj, [key]: obj[key] }), {});
 }
+
+export function isEmpty(obj) {
+  return Object.keys(obj).length === 0;
+}

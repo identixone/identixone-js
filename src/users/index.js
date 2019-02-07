@@ -12,8 +12,8 @@ export default class Users extends Api {
     return this.httpClient.post(`login/permanent/`, data);
   }
 
-  updateToken(token) {
-    return this.httpClient.put(`${USERS_TOKENS}${token.id}/`, token);
+  updateToken({ id, ...restData }) {
+    return this.httpClient.put(`${USERS_TOKENS}${id}/`, restData);
   }
 
   deleteToken(id) {

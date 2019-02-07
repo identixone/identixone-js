@@ -132,9 +132,7 @@ describe("IdxApi test", () => {
 
       api.notifications.getNotifications().then(thenFn);
 
-      expect(axios.get).toHaveBeenCalledWith(SETTINGS_NOTIFICATIONS, {
-        params: {},
-      });
+      expect(axios.get).toHaveBeenCalledWith(SETTINGS_NOTIFICATIONS);
 
       axios.mockResponse({ data: mockedNotifications });
 
@@ -147,8 +145,7 @@ describe("IdxApi test", () => {
       api.notifications.getNotification(notificationId).then(thenFn);
 
       expect(axios.get).toHaveBeenCalledWith(
-        `${SETTINGS_NOTIFICATIONS}${notificationId}/`,
-        { params: {} }
+        `${SETTINGS_NOTIFICATIONS}${notificationId}/`
       );
 
       axios.mockResponse({ data: mockedNotification });
@@ -339,9 +336,7 @@ describe("IdxApi test", () => {
 
       api.records.getRecords().then(thenFn);
 
-      expect(axios.get).toHaveBeenCalledWith("records/", {
-        params: {},
-      });
+      expect(axios.get).toHaveBeenCalledWith("records/");
 
       axios.mockResponse({ data: mockedRecords });
 
@@ -387,9 +382,7 @@ describe("IdxApi test", () => {
 
       api.sources.getSources().then(thenFn);
 
-      expect(axios.get).toHaveBeenCalledWith("sources/", {
-        params: {},
-      });
+      expect(axios.get).toHaveBeenCalledWith("sources/");
 
       axios.mockResponse({ data: mockedSources });
 
@@ -407,9 +400,7 @@ describe("IdxApi test", () => {
 
       api.sources.getSource(sourceId).then(thenFn);
 
-      expect(axios.get).toHaveBeenCalledWith(`sources/${sourceId}/`, {
-        params: {},
-      });
+      expect(axios.get).toHaveBeenCalledWith(`sources/${sourceId}/`);
 
       axios.mockResponse({ data: mockedSource });
 
