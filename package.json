@@ -7,10 +7,10 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "prepublish": "npm run build",
-    "docs:serve": "npx docsify serve ./docs",
-    "test": "npx jest",
-    "test:watch": "npx jest --watch",
-    "test:coverage": "npx jest --coverage"
+    "docs:serve": "docsify serve ./docs",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
     "identix",
