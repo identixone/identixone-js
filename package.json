@@ -3,7 +3,10 @@
   "version": "0.0.1-beta.10",
   "description": "Library for work with identix server api",
   "source": "src/index.js",
-  "main": "dist/IDXApi.umd.js",
+  "main": "dist/IDXApi.node.js",
+  "browser": {
+    "dist/IDXApi.node.js": "dist/IDXApi.web.js"
+  },
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "prepublish": "npm run build",
@@ -27,7 +30,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "form-data": "^2.3.3"
+    "isomorphic-form-data": "^2.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

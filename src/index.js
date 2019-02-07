@@ -1,3 +1,5 @@
+import "isomorphic-form-data";
+
 import Auth from "./auth";
 import Users from "./users";
 import Records from "./records";
