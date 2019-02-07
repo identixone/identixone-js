@@ -396,6 +396,12 @@ describe("IdxApi test", () => {
       expect(thenFn).toHaveBeenCalledWith(mockedSources);
     });
 
+    test("createSource: should send POST request with correct data", () => {
+      api.sources.createSource(mockedSource).then(thenFn);
+
+      expect(axios.post).toHaveBeenCalledWith("sources/", mockedSource);
+    });
+
     test("getSource: should return correct source object", () => {
       const sourceId = 1;
 
