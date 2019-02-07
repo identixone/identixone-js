@@ -3,7 +3,7 @@ import Api from "../Api";
 const USERS_TOKENS = "users/tokens/";
 
 export default class Users extends Api {
-  getTokens(params = {}) {
+  getTokens(params) {
     return this.httpClient.get(USERS_TOKENS, params);
   }
 
@@ -20,7 +20,7 @@ export default class Users extends Api {
     return this.httpClient.delete(`${USERS_TOKENS}${id}/`);
   }
 
-  deleteTokens({ permanent }) {
+  deleteTokens({ permanent } = {}) {
     return this.httpClient.delete(USERS_TOKENS, { permanent });
   }
 }

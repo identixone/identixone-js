@@ -42,7 +42,7 @@ export default class Records extends Api {
     );
   }
 
-  getRecordsByPersonId({ personId, filters = {} }) {
+  getRecordsByPersonId({ personId, filters = {} } = {}) {
     return this.httpClient.get(
       `${RECORDS}${personId}/`,
       removeEmpty(Records.getFiltersData(filters))

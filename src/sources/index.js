@@ -47,14 +47,14 @@ export default class Sources extends Api {
     return this.httpClient.get(`${SOURCES}${id}/`);
   }
 
-  createSource(data) {
+  createSource(data = {}) {
     return this.httpClient.post(
       SOURCES,
       removeEmpty(Sources.getSorceData(data))
     );
   }
 
-  updateSource({ id, ...restData }) {
+  updateSource({ id, ...restData } = {}) {
     return this.httpClient.put(
       `${SOURCES}${id}/`,
       removeEmpty(Sources.getSorceData(restData))

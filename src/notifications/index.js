@@ -45,14 +45,14 @@ export default class Notifications extends Api {
     return this.httpClient.get(`${SETTINGS_NOTIFICATIONS}${id}/`);
   }
 
-  createNotification(data) {
+  createNotification(data = {}) {
     return this.httpClient.post(
       SETTINGS_NOTIFICATIONS,
       removeEmpty(Notifications.getNotificationData(data))
     );
   }
 
-  updateNotification({ id, ...restData }) {
+  updateNotification({ id, ...restData } = {}) {
     return this.httpClient.put(
       `${SETTINGS_NOTIFICATIONS}${id}/`,
       removeEmpty(Notifications.getNotificationData(restData))
