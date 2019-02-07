@@ -16,7 +16,7 @@ import IDXApi from "identix-api-lib-js";
 const comparingResult = IDXApi.utilities.comparePhotos({
   photo1: "dataURIPhoto",
   photo2: "dataURIPhoto",
-  conf: true
+  conf: "ha"
 });
 
 comparingResult.then(comparingResult => {
