@@ -374,4 +374,63 @@ describe("IdxApi test", () => {
       expect(axios.delete).toHaveBeenCalledWith(`entry/${recordId}/`);
     });
   });
+
+  describe("Sources module test", () => {
+    const mockedSource = {
+      name: "My new awesome source",
+      identify_resolution_threshold: 7000,
+      pps_timestamp: 1000,
+    };
+
+    test("getSources: should return correct array of sources", () => {
+      const mockedSources = [mockedSource];
+
+      api.sources.getSources().then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith("sources/", {
+        params: undefined,
+      });
+
+      axios.mockResponse({ data: mockedSources });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedSources);
+    });
+
+    test("getSource: should return correct source object", () => {
+      const sourceId = 1;
+
+      api.sources.getSource(sourceId).then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith(`sources/${sourceId}/`, {
+        params: undefined,
+      });
+
+      axios.mockResponse({ data: mockedSource });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedSource);
+    });
+
+    test("updateSource: should send PUT request with correct data", () => {
+      const sourceId = 1;
+
+      api.sources.updateSource({ id: sourceId, ...mockedSource }).then(thenFn);
+
+      expect(axios.put).toHaveBeenCalledWith(
+        `sources/${sourceId}/`,
+        mockedSource
+      );
+
+      axios.mockResponse({ data: mockedSource });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedSource);
+    });
+
+    test("deleteSource: should send DELETE request with correct data", () => {
+      const sourceId = 1;
+
+      api.sources.deleteSource(sourceId).then(thenFn);
+
+      expect(axios.delete).toHaveBeenCalledWith(`sources/${sourceId}/`);
+    });
+  });
 });
