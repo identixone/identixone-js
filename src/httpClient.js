@@ -20,7 +20,7 @@ export default ({ client }) =>
       return this._client.post(url, data).then(({ data }) => data);
     }
 
-    get(url, params) {
+    get(url, params = {}) {
       return this._client.get(url, { params }).then(({ data }) => data);
     }
 
