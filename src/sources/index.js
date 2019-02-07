@@ -1,3 +1,5 @@
+import { removeEmpty } from "../utils";
+
 import Api from "../Api";
 
 const SOURCES = "sources/";
@@ -6,6 +8,7 @@ export default class Sources extends Api {
   static getSorceData = ({
     name,
     identify_facesize_threshold,
+    identify_resolution_threshold,
     pps_timestamp,
     manual_create_facesize_threshold,
     manual_create_on_ha,
@@ -21,6 +24,7 @@ export default class Sources extends Api {
   }) => ({
     name,
     identify_facesize_threshold,
+    identify_resolution_threshold,
     pps_timestamp,
     manual_create_facesize_threshold,
     manual_create_on_ha,
@@ -43,14 +47,17 @@ export default class Sources extends Api {
     return this.httpClient.get(`${SOURCES}${id}/`);
   }
 
-  createSource(data) {
-    return this.httpClient.post(SOURCES, Sources.getSorceData(data));
+  createSource(data = {}) {
+    return this.httpClient.post(
+      SOURCES,
+      removeEmpty(Sources.getSorceData(data))
+    );
   }
 
-  updateSource({ id, ...restData }) {
+  updateSource({ id, ...restData } = {}) {
     return this.httpClient.put(
       `${SOURCES}${id}/`,
-      Sources.getSorceData(restData)
+      removeEmpty(Sources.getSorceData(restData))
     );
   }
 
