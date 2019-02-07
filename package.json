@@ -3,9 +3,9 @@
   "version": "0.0.1-beta.11",
   "description": "Library for work with identix server api",
   "source": "src/index.js",
-  "main": "dist/IDXApi.node.js",
+  "main": "./dist/IDXApi.node.js",
   "browser": {
-    "dist/IDXApi.node.js": "dist/IDXApi.web.js"
+    "./dist/IDXApi.node.js": "./dist/IDXApi.web.js"
   },
   "scripts": {
     "build": "NODE_ENV=production webpack",
