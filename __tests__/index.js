@@ -430,4 +430,59 @@ describe("IdxApi test", () => {
       expect(axios.delete).toHaveBeenCalledWith(`sources/${sourceId}/`);
     });
   });
+
+  describe("Users module test", () => {
+    const mockedToken = {
+      name: "My new awesome token",
+    };
+
+    test("getTokens: should return correct array of tokens", () => {
+      const mockedTokens = [mockedToken];
+
+      api.users.getTokens().then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith("users/tokens/");
+
+      axios.mockResponse({ data: mockedTokens });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedTokens);
+    });
+
+    test("createToken: should send POST request with correct data", () => {
+      api.users.createToken(mockedToken).then(thenFn);
+
+      expect(axios.post).toHaveBeenCalledWith("login/permanent/", mockedToken);
+    });
+
+    test("updateToken: should send PUT request with correct data", () => {
+      const tokenId = 1;
+
+      api.users.updateToken({ id: tokenId, ...mockedToken }).then(thenFn);
+
+      expect(axios.put).toHaveBeenCalledWith(
+        `users/tokens/${tokenId}/`,
+        mockedToken
+      );
+
+      axios.mockResponse({ data: mockedToken });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedToken);
+    });
+
+    test("deleteToken: should send DELETE request with correct data", () => {
+      const tokenId = 1;
+
+      api.users.deleteToken(tokenId).then(thenFn);
+
+      expect(axios.delete).toHaveBeenCalledWith(`users/tokens/${tokenId}/`);
+    });
+
+    test("deleteTokens: should send DELETE request with correct data", () => {
+      api.users.deleteTokens({ permanent: true }).then(thenFn);
+
+      expect(axios.delete).toHaveBeenCalledWith(`users/tokens/`, {
+        params: { permanent: true },
+      });
+    });
+  });
 });
