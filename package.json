@@ -16,8 +16,8 @@
     "query"
   ],
   "dependencies": {
-    "identix-rest-api-js": "0.0.1-beta.1",
-    "identix-ws-api-js": "0.0.1-beta.1"
+    "@identixone/rest-api": "0.0.1-beta.1",
+    "@identixone/websocket": "0.0.1-beta.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

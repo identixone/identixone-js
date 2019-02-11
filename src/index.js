@@ -1,5 +1,5 @@
-import IDXRestApi from "identix-rest-api-js";
-import { createIDXWsApi } from "identix-ws-api-js";
+import IDXRestApi from "@identixone/rest-api";
+import { createIDXWsApi } from "@identixone/websocket";
 
 export default {
   IDXRestApi,
