@@ -1,5 +1,5 @@
 {
-  "name": "identix-rest-api-js",
+  "name": "@identixone/rest-api",
   "version": "0.0.1-beta.1",
   "description": "Library for work with identix-one REST API",
   "main": "./dist/IDXApi.node.js",
@@ -49,6 +49,6 @@
     ]
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Dmitriy Balashov <mockedcat@gmail.com>",
+  "license": "MIT"
 }
