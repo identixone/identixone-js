@@ -3,7 +3,11 @@ const { apiVersions } = require("../constants");
 
 const WebSocket = require("isomorphic-ws");
 
-const createIDXWsApi = ({ token, version }) => {
+const createIDXWsApi = ({ token, version } = {}) => {
+  if (!token) {
+    throw new Error("You did not specify Identix API token");
+  }
+
   if (!version) {
     throw new Error(
       `You did not specify Identix API version.
