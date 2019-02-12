@@ -1,11 +1,10 @@
 const { EventEmitter } = require("../../base/event-emitter");
-const { apiEndpoints } = require("../../constants");
 
 class IDXWsApiV1 extends EventEmitter {
-  constructor({ token, SocketClient }) {
+  constructor({ token, SocketClient, apiEndpoints }) {
     super();
 
-    Object.assign(this, { token, SocketClient });
+    Object.assign(this, { token, SocketClient, apiEndpoints });
   }
 
   setToken(token) {
@@ -14,7 +13,7 @@ class IDXWsApiV1 extends EventEmitter {
   }
 
   connect() {
-    this.socket = new this.SocketClient(apiEndpoints.v1);
+    this.socket = new this.SocketClient(this.apiEndpoints.v1);
 
     this.socket.onopen = () => {
       this.socket.send(
@@ -27,16 +26,20 @@ class IDXWsApiV1 extends EventEmitter {
       );
 
       this.socket.onmessage = ({ data }) => {
-        const parsedData = JSON.parse(data);
-        if (parsedData.auth === "ok") return;
+        try {
+          const parsedData = JSON.parse(data);
+          if (parsedData.auth === "ok") return;
 
-        this.emit("message", parsedData);
+          this.emit("message", parsedData);
+        } catch (error) {
+          this.emit("error", error);
+        }
       };
 
       this.socket.onclose = data => {
         const { wasClean, reason, code } = data;
 
-        this.emit("close", { wasClean, reason, code });
+        this.emit("disconnect", { wasClean, reason, code });
       };
 
       this.emit("connect");
