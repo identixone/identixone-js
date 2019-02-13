@@ -1,6 +1,6 @@
 {
   "name": "@identixone/rest-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for work with identix-one REST API",
   "main": "./dist/IDXApi.node.js",
   "browser": {
