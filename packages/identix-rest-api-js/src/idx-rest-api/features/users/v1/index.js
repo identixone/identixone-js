@@ -1,4 +1,4 @@
-import Api from "../Api";
+import Api from "../../../../base/api";
 
 const USERS_TOKENS = "users/tokens/";
 

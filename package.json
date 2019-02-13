@@ -16,7 +16,7 @@
     "query"
   ],
   "dependencies": {
-    "@identixone/rest-api": "0.0.1-beta.1",
+    "@identixone/rest-api": "0.0.1-beta.2",
     "@identixone/websocket": "0.0.1-beta.1"
   },
   "devDependencies": {

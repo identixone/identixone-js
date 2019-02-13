@@ -1,6 +1,6 @@
-import Api from "../Api";
+import Api from "../../../../base/api";
 
-import { addFileToFormData } from "../utils";
+import { addFileToFormData } from "../../../../utils";
 
 export default class Utilities extends Api {
   comparePhotos({ photo1, photo2, conf } = {}) {

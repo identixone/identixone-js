@@ -11,9 +11,14 @@
 [Identix API](https://kb.identix.one/#/authorization?id=token-generation)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const token = IDXApi.auth.generateToken();
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const token = IDXRestApi.auth.generateToken();
 
 token.then(token => {
   console.log({ token });
@@ -25,9 +30,14 @@ token.then(token => {
 [Identix API](https://kb.identix.one/#/authorization?id=token-generation)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const permanentToken = IDXApi.auth.generatePermanentToken();
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const permanentToken = IDXRestApi.auth.generatePermanentToken();
 
 permanentToken.then(permanentToken => {
   console.log({ permanentToken });
@@ -39,11 +49,16 @@ permanentToken.then(permanentToken => {
 [Identix API](https://kb.identix.one/#/authorization?id=token-deactivationactivation)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const tokenId = 1;
 
-const token = IDXApi.users.updateToken({ id: tokenId, isActive: false });
+const token = IDXRestApi.users.updateToken({ id: tokenId, isActive: false });
 
 token.then(token => {
   console.log({ token });
@@ -55,11 +70,16 @@ token.then(token => {
 [Identix API](https://kb.identix.one/#/authorization?id=deleting-a-token)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const tokenId = 1;
 
-const token = IDXApi.users.deleteToken(tokenId);
+const token = IDXRestApi.users.deleteToken(tokenId);
 
 token.then(() => {
   console.log("Token was deleted!");
@@ -71,9 +91,14 @@ token.then(() => {
 [Identix API](https://kb.identix.one/#/authorization?id=deleting-all-users-tokens)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const tokens = IDXApi.users.deleteToken({ permanent: true });
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const tokens = IDXRestApi.users.deleteToken({ permanent: true });
 
 tokens.then(() => {
   console.log("All permanent tokens were deleted!");

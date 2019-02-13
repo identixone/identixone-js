@@ -7,12 +7,17 @@
 ## Login
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const username = "Jane Doe";
 const password = "04.09.2001";
 
-const userWithToken = IDXApi.auth.login(username, password);
+const userWithToken = IDXRestApi.auth.login(username, password);
 
 notification.then(userWithToken => {
   console.log({ userWithToken });
@@ -24,11 +29,16 @@ notification.then(userWithToken => {
 !> Note that you got token Id with login response.
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const tokenId = 12;
 
-const logout = IDXApi.auth.logout(tokenId);
+const logout = IDXRestApi.auth.logout(tokenId);
 
 logout.then(() => {
   console.log("Logout successful!");

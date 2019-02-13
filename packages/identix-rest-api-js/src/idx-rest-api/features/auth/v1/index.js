@@ -1,4 +1,4 @@
-import Api from "../Api";
+import Api from "../../../../base/api";
 
 /**
  * Authorization Identix api.

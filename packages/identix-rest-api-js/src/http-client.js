@@ -3,6 +3,8 @@ import { removeEmpty, isEmpty } from "./utils";
 export default ({ client }) =>
   class HttpClient {
     constructor({ baseURL, token }) {
+      Object.assign(this, { baseURL, token });
+
       this._client = client.create({
         baseURL,
         headers: {

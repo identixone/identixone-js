@@ -11,9 +11,14 @@
 [Identix API](https://kb.identix.one/#/records?id=records-request)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const haRecords = IDXApi.records.getRecords({ ha: true });
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const haRecords = IDXRestApi.records.getRecords({ ha: true });
 
 haRecords.then(haRecords => {
   console.log({ haRecords });
@@ -23,11 +28,16 @@ haRecords.then(haRecords => {
 ## Get person records
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const personId = 1;
 
-const records = IDXApi.records.getRecordsByPersonId({
+const records = IDXRestApi.records.getRecordsByPersonId({
   personId,
   filters: { ha: true }
 });
@@ -42,11 +52,16 @@ records.then(records => {
 [Identix API](https://kb.identix.one/#/records?id=record-deleting)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const recordId = 1;
 
-const record = IDXApi.records.deleteRecord(recordId);
+const record = IDXRestApi.records.deleteRecord(recordId);
 
 record.then(() => {
   console.log("Record was deleted!");

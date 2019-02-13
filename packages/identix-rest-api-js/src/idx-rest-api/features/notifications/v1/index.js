@@ -1,6 +1,6 @@
-import Api from "../Api";
+import Api from "../../../../base/api";
 
-import { removeEmpty } from "../utils";
+import { removeEmpty } from "../../../../utils";
 
 const SETTINGS_NOTIFICATIONS = "settings/notifications/";
 
