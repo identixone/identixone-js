@@ -495,6 +495,21 @@ describe("IdxApi test", () => {
       expect(thenFn).toHaveBeenCalledWith(mockedTokens);
     });
 
+    test("getUser: should return correct user data", () => {
+      const mockedUserData = {
+        username: "MyMockedName",
+        group: "MyMockedGroup"
+      };
+
+      api.users.getTokens().then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith("users/me/");
+
+      axios.mockResponse({ data: mockedUserData });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedUserData);
+    });
+
     test("createToken: should send POST request with correct data", () => {
       api.users.createToken(mockedToken).then(thenFn);
 

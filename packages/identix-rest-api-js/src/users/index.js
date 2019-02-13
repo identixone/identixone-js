@@ -23,4 +23,8 @@ export default class Users extends Api {
   deleteTokens({ permanent } = {}) {
     return this.httpClient.delete(USERS_TOKENS, { permanent });
   }
+
+  getUser() {
+    return this.httpClient.get(`users/me`);
+  }
 }
