@@ -1,19 +1,13 @@
 {
-  "name": "identix-api-lib-js",
+  "name": "@identixone/api",
   "version": "0.0.1-beta.13",
   "description": "Library for work with identix server api",
-  "source": "src/index.js",
-  "main": "./dist/IDXApi.node.js",
-  "browser": {
-    "./dist/IDXApi.node.js": "./dist/IDXApi.web.js"
-  },
+  "source": "index.js",
+  "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "prepublish": "npm run build",
-    "docs:serve": "docsify serve ./docs",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage"
+    "docs:serve": "docsify serve ./docs"
   },
   "keywords": [
     "identix",
@@ -21,37 +15,23 @@
     "api",
     "query"
   ],
-  "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "__helpers__",
-      "__mocks__"
-    ]
-  },
   "dependencies": {
-    "axios": "^0.18.0",
-    "isomorphic-form-data": "^2.0.0"
+    "@identixone/rest-api": "0.0.1-beta.2",
+    "@identixone/websocket": "0.0.1-beta.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.3.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
     "@babel/preset-env": "^7.3.1",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
-    "codacy-coverage": "^3.4.0",
     "docsify-cli": "^4.3.0",
+    "dotenv": "^6.2.0",
     "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-jest": "^22.2.2",
     "eslint-plugin-prettier": "^3.0.1",
-    "file-api": "^0.10.4",
-    "jest": "^24.1.0",
-    "jest-mock-axios": "^2.1.11",
-    "npm": "^6.7.0",
     "parallel-webpack": "^2.3.0",
     "prettier": "^1.16.4",
     "prettier-eslint": "^8.8.2",
@@ -59,5 +39,16 @@
     "webpack-cli": "^3.2.3"
   },
   "author": "Nikita Kashtanov",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/identixone/identix-api-lib-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/identixone/identix-api-lib-js/issues"
+  },
+  "homepage": "https://github.com/identixone/identix-api-lib-js#readme"
 }

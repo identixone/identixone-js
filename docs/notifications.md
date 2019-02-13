@@ -11,9 +11,14 @@
 [Identix API](https://kb.identix.one/#/notifications?id=request-of-list-of-notification-profiles)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const notifications = IDXApi.notifications.getNotifications();
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const notifications = IDXRestApi.notifications.getNotifications();
 
 notifications.then(notifications => {
   console.log({ notifications });
@@ -25,11 +30,16 @@ notifications.then(notifications => {
 [Identix API](https://kb.identix.one/#/notifications?id=request-of-the-notification-profile-settings)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const notificationId = 1;
 
-const notification = IDXApi.notifications.getNotification(notificationId);
+const notification = IDXRestApi.notifications.getNotification(notificationId);
 
 notification.then(notification => {
   console.log({ notification });
@@ -41,9 +51,14 @@ notification.then(notification => {
 [Identix API](https://kb.identix.one/#/notifications?id=creating-notification-profile)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const notification = IDXApi.notifications.createNotification({
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const notification = IDXRestApi.notifications.createNotification({
   name: "My new awesome notification",
   is_active: 7000,
   transport: 0,
@@ -67,11 +82,16 @@ notification.then(notification => {
 [Identix API](https://kb.identix.one/#/notifications?id=changing-of-the-notification-profile-settings)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const notificationId = 1;
 
-const notification = IDXApi.notifications.updateNotification({
+const notification = IDXRestApi.notifications.updateNotification({
   id: notificationId,
   is_active: false
 });
@@ -86,11 +106,18 @@ notification.then(notification => {
 [Identix API](https://kb.identix.one/#/notifications?id=deleting-of-notification-profile)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const notificationId = 1;
 
-const notification = IDXApi.notifications.deleteNotification(notificationId);
+const notification = IDXRestApi.notifications.deleteNotification(
+  notificationId
+);
 
 notification.then(() => {
   console.log("Notification was deleted!");

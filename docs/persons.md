@@ -11,9 +11,14 @@
 [Identix API](https://kb.identix.one/#/personas?id=persona-creation-with-an-image)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const person = IDXApi.persons.createPerson({
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const person = IDXRestApi.persons.createPerson({
   photo: "dataURIPhoto",
   source: "webcam",
   facesize: 10,
@@ -32,11 +37,16 @@ person.then(person => {
 [Identix API](https://kb.identix.one/#/personas?id=persona-removal-from-the-database)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const personId = 1;
 
-const person = IDXApi.persons.deletePerson(personId);
+const person = IDXRestApi.persons.deletePerson(personId);
 
 person.then(() => {
   console.log("Person was deleted!");
@@ -48,9 +58,14 @@ person.then(() => {
 [Identix API](https://kb.identix.one/#/personas?id=persona-search-by-image)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const person = IDXApi.persons.searchPersonByImage({
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const person = IDXRestApi.persons.searchPersonByImage({
   photo: "dataURIPhoto",
   asm: true,
   liveness: false
@@ -66,11 +81,16 @@ person.then(person => {
 [Identix API](https://kb.identix.one/#/personas?id=reinitialization-by-record)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const recordId = 1;
 
-const person = IDXApi.persons.reinitializePersonByRecord({
+const person = IDXRestApi.persons.reinitializePersonByRecord({
   recordId,
   facesize: 100
 });
@@ -85,11 +105,16 @@ person.then(person => {
 [Identix API](https://kb.identix.one/#/personas?id=reinitialization-by-image)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const personId = 1;
 
-const person = IDXApi.persons.reinitializePersonByImage({
+const person = IDXRestApi.persons.reinitializePersonByImage({
   personId,
   photo: "dataURIPhoto",
   source: "webcam",

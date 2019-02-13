@@ -11,9 +11,14 @@
 [Identix API](https://kb.identix.one/#/utilities?id=comparison)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const comparingResult = IDXApi.utilities.comparePhotos({
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const comparingResult = IDXRestApi.utilities.comparePhotos({
   photo1: "dataURIPhoto",
   photo2: "dataURIPhoto",
   conf: "ha"
@@ -29,9 +34,14 @@ comparingResult.then(comparingResult => {
 [Identix API](https://kb.identix.one/#/utilities?id=who-is-a-customer)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const customer = IDXApi.utilities.findOutCustomer({
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const customer = IDXRestApi.utilities.findOutCustomer({
   source: "webcam",
   offset: 10
 });

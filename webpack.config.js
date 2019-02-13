@@ -50,10 +50,6 @@ const createConfig = ({ target }) => {
                     },
                   ],
                 ],
-                plugins: [
-                  "@babel/plugin-proposal-object-rest-spread",
-                  "@babel/plugin-proposal-class-properties",
-                ],
               },
             },
           ],
@@ -74,7 +70,6 @@ const createConfig = ({ target }) => {
     optimization: {
       removeAvailableModules: false,
       removeEmptyChunks: false,
-      splitChunks: false,
     },
   };
 };

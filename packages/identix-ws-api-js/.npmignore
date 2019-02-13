@@ -1,0 +1,14 @@
+/.idea/
+/.vscode/
+
+/node_modules/
+
+/coverage/
+/__tests__/
+
+.npmignore
+.gitignore
+
+webpack.config.js
+babel.config.js
+.eslintrc.js
