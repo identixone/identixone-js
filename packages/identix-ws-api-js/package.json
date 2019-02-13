@@ -1,6 +1,6 @@
 {
   "name": "@identixone/websocket",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library for work with identix-one WebSocket API",
   "main": "./dist/IDXApi.node.js",
   "browser": {
