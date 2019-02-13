@@ -11,9 +11,14 @@
 [Identix API](https://kb.identix.one/#/sources?id=list-of-sources-request)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const sources = IDXApi.sources.getSources();
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const sources = IDXRestApi.sources.getSources();
 
 sources.then(sources => {
   console.log({ sources });
@@ -25,11 +30,16 @@ sources.then(sources => {
 [Identix API](https://kb.identix.one/#/sources?id=source-settings-request)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const sourceId = 1;
 
-const source = IDXApi.sources.getSource(sourceId);
+const source = IDXRestApi.sources.getSource(sourceId);
 
 source.then(source => {
   console.log({ source });
@@ -41,9 +51,14 @@ source.then(source => {
 [Identix API](https://kb.identix.one/#/sources?id=source-creation)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
 
-const source = IDXApi.sources.createSource({
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
+
+const source = IDXRestApi.sources.createSource({
   name: "My new awesome source",
   identify_resolution_threshold: 7000,
   pps_timestamp: 1000
@@ -59,11 +74,16 @@ source.then(source => {
 [Identix API](https://kb.identix.one/#/sources?id=deleting-a-source)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const sourceId = 1;
 
-const source = IDXApi.sources.deleteSource(sourceId);
+const source = IDXRestApi.sources.deleteSource(sourceId);
 
 source.then(() => {
   console.log("Source was deleted!");
@@ -75,11 +95,16 @@ source.then(() => {
 [Identix API](https://kb.identix.one/#/sources?id=source-settings-change)
 
 ```js
-import IDXApi from "identix-api-lib-js";
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN
+});
 
 const sourceId = 1;
 
-const source = IDXApi.sources.updateSource({
+const source = IDXRestApi.sources.updateSource({
   id: sourceId,
   identify_resolution_threshold: 7200
 });

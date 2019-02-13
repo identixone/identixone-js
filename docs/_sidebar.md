@@ -13,3 +13,5 @@
   - [Persons](persons.md)
   - [Notifications](notifications.md)
   - [Utilities](utilities.md)
+
+  - [Websocket](websocket.md)
