@@ -25,6 +25,6 @@ export default class Users extends Api {
   }
 
   getUser() {
-    return this.httpClient.get(`users/me`);
+    return this.httpClient.get("users/me/");
   }
 }
