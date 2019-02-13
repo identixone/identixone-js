@@ -2,7 +2,9 @@
 /.vscode/
 
 /node_modules/
-/docs/
+
+/coverage/
+/__tests__/
 
 .npmignore
 .gitignore
