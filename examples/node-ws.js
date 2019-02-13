@@ -18,3 +18,12 @@ testWs.on("connect", () => {
 testWs.on("message", message => {
   console.log("✉️ message received!", { message });
 });
+
+/**
+ * NOTE: if you want to update token
+ * you should connect to socket again
+ * all previos listeners will remain
+ */
+testWs.setToken("a brand new token");
+
+testWs.connect();
