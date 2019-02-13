@@ -1,8 +1,6 @@
 require("dotenv").config();
 
-const {
-  createIDXRestApi,
-} = require("../packages/identix-rest-api-js/dist/IDXApi.node");
+const { createIDXRestApi } = require("@identixone/rest-api");
 
 const { IDENTIXONE_TOKEN } = process.env;
 

@@ -4,18 +4,18 @@ const { createIDXWsApi } = require("@identixone/websocket");
 
 const { IDENTIXONE_TOKEN } = process.env;
 
-const testWs = createIDXWsApi({
+const IDXWsApi = createIDXWsApi({
   version: 1,
   token: IDENTIXONE_TOKEN,
 });
 
-testWs.connect();
+IDXWsApi.connect();
 
-testWs.on("connect", () => {
+IDXWsApi.on("connect", () => {
   console.log("🤝 connected!");
 });
 
-testWs.on("message", message => {
+IDXWsApi.on("message", message => {
   console.log("✉️ message received!", { message });
 });
 
@@ -24,6 +24,6 @@ testWs.on("message", message => {
  * you should connect to socket again
  * all previos listeners will remain
  */
-testWs.setToken("a brand new token");
+IDXWsApi.setToken("a brand new token");
 
-testWs.connect();
+IDXWsApi.connect();

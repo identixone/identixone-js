@@ -5,21 +5,26 @@
 ### NPM
 
 ```bash
-npm i --save identix-rest-api-js
+npm i --save @identixone/rest-api
 ```
 
 ### Yarn
 
 ```bash
-yarn add identix-rest-api-js
+yarn add @identixone/rest-api
 ```
 
 ## Usage
 
 ```js
 // ES2015 module import:
-import IDXRestApi from "identix-rest-api-js";
+import { createIDXRestApi } from "@identixone/rest-api";
 
 // CommonJS module require:
-const IDXRestApi = require("identix-rest-api-js");
+const { createIDXRestApi } = require("@identixone/rest-api");
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: "YOUR_IDENTIXONE_TOKEN"
+});
 ```
