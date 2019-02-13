@@ -538,7 +538,7 @@ describe("IdxApi test", () => {
         group: "MyMockedGroup",
       };
 
-      api.users.getTokens().then(thenFn);
+      api.users.getUser().then(thenFn);
 
       expect(axios.get).toHaveBeenCalledWith("users/me/");
 

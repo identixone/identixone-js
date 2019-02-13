@@ -9,14 +9,6 @@ describe("createIDXWsApi test", () => {
   const existedVersions = [1];
   const nonExistedVersion = 999;
 
-  test("should throw a non setted token error", () => {
-    const call = () => {
-      createIDXWsApi();
-    };
-
-    expect(call).toThrow(new Error("You did not specify Identix API token"));
-  });
-
   test("should throw a non setted version error", () => {
     const call = () => {
       createIDXWsApi({ token: mockedToken });
