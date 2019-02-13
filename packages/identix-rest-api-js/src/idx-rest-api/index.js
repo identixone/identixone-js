@@ -15,10 +15,6 @@ import { IDXRestApi } from "./idx-rest-api";
 import { apiEndpoints, apiVersions } from "../constants";
 
 export const createIDXRestApi = ({ token, version } = {}) => {
-  if (!token) {
-    throw new Error("You did not specify Identix API token");
-  }
-
   if (!version) {
     throw new Error(
       `You did not specify Identix API version.
