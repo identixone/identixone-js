@@ -531,6 +531,21 @@ describe("IdxApi test", () => {
         params: { permanent: true },
       });
     });
+
+    test("getUser: should return correct user data", () => {
+      const mockedUserData = {
+        username: "MyMockedName",
+        group: "MyMockedGroup",
+      };
+
+      api.users.getTokens().then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith("users/me/");
+
+      axios.mockResponse({ data: mockedUserData });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedUserData);
+    });
   });
 
   describe("Utilities module test", () => {
