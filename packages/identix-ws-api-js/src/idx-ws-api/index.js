@@ -1,5 +1,5 @@
 const { IDXWsApiV1 } = require("./v1");
-const { apiVersions } = require("../constants");
+const { apiVersions, apiEndpoints } = require("../constants");
 
 const WebSocket = require("isomorphic-ws");
 
@@ -29,6 +29,7 @@ const createIDXWsApi = ({ token, version } = {}) => {
       return new IDXWsApiV1({
         SocketClient: WebSocket,
         token,
+        apiEndpoints,
       });
   }
 };

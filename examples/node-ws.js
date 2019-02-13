@@ -24,6 +24,3 @@ IDXWsApi.on("message", message => {
  * you should connect to socket again
  * all previos listeners will remain
  */
-IDXWsApi.setToken("a brand new token");
-
-IDXWsApi.connect();
