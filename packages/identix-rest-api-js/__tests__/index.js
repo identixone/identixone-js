@@ -48,7 +48,11 @@ describe("IdxApi test", () => {
 
   beforeAll(done => {
     readFile(pathToMockedImage).then(fileBuffer => {
-      mockedFile = new File({ buffer: fileBuffer, name: "handsome.jpg" });
+      mockedFile = new File({
+        buffer: fileBuffer,
+        name: "handsome.jpg",
+        type: "image/jpeg",
+      });
 
       done();
     });

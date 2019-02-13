@@ -31,7 +31,11 @@ describe("addFileToFormData test", () => {
     let mockedFile;
 
     beforeAll(() => {
-      mockedFile = new File({ buffer: readedFile, name: fileName });
+      mockedFile = new File({
+        buffer: readedFile,
+        name: fileName,
+        type: "image/jpeg",
+      });
     });
 
     test("should append binary file to form data with setted filename", () => {
