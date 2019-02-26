@@ -39,4 +39,8 @@ export class IDXRestApi {
   setToken(token) {
     this.httpClient.setToken(token);
   }
+
+  deleteToken() {
+    this.httpClient.deleteToken();
+  }
 }
