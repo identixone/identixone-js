@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Library for work with identix server api",
   "source": "index.js",
-  "main": "index.js",
+  "main": "./dist/IDXApi.node.js",
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "prepublish": "npm run build",
