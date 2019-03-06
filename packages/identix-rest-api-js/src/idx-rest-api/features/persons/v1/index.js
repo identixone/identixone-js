@@ -10,7 +10,7 @@ export default class Persons extends Api {
     addFileToFormData(data, photo, "photo");
 
     Object.keys(fieldsData).forEach(key => {
-      data.append(key, fieldsData[key]);
+      fieldsData[key] && data.append(key, fieldsData[key]);
     });
 
     return this.httpClient.post("persons/search/", data);
