@@ -1,6 +1,6 @@
 import Api from "../../../../base/api";
 
-import { addFileToFormData } from "../../../../utils";
+import { addFileToFormData, isExist } from "../../../../utils";
 
 export default class Persons extends Api {
   searchPersonByImage({ photo, asm, liveness } = {}) {
@@ -10,7 +10,7 @@ export default class Persons extends Api {
     addFileToFormData(data, photo, "photo");
 
     Object.keys(fieldsData).forEach(key => {
-      fieldsData[key] && data.append(key, fieldsData[key]);
+      isExist(fieldsData[key]) && data.append(key, fieldsData[key]);
     });
 
     return this.httpClient.post("persons/search/", data);
