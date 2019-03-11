@@ -19,6 +19,7 @@ export default class Records extends Api {
     source,
     qty,
     pgn_start,
+    last
   }) => ({
     new: is_new,
     reinit,
@@ -33,6 +34,7 @@ export default class Records extends Api {
     source,
     qty,
     pgn_start,
+    last
   });
 
   getRecords(filters) {
