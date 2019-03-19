@@ -21,7 +21,7 @@ export default ({ client }) =>
     }
 
     deleteToken() {
-        delete this._client.defaults.headers["Authorization"]
+      delete this._client.defaults.headers["Authorization"];
     }
 
     post(url, data) {

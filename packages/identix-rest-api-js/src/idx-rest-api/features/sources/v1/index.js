@@ -57,29 +57,29 @@ export default class Sources extends Api {
     store_images_for_confs,
   });
 
-  getSources() {
+  getSources = () => {
     return this.httpClient.get(SOURCES);
-  }
+  };
 
-  getSource(id) {
+  getSource = id => {
     return this.httpClient.get(`${SOURCES}${id}/`);
-  }
+  };
 
-  createSource(data = {}) {
+  createSource = (data = {}) => {
     return this.httpClient.post(
       SOURCES,
       removeEmpty(Sources.getSorceData(data))
     );
-  }
+  };
 
-  updateSource({ id, ...restData } = {}) {
+  updateSource = ({ id, ...restData } = {}) => {
     return this.httpClient.put(
       `${SOURCES}${id}/`,
       removeEmpty(Sources.getSorceData(restData))
     );
-  }
+  };
 
-  deleteSource(id) {
+  deleteSource = id => {
     return this.httpClient.delete(`${SOURCES}${id}/`);
-  }
+  };
 }
