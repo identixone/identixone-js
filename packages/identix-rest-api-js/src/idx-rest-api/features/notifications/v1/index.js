@@ -39,33 +39,33 @@ export default class Notifications extends Api {
   /**
    * @return {Promise} Promise object represents the response object
    */
-  getNotifications() {
+  getNotifications = () => {
     return this.httpClient.get(SETTINGS_NOTIFICATIONS);
-  }
+  };
 
-  getNotification(id) {
+  getNotification = id => {
     return this.httpClient.get(`${SETTINGS_NOTIFICATIONS}${id}/`);
-  }
+  };
 
-  createNotification(data = {}) {
+  createNotification = (data = {}) => {
     return this.httpClient.post(
       SETTINGS_NOTIFICATIONS,
       removeEmpty(Notifications.getNotificationData(data))
     );
-  }
+  };
 
-  updateNotification({ id, ...restData } = {}) {
+  updateNotification = ({ id, ...restData } = {}) => {
     return this.httpClient.put(
       `${SETTINGS_NOTIFICATIONS}${id}/`,
       removeEmpty(Notifications.getNotificationData(restData))
     );
-  }
+  };
 
   /**
    * @param {string} id - id of the deleted item.
    * @return {Promise} Promise object represents the response object
    */
-  deleteNotification(id) {
+  deleteNotification = id => {
     return this.httpClient.delete(`${SETTINGS_NOTIFICATIONS}${id}/`);
-  }
+  };
 }

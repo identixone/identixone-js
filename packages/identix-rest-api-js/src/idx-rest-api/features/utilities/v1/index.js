@@ -3,7 +3,7 @@ import Api from "../../../../base/api";
 import { addFileToFormData } from "../../../../utils";
 
 export default class Utilities extends Api {
-  comparePhotos({ photo1, photo2, conf } = {}) {
+  comparePhotos = ({ photo1, photo2, conf } = {}) => {
     const fieldsData = { conf };
     const data = new FormData();
 
@@ -15,9 +15,9 @@ export default class Utilities extends Api {
     });
 
     return this.httpClient.post("utility/compare/", data);
-  }
+  };
 
-  findOutCustomer({ source, offset } = {}) {
+  findOutCustomer = ({ source, offset } = {}) => {
     return this.httpClient.get("utility/customer/", { source, offset });
-  }
+  };
 }

@@ -19,7 +19,7 @@ export default class Records extends Api {
     source,
     qty,
     pgn_start,
-    last
+    last,
   }) => ({
     new: is_new,
     reinit,
@@ -34,24 +34,24 @@ export default class Records extends Api {
     source,
     qty,
     pgn_start,
-    last
+    last,
   });
 
-  getRecords(filters) {
+  getRecords = filters => {
     return this.httpClient.get(
       RECORDS,
       filters ? removeEmpty(Records.getFiltersData(filters)) : undefined
     );
-  }
+  };
 
-  getRecordsByPersonId({ personId, filters } = {}) {
+  getRecordsByPersonId = ({ personId, filters } = {}) => {
     return this.httpClient.get(
       `${RECORDS}${personId}/`,
       filters ? removeEmpty(Records.getFiltersData(filters)) : undefined
     );
-  }
+  };
 
-  deleteRecord(id) {
+  deleteRecord = id => {
     return this.httpClient.delete(`entry/${id}/`);
-  }
+  };
 }
