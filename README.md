@@ -20,19 +20,23 @@ yarn add @identixone/api
 
 ```js
 // ES2015 module import:
-import { createIDXRestApi, createIDXWsApi } from "@identixone/api";
+import IDXApi from "@identixone/api";
 
 // CommonJS module require:
-const { createIDXRestApi, createIDXWsApi } = require("@identixone/api");
+const IDXApi = require("@identixone/api");
 
+const { createIDXRestApi, createIDXRestApi } = IDXApi;
+
+// REST
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: "YOUR_IDENTIXONE_TOKEN"
+  token: "YOUR_IDENTIXONE_TOKEN",
 });
 
-const IDXWsApi = createIDXWsApi({
+// WebSocket
+const IDXWsApi = createIDXRestApi({
   version: 1,
-  token: "YOUR_IDENTIXONE_TOKEN"
+  token: "YOUR_IDENTIXONE_TOKEN",
 });
 
 IDXWsApi.connect();
