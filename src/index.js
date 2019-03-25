@@ -1,7 +1,7 @@
-import IDXRestApi from "@identixone/rest-api";
+import { createIDXRestApi } from "@identixone/rest-api";
 import { createIDXWsApi } from "@identixone/websocket";
 
 export default {
-  IDXRestApi,
+  createIDXRestApi,
   createIDXWsApi,
 };
