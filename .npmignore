@@ -1,5 +1,6 @@
 /.idea/
 /.vscode/
+/.git/
 
 /node_modules/
 /docs/
@@ -10,3 +11,4 @@
 webpack.config.js
 babel.config.js
 .eslintrc.js
+.env
