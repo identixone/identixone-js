@@ -40,6 +40,7 @@ export default class Notifications extends Api {
    * @return {Promise} Promise object represents the response object
    */
   getNotifications = () => {
+    console.log("NOTIFICATIONS");
     return this.httpClient.get(SETTINGS_NOTIFICATIONS);
   };
 
