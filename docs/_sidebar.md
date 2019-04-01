@@ -9,7 +9,8 @@
   - [User tokens](user-tokens.md)
 
   - [Sources](sources.md)
-  - [Records](records.md)
+  - [Records (DEPRECATED)](records.md)
+  - [Entries](entries.md)
   - [Persons](persons.md)
   - [Notifications](notifications.md)
   - [Utilities](utilities.md)
