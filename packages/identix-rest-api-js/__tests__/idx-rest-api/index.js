@@ -179,9 +179,13 @@ describe("IdxApi test", () => {
     test("getNotifications: should return correct array of notifications", () => {
       const mockedNotifications = [mockedNotification];
 
-      api.notifications.getNotifications().then(thenFn);
+      api.notifications
+        .getNotifications({ q: "some q", limit: 20, offset: 0 })
+        .then(thenFn);
 
-      expect(axios.get).toHaveBeenCalledWith(SETTINGS_NOTIFICATIONS);
+      expect(axios.get).toHaveBeenCalledWith(SETTINGS_NOTIFICATIONS, {
+        params: { q: "some q", limit: 20, offset: 0 },
+      });
 
       axios.mockResponse({ data: mockedNotifications });
 
@@ -539,9 +543,13 @@ describe("IdxApi test", () => {
     test("getSources: should return correct array of sources", () => {
       const mockedSources = [mockedSource];
 
-      api.sources.getSources().then(thenFn);
+      api.sources
+        .getSources({ q: "some q", limit: 20, offset: 0 })
+        .then(thenFn);
 
-      expect(axios.get).toHaveBeenCalledWith("sources/");
+      expect(axios.get).toHaveBeenCalledWith("sources/", {
+        params: { q: "some q", limit: 20, offset: 0 },
+      });
 
       axios.mockResponse({ data: mockedSources });
 

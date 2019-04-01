@@ -39,8 +39,19 @@ export default class Notifications extends Api {
   /**
    * @return {Promise} Promise object represents the response object
    */
-  getNotifications = () => {
-    return this.httpClient.get(SETTINGS_NOTIFICATIONS);
+  getNotifications = filters => {
+    const getFiltersData = ({ q, limit, offset }) => ({
+      q,
+      limit,
+      offset,
+    });
+
+    return this.httpClient.get(
+      SETTINGS_NOTIFICATIONS,
+      typeof filters === "object"
+        ? removeEmpty(getFiltersData(filters))
+        : undefined
+    );
   };
 
   getNotification = id => {
