@@ -6,6 +6,7 @@ export class IDXRestApi {
     Auth,
     Users,
     Records,
+    Entries,
     Notifications,
     Sources,
     Persons,
@@ -21,6 +22,7 @@ export class IDXRestApi {
     this.auth = new Auth({ httpClient: this.httpClient });
     this.users = new Users({ httpClient: this.httpClient });
     this.records = new Records({ httpClient: this.httpClient });
+    this.entries = new Entries({ httpClient: this.httpClient });
     this.notifications = new Notifications({ httpClient: this.httpClient });
     this.sources = new Sources({ httpClient: this.httpClient });
     this.persons = new Persons({ httpClient: this.httpClient });

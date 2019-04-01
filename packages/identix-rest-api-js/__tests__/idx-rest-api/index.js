@@ -11,6 +11,7 @@ import { IDXRestApi } from "../../src/idx-rest-api/idx-rest-api";
 import Auth from "../../src/idx-rest-api/features/auth/v1";
 import Users from "../../src/idx-rest-api/features/users/v1";
 import Records from "../../src/idx-rest-api/features/records/v1";
+import Entries from "../../src/idx-rest-api/features/entries/v1";
 import Notifications from "../../src/idx-rest-api/features/notifications/v1";
 import Sources from "../../src/idx-rest-api/features/sources/v1";
 import Utilities from "../../src/idx-rest-api/features/utilities/v1";
@@ -30,6 +31,7 @@ describe("IdxApi test", () => {
     Auth,
     Users,
     Records,
+    Entries,
     Notifications,
     Sources,
     Utilities,
@@ -414,6 +416,116 @@ describe("IdxApi test", () => {
       api.records.deleteRecord(recordId).then(thenFn);
 
       expect(axios.delete).toHaveBeenCalledWith(`entry/${recordId}/`);
+    });
+  });
+
+  describe("Entries module test", () => {
+    /**
+     *  "id": integer, //порядковый идентификатор данной записи в бд
+        "created": ISO8601, //время детекции персоны время создания карточки персоны (первой детекции) 
+        "photo": url, //путь до фото, произведенного в момент детекции персоны
+        "source": {
+            "id": integer, //id источника данных
+            "name": string //имя источника данных
+        },
+        "facesize": integer, //размер площади лица в пикселях
+        "age": num, //возраст персоны
+        "sex": integer, //пол персоны, 0 (male) или 1 (female)
+        "mood": string, //настроение персоны
+        "liveness": string, //статус проверки изображения на liveness
+        "idxid": string, //уникальный идентификатор персоны в платформе
+        "conf": string, //точность идентификации и результата
+        "idxid_created": ISO8601, //время создания карточки персоны/первой детекции персоны
+        "initial_photo": url //путь до первичного фото
+     */
+
+    const mockedEntry = {
+      id: 1,
+      created: "2008-09-15T15:53:00",
+      photo: "https://mocked.com/entries/detected/1",
+      initial_photo: "https://mocked.com/entries/initial/1",
+      source: {
+        id: 0,
+        name: "webcam",
+      },
+      facesize: 10,
+      age: 12,
+      sex: 0,
+      mood: "fear",
+      liveness: "passed",
+      conf: "ha",
+      detected: "2008-09-15T15:53:00",
+    };
+
+    test("getEntries: should return correct array of entries", () => {
+      const mockedEntries = [mockedEntry];
+      const mockedFilters = {
+        idxid: "1, 2",
+        conf: "some_conf",
+        liveness: "some_liveness",
+        source: 2,
+        id_from: 100,
+        date_from: "some_date_from",
+        date_to: "some_date_to",
+        limit: 100,
+        offset: 20,
+      };
+
+      api.entries.getEntries(mockedFilters).then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith("entries/", {
+        params: mockedFilters,
+      });
+
+      axios.mockResponse({ data: mockedEntries });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedEntries);
+    });
+
+    test("getEntriesStatsByPersonId: should return correct object with stats of a person", () => {
+      const personId = 1;
+
+      api.entries.getEntriesStatsByPersonId(personId).then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith(
+        `entries/stats/idxid/${personId}/`
+      );
+
+      axios.mockResponse({ data: mockedEntry });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedEntry);
+    });
+
+    test("getEntriesStatsBySources: should return correct array with stats of a sources", () => {
+      const mockedEntries = [mockedEntry];
+      const mockedFilters = {
+        idxid: "1, 2",
+        conf: "some_conf",
+        liveness: "some_liveness",
+        source: 2,
+        entry_id_from: 100,
+        date_from: "some_date_from",
+        date_to: "some_date_to",
+        limit: 100,
+        offset: 20,
+      };
+      api.entries.getEntriesStatsBySources(mockedFilters).then(thenFn);
+
+      expect(axios.get).toHaveBeenCalledWith(`entries/stats/sources/`, {
+        params: mockedFilters,
+      });
+
+      axios.mockResponse({ data: mockedEntries });
+
+      expect(thenFn).toHaveBeenCalledWith(mockedEntries);
+    });
+
+    test("deleteRecord: should send DELETE request with correct data", () => {
+      const entryId = 1;
+
+      api.entries.deleteEntry(entryId).then(thenFn);
+
+      expect(axios.delete).toHaveBeenCalledWith(`entries/${entryId}/`);
     });
   });
 

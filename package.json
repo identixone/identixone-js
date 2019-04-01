@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "docs:serve": "docsify serve ./docs"
   },
   "keywords": [

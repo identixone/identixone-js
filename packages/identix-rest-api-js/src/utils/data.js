@@ -9,5 +9,5 @@ export function isEmpty(obj) {
 }
 
 export function isExist(prop) {
-  return typeof prop !== "undefined"
+  return typeof prop !== "undefined";
 }
