@@ -38,7 +38,6 @@ export default class Records extends Api {
   });
 
   getRecords = filters => {
-    console.log("RECORDS");
     return this.httpClient.get(
       RECORDS,
       filters ? removeEmpty(Records.getFiltersData(filters)) : undefined
