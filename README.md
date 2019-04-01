@@ -20,12 +20,10 @@ yarn add @identixone/api
 
 ```js
 // ES2015 module import:
-import IDXApi from "@identixone/api";
+import { createIDXRestApi, createIDXRestApi } from "@identixone/api";
 
 // CommonJS module require:
-const IDXApi = require("@identixone/api");
-
-const { createIDXRestApi, createIDXRestApi } = IDXApi;
+const { createIDXRestApi, createIDXRestApi } = require("@identixone/api");
 
 // REST
 const IDXRestApi = createIDXRestApi({

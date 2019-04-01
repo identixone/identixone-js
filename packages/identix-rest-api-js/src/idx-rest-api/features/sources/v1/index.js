@@ -57,8 +57,19 @@ export default class Sources extends Api {
     store_images_for_confs,
   });
 
-  getSources = () => {
-    return this.httpClient.get(SOURCES);
+  getSources = filters => {
+    const getFiltersData = ({ q, limit, offset }) => ({
+      q,
+      limit,
+      offset,
+    });
+
+    return this.httpClient.get(
+      SOURCES,
+      typeof filters === "object"
+        ? removeEmpty(getFiltersData(filters))
+        : undefined
+    );
   };
 
   getSource = id => {

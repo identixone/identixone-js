@@ -1,7 +1,7 @@
-import { createIDXRestApi } from "@identixone/rest-api";
-import { createIDXWsApi } from "@identixone/websocket";
+const { createIDXRestApi } = require("@identixone/rest-api");
+const { createIDXWsApi } = require("@identixone/websocket");
 
-export default {
+module.exports = {
   createIDXRestApi,
   createIDXWsApi,
 };
