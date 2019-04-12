@@ -464,7 +464,7 @@ describe("IdxApi test", () => {
     test("getEntries: should return correct array of entries", () => {
       const mockedEntries = [mockedEntry];
       const mockedFilters = {
-        idxid: "1, 2",
+        idxid: "1,2",
         conf: "some_conf",
         liveness: "some_liveness",
         source: 2,
@@ -473,6 +473,10 @@ describe("IdxApi test", () => {
         date_to: "some_date_to",
         limit: 100,
         offset: 20,
+        mood: "happiness,fear",
+        age_from: 10,
+        age_to: 13,
+        sex: "0,1",
       };
 
       api.entries.getEntries(mockedFilters).then(thenFn);
@@ -503,7 +507,7 @@ describe("IdxApi test", () => {
     test("getEntriesStatsBySources: should return correct array with stats of a sources", () => {
       const mockedEntries = [mockedEntry];
       const mockedFilters = {
-        idxid: "1, 2",
+        idxid: "1,2",
         conf: "some_conf",
         liveness: "some_liveness",
         source: 2,
@@ -512,6 +516,10 @@ describe("IdxApi test", () => {
         date_to: "some_date_to",
         limit: 100,
         offset: 20,
+        mood: "happiness,fear",
+        age_from: 10,
+        age_to: 13,
+        sex: "0,1",
       };
       api.entries.getEntriesStatsBySources(mockedFilters).then(thenFn);
 

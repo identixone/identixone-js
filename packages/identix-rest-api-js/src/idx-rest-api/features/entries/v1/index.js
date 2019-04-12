@@ -14,6 +14,10 @@ const ENTRIES = "entries/";
   date_to: ISO8601 - конец периода выборки
   limit: integer - количество записей в выдаче, максимальное кол-во записей в одном запросе 1000
   offset: integer - порядковый номер записи в выдаче, с которого следует показывать выборку
+  sex: 0,1,null (можно через запятую несколько значений)
+  mood: neutral,surprise,anger,happiness,fear,sadness,disgust,contempt (можно через запятую несколько значений)
+  age_from: int
+  age_to: int
  */
 
 export default class Entries extends Api {
@@ -28,6 +32,10 @@ export default class Entries extends Api {
       date_to,
       limit,
       offset,
+      sex,
+      mood,
+      age_from,
+      age_to,
     }) => ({
       idxid,
       conf,
@@ -38,6 +46,10 @@ export default class Entries extends Api {
       date_to,
       limit,
       offset,
+      sex,
+      mood,
+      age_from,
+      age_to,
     });
 
     return this.httpClient.get(
@@ -63,6 +75,10 @@ export default class Entries extends Api {
       date_to,
       limit,
       offset,
+      sex,
+      mood,
+      age_from,
+      age_to,
     }) => ({
       idxid,
       conf,
@@ -73,6 +89,10 @@ export default class Entries extends Api {
       date_to,
       limit,
       offset,
+      sex,
+      mood,
+      age_from,
+      age_to,
     });
 
     return this.httpClient.get(
