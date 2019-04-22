@@ -79,6 +79,7 @@ export default class Entries extends Api {
       mood,
       age_from,
       age_to,
+      q,
     }) => ({
       idxid,
       conf,
@@ -93,6 +94,7 @@ export default class Entries extends Api {
       mood,
       age_from,
       age_to,
+      q,
     });
 
     return this.httpClient.get(
