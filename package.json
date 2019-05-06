@@ -10,7 +10,9 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "prepublishOnly": "npm run build",
-    "docs:serve": "docsify serve ./docs"
+    "docs:serve": "docsify serve ./docs",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "identix",
@@ -20,7 +22,8 @@
   ],
   "dependencies": {
     "@identixone/rest-api": "^1.5.0",
-    "@identixone/websocket": "^1.0.2"
+    "@identixone/websocket": "^1.0.2",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
@@ -53,5 +56,6 @@
   "bugs": {
     "url": "https://github.com/identixone/identix-api-lib-js/issues"
   },
-  "homepage": "https://github.com/identixone/identix-api-lib-js#readme"
+  "homepage": "https://github.com/identixone/identix-api-lib-js#readme",
+  "snyk": true
 }
