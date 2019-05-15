@@ -715,5 +715,27 @@ describe("IdxApi test", () => {
         params: mockedData,
       });
     });
+
+    test("verifyPersonPhotoWithDocumentPhoto: should send POST request with correct data", () => {
+      const mockedDataToVerify = {
+        // photo1: mockedFile,
+        // photo2: mockedFile,
+        id_type: "some.id.type",
+      };
+
+      const expectedData = {
+        // photo1: mockedFile,
+        // photo2: mockedFile,
+        id_type: "some.id.type",
+      };
+
+      api.utilities
+        .verifyPersonPhotoWithDocumentPhoto(mockedDataToVerify)
+        .then(thenFn);
+
+      expect(axios.post).toHaveBeenCalledWith("faceid/verification/", {
+        _data: expectedData,
+      });
+    });
   });
 });

@@ -53,14 +53,17 @@ export default class Utilities extends Api {
       conf,
       liveness_photo1,
     };
+    console.log(fieldsData);
     const data = new FormData();
 
-    addFileToFormData(data, photo1, "photo1");
-    addFileToFormData(data, photo2, "photo2");
+    // addFileToFormData(data, photo1, "photo1");
+    // addFileToFormData(data, photo2, "photo2");
 
     Object.keys(removeEmpty(fieldsData)).forEach(key => {
       data.append(key, fieldsData[key]);
     });
+
+    console.log(data);
 
     return this.httpClient.post("faceid/verification/", data);
   };
