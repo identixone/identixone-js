@@ -1,6 +1,6 @@
 import Api from "../../../../base/api";
 
-import { addFileToFormData } from "../../../../utils";
+import { addFileToFormData, removeEmpty } from "../../../../utils";
 
 export default class Utilities extends Api {
   comparePhotos = ({ photo1, photo2, conf } = {}) => {
@@ -29,7 +29,7 @@ export default class Utilities extends Api {
 
     addFileToFormData(data, photo, "photo");
 
-    Object.keys(fieldsData).forEach(key => {
+    Object.keys(removeEmpty(fieldsData)).forEach(key => {
       data.append(key, fieldsData[key]);
     });
 
@@ -58,7 +58,7 @@ export default class Utilities extends Api {
     addFileToFormData(data, photo1, "photo1");
     addFileToFormData(data, photo2, "photo2");
 
-    Object.keys(fieldsData).forEach(key => {
+    Object.keys(removeEmpty(fieldsData)).forEach(key => {
       data.append(key, fieldsData[key]);
     });
 
