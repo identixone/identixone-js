@@ -33,7 +33,7 @@ export default class Utilities extends Api {
       data.append(key, fieldsData[key]);
     });
 
-    return this.httpClient.post("compare/", data);
+    return this.httpClient.post("faceid/compare/", data);
   };
 
   // TODO: написать тест
@@ -62,7 +62,7 @@ export default class Utilities extends Api {
       data.append(key, fieldsData[key]);
     });
 
-    return this.httpClient.post("verification/", data);
+    return this.httpClient.post("faceid/verification/", data);
   };
 
   findOutCustomer = ({ source, offset } = {}) => {
