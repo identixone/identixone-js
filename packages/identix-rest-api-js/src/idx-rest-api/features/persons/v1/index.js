@@ -1,6 +1,6 @@
 import Api from "../../../../base/api";
 
-import { addFileToFormData, isExist } from "../../../../utils";
+import { addFileToFormData, addDataToFormData } from "../../../../utils";
 
 export default class Persons extends Api {
   searchPersonByImage = ({ photo, asm, liveness } = {}) => {
@@ -8,10 +8,7 @@ export default class Persons extends Api {
     const data = new FormData();
 
     addFileToFormData(data, photo, "photo");
-
-    Object.keys(fieldsData).forEach(key => {
-      isExist(fieldsData[key]) && data.append(key, fieldsData[key]);
-    });
+    addDataToFormData(data, fieldsData);
 
     return this.httpClient.post("persons/search/", data);
   };
@@ -28,10 +25,7 @@ export default class Persons extends Api {
     const data = new FormData();
 
     addFileToFormData(data, photo, "photo");
-
-    Object.keys(fieldsData).forEach(key => {
-      data.append(key, fieldsData[key]);
-    });
+    addDataToFormData(data, fieldsData);
 
     return this.httpClient.post("persons/", data);
   };
@@ -55,10 +49,7 @@ export default class Persons extends Api {
     const data = new FormData();
 
     addFileToFormData(data, photo, "photo");
-
-    Object.keys(fieldsData).forEach(key => {
-      data.append(key, fieldsData[key]);
-    });
+    addDataToFormData(data, fieldsData);
 
     return this.httpClient.post(`persons/reinit/${personId}`, data);
   };

@@ -1,7 +1,5 @@
 import Api from "../../../../base/api";
 
-import { removeEmpty } from "../../../../utils";
-
 const ENTRIES = "entries/";
 
 /**
@@ -36,7 +34,7 @@ export default class Entries extends Api {
       mood,
       age_from,
       age_to,
-    }) => ({
+    } = {}) => ({
       idxid,
       conf,
       liveness,
@@ -52,12 +50,7 @@ export default class Entries extends Api {
       age_to,
     });
 
-    return this.httpClient.get(
-      ENTRIES,
-      typeof filters === "object"
-        ? removeEmpty(getFiltersData(filters))
-        : undefined
-    );
+    return this.httpClient.get(ENTRIES, getFiltersData(filters));
   };
 
   getEntriesStatsByPersonId = personId => {
@@ -80,7 +73,7 @@ export default class Entries extends Api {
       age_from,
       age_to,
       q,
-    }) => ({
+    } = {}) => ({
       idxid,
       conf,
       liveness,
@@ -99,9 +92,7 @@ export default class Entries extends Api {
 
     return this.httpClient.get(
       `${ENTRIES}stats/sources/`,
-      typeof filters === "object"
-        ? removeEmpty(getFiltersData(filters))
-        : undefined
+      getFiltersData(filters)
     );
   };
 

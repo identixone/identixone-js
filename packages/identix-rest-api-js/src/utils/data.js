@@ -1,4 +1,6 @@
 export function removeEmpty(obj) {
+  if (typeof obj !== "object" || obj === null) return obj;
+
   return Object.keys(obj)
     .filter(key => obj[key] !== undefined)
     .reduce((newObj, key) => ({ ...newObj, [key]: obj[key] }), {});
@@ -6,8 +8,4 @@ export function removeEmpty(obj) {
 
 export function isEmpty(obj) {
   return Object.keys(obj).length === 0;
-}
-
-export function isExist(prop) {
-  return typeof prop !== "undefined";
 }
