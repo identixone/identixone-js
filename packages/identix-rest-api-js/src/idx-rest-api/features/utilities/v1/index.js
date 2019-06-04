@@ -45,6 +45,7 @@ export default class Utilities extends Api {
       conf,
       liveness_photo1,
     };
+    console.log(fieldsData);
     const data = new FormData();
 
     addFileToFormData(data, photo1, "photo1");
