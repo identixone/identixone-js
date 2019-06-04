@@ -1,6 +1,6 @@
 import Api from "../../../../base/api";
 
-import { addFileToFormData, removeEmpty } from "../../../../utils";
+import { addFileToFormData, addDataToFormData } from "../../../../utils";
 
 export default class Utilities extends Api {
   comparePhotos = ({ photo1, photo2, conf } = {}) => {
@@ -9,15 +9,11 @@ export default class Utilities extends Api {
 
     addFileToFormData(data, photo1, "photo1");
     addFileToFormData(data, photo2, "photo2");
-
-    Object.keys(fieldsData).forEach(key => {
-      data.append(key, fieldsData[key]);
-    });
+    addDataToFormData(data, fieldsData);
 
     return this.httpClient.post("utility/compare/", data);
   };
 
-  // TODO: написать тест
   comparePersonPhotoWithDocumentPhoto = ({
     photo,
     facesize,
@@ -28,15 +24,11 @@ export default class Utilities extends Api {
     const data = new FormData();
 
     addFileToFormData(data, photo, "photo");
-
-    Object.keys(removeEmpty(fieldsData)).forEach(key => {
-      data.append(key, fieldsData[key]);
-    });
+    addDataToFormData(data, fieldsData);
 
     return this.httpClient.post("faceid/compare/", data);
   };
 
-  // TODO: написать тест
   verifyPersonPhotoWithDocumentPhoto = ({
     photo1,
     photo2,
@@ -56,14 +48,9 @@ export default class Utilities extends Api {
     console.log(fieldsData);
     const data = new FormData();
 
-    // addFileToFormData(data, photo1, "photo1");
-    // addFileToFormData(data, photo2, "photo2");
-
-    Object.keys(removeEmpty(fieldsData)).forEach(key => {
-      data.append(key, fieldsData[key]);
-    });
-
-    console.log(data);
+    addFileToFormData(data, photo1, "photo1");
+    addFileToFormData(data, photo2, "photo2");
+    addDataToFormData(data, fieldsData);
 
     return this.httpClient.post("faceid/verification/", data);
   };

@@ -1,7 +1,5 @@
 import Api from "../../../../base/api";
 
-import { removeEmpty } from "../../../../utils";
-
 const SETTINGS_NOTIFICATIONS = "settings/notifications/";
 
 /**
@@ -21,7 +19,7 @@ export default class Notifications extends Api {
     moods,
     sources,
     liveness,
-  }) => ({
+  } = {}) => ({
     name,
     is_active,
     transport,
@@ -40,18 +38,13 @@ export default class Notifications extends Api {
    * @return {Promise} Promise object represents the response object
    */
   getNotifications = filters => {
-    const getFiltersData = ({ q, limit, offset }) => ({
+    const getFiltersData = ({ q, limit, offset } = {}) => ({
       q,
       limit,
       offset,
     });
 
-    return this.httpClient.get(
-      SETTINGS_NOTIFICATIONS,
-      typeof filters === "object"
-        ? removeEmpty(getFiltersData(filters))
-        : undefined
-    );
+    return this.httpClient.get(SETTINGS_NOTIFICATIONS, getFiltersData(filters));
   };
 
   getNotification = id => {
@@ -61,14 +54,14 @@ export default class Notifications extends Api {
   createNotification = (data = {}) => {
     return this.httpClient.post(
       SETTINGS_NOTIFICATIONS,
-      removeEmpty(Notifications.getNotificationData(data))
+      Notifications.getNotificationData(data)
     );
   };
 
   updateNotification = ({ id, ...restData } = {}) => {
     return this.httpClient.put(
       `${SETTINGS_NOTIFICATIONS}${id}/`,
-      removeEmpty(Notifications.getNotificationData(restData))
+      Notifications.getNotificationData(restData)
     );
   };
 

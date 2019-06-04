@@ -1,3 +1,5 @@
+import { removeEmpty } from "./index";
+
 function dataURItoBlob(dataURI) {
   // convert base64/URLEncoded data component to raw binary data held in a string
   var byteString;
@@ -32,6 +34,8 @@ function getFileExtensionFromBase64String(base64) {
 }
 
 export function addFileToFormData(formData, file, fieldName, fileName) {
+  if (!file) return formData;
+
   if (isBinaryFile(file)) {
     const formFieldName = fileName || file.name;
 
@@ -42,6 +46,16 @@ export function addFileToFormData(formData, file, fieldName, fileName) {
 
     formData.append(fieldName, dataURItoBlob(file), formFieldName);
   }
+
+  return formData;
+}
+
+export function addDataToFormData(formData, fieldsData) {
+  if (!formData) return formData;
+
+  Object.keys(removeEmpty(fieldsData)).forEach(key => {
+    formData.append(key, fieldsData[key]);
+  });
 
   return formData;
 }

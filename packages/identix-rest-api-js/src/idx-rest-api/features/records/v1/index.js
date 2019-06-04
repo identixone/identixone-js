@@ -1,7 +1,5 @@
 import Api from "../../../../base/api";
 
-import { removeEmpty } from "../../../../utils";
-
 const RECORDS = "records/";
 
 export default class Records extends Api {
@@ -20,7 +18,7 @@ export default class Records extends Api {
     qty,
     pgn_start,
     last,
-  }) => ({
+  } = {}) => ({
     new: is_new,
     reinit,
     exact,
@@ -38,16 +36,13 @@ export default class Records extends Api {
   });
 
   getRecords = filters => {
-    return this.httpClient.get(
-      RECORDS,
-      filters ? removeEmpty(Records.getFiltersData(filters)) : undefined
-    );
+    return this.httpClient.get(RECORDS, Records.getFiltersData(filters));
   };
 
   getRecordsByPersonId = ({ personId, filters } = {}) => {
     return this.httpClient.get(
       `${RECORDS}${personId}/`,
-      filters ? removeEmpty(Records.getFiltersData(filters)) : undefined
+      Records.getFiltersData(filters)
     );
   };
 

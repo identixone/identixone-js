@@ -257,13 +257,12 @@ describe("IdxApi test", () => {
     test("searchPersonByImage: should return correct person object", () => {
       const personData = {
         photo: mockedFile,
+        liveness: undefined,
         asm: true,
-        liveness: true,
       };
 
       const expectedData = {
         asm: true,
-        liveness: true,
         photo: {
           filename: "handsome.jpg",
           value: mockedFile,
@@ -286,15 +285,14 @@ describe("IdxApi test", () => {
         photo: mockedFile,
         source: "webcam",
         facesize: 100,
-        create_on_ha: true,
         create_on_junk: false,
+        create_on_ha: undefined,
         asm: true,
       };
 
       const expectedData = {
         source: "webcam",
         facesize: 100,
-        create_on_ha: true,
         create_on_junk: false,
         asm: true,
         photo: {
@@ -718,14 +716,20 @@ describe("IdxApi test", () => {
 
     test("verifyPersonPhotoWithDocumentPhoto: should send POST request with correct data", () => {
       const mockedDataToVerify = {
-        // photo1: mockedFile,
-        // photo2: mockedFile,
+        photo1: mockedFile,
+        photo2: mockedFile,
         id_type: "some.id.type",
       };
 
       const expectedData = {
-        // photo1: mockedFile,
-        // photo2: mockedFile,
+        photo1: {
+          filename: "handsome.jpg",
+          value: mockedFile,
+        },
+        photo2: {
+          filename: "handsome.jpg",
+          value: mockedFile,
+        },
         id_type: "some.id.type",
       };
 

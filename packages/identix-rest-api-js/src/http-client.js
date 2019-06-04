@@ -1,5 +1,19 @@
 import { removeEmpty, isEmpty } from "./utils";
 
+function getUrlWithParams(url, params = {}) {
+  const preparedParams = removeEmpty(params);
+
+  const preparedData = removeEmpty({
+    params: !isEmpty(preparedParams) ? preparedParams : undefined,
+  });
+
+  const requestParams = [url]
+    .concat(!isEmpty(preparedData) ? preparedData : undefined)
+    .filter(Boolean);
+
+  return requestParams;
+}
+
 export default ({ client }) =>
   class HttpClient {
     constructor({ baseURL, token }) {
@@ -25,30 +39,34 @@ export default ({ client }) =>
     }
 
     post(url, data) {
-      return this._client.post(url, data).then(({ data }) => data);
+      let preparedData = data;
+
+      if (!(data instanceof FormData)) {
+        preparedData = removeEmpty(data);
+      }
+
+      return this._client.post(url, preparedData).then(({ data }) => data);
     }
 
-    get(url, params) {
-      const preparedData = removeEmpty({ params });
-      const requestParams = [url]
-        .concat(!isEmpty(preparedData) ? preparedData : undefined)
-        .filter(Boolean);
-
-      return this._client.get(...requestParams).then(({ data }) => data);
+    get(url, params = {}) {
+      return this._client
+        .get(...getUrlWithParams(url, params))
+        .then(({ data }) => data);
     }
 
     put(url, data) {
-      return this._client.put(url, data).then(({ data }) => data);
+      let preparedData = data;
+
+      if (!(data instanceof FormData)) {
+        preparedData = removeEmpty(data);
+      }
+
+      return this._client.put(url, preparedData).then(({ data }) => data);
     }
 
-    delete(url, params) {
-      const preparedData = removeEmpty({ params });
-      const requestParams = [url]
-        .concat(!isEmpty(preparedData) ? preparedData : undefined)
-        .filter(Boolean);
-
+    delete(url, params = {}) {
       return this._client
-        .delete(...requestParams)
+        .delete(...getUrlWithParams(url, params))
         .then(({ data }) => ({ data }));
     }
   };

@@ -1,5 +1,3 @@
-import { removeEmpty } from "../../../../utils";
-
 import Api from "../../../../base/api";
 
 const SOURCES = "sources/";
@@ -30,7 +28,7 @@ export default class Sources extends Api {
     auto_check_asm,
 
     store_images_for_confs,
-  }) => ({
+  } = {}) => ({
     name,
     identify_resolution_threshold,
     pps_timestamp,
@@ -58,18 +56,13 @@ export default class Sources extends Api {
   });
 
   getSources = filters => {
-    const getFiltersData = ({ q, limit, offset }) => ({
+    const getFiltersData = ({ q, limit, offset } = {}) => ({
       q,
       limit,
       offset,
     });
 
-    return this.httpClient.get(
-      SOURCES,
-      typeof filters === "object"
-        ? removeEmpty(getFiltersData(filters))
-        : undefined
-    );
+    return this.httpClient.get(SOURCES, getFiltersData(filters));
   };
 
   getSource = id => {
@@ -77,16 +70,13 @@ export default class Sources extends Api {
   };
 
   createSource = (data = {}) => {
-    return this.httpClient.post(
-      SOURCES,
-      removeEmpty(Sources.getSorceData(data))
-    );
+    return this.httpClient.post(SOURCES, Sources.getSorceData(data));
   };
 
   updateSource = ({ id, ...restData } = {}) => {
     return this.httpClient.put(
       `${SOURCES}${id}/`,
-      removeEmpty(Sources.getSorceData(restData))
+      Sources.getSorceData(restData)
     );
   };
 
