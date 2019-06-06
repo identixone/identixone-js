@@ -38,6 +38,12 @@ export default ({ client }) =>
       delete this._client.defaults.headers["Authorization"];
     }
 
+    setBaseURL(baseURL) {
+      if (baseURL) {
+        this._client.defaults.baseURL = baseURL;
+      }
+    }
+
     post(url, data) {
       let preparedData = data;
 
