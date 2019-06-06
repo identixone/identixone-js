@@ -28,6 +28,7 @@ export default class Sources extends Api {
     auto_check_asm,
 
     store_images_for_confs,
+    license_type,
   } = {}) => ({
     name,
     identify_resolution_threshold,
@@ -53,6 +54,7 @@ export default class Sources extends Api {
     auto_check_asm,
 
     store_images_for_confs,
+    license_type,
   });
 
   getSources = filters => {
