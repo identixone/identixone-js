@@ -20,8 +20,18 @@ export default class Persons extends Api {
     create_on_ha,
     create_on_junk,
     asm,
+    liveness,
+    create_liveness_only,
   } = {}) => {
-    const fieldsData = { source, facesize, create_on_ha, create_on_junk, asm };
+    const fieldsData = {
+      source,
+      facesize,
+      create_on_ha,
+      create_on_junk,
+      asm,
+      liveness,
+      create_liveness_only,
+    };
     const data = new FormData();
 
     addFileToFormData(data, photo, "photo");
