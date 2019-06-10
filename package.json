@@ -19,7 +19,7 @@
     "query"
   ],
   "dependencies": {
-    "@identixone/rest-api": "^1.7.0",
+    "@identixone/rest-api": "^1.7.1",
     "@identixone/websocket": "^1.0.2"
   },
   "devDependencies": {
@@ -36,10 +36,10 @@
     "eslint-plugin-jest": "^22.6.4",
     "eslint-plugin-prettier": "^3.1.0",
     "parallel-webpack": "^2.4.0",
-    "prettier": "^1.17.1",
+    "prettier": "^1.18.2",
     "prettier-eslint": "^8.8.2",
     "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^3.3.3"
   },
   "author": "Nikita Kashtanov",
   "license": "MIT",
