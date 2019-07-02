@@ -542,7 +542,7 @@ describe("IdxApi test", () => {
   describe("Sources module test", () => {
     const mockedSource = {
       name: "My new awesome source",
-      identify_resolution_threshold: 7000,
+      identify_facesize_threshold: 7000,
       pps_timestamp: 1000,
     };
 
