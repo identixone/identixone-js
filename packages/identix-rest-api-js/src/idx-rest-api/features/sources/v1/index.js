@@ -5,7 +5,7 @@ const SOURCES = "sources/";
 export default class Sources extends Api {
   static getSorceData = ({
     name,
-    identify_resolution_threshold,
+    identify_facesize_threshold,
     pps_timestamp,
 
     manual_create_facesize_threshold,
@@ -31,7 +31,7 @@ export default class Sources extends Api {
     license_type,
   } = {}) => ({
     name,
-    identify_resolution_threshold,
+    identify_facesize_threshold,
     pps_timestamp,
 
     manual_create_facesize_threshold,
