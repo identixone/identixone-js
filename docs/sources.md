@@ -15,7 +15,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const sources = IDXRestApi.sources.getSources();
@@ -34,7 +34,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const sourceId = 1;
@@ -55,13 +55,13 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const source = IDXRestApi.sources.createSource({
   name: "My new awesome source",
-  identify_resolution_threshold: 7000,
-  pps_timestamp: 1000
+  identify_facesize_threshold: 7000,
+  pps_timestamp: 1000,
 });
 
 source.then(source => {
@@ -78,7 +78,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const sourceId = 1;
@@ -99,14 +99,14 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const sourceId = 1;
 
 const source = IDXRestApi.sources.updateSource({
   id: sourceId,
-  identify_resolution_threshold: 7200
+  identify_facesize_threshold: 7200,
 });
 
 source.then(source => {
