@@ -69,7 +69,7 @@ export default class PersonsLists extends Api {
   };
 
   removePersonsFromPersonsLists = ({ listIds, persons }) => {
-    return this.httpClient.delete(`${PERSONS_LISTS}idxids/`, {
+    return this.httpClient.delete(`${PERSONS_LISTS}idxids/`, null, {
       list_ids: listIds,
       idxids: persons,
     });
