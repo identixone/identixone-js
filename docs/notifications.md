@@ -15,7 +15,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const notifications = IDXRestApi.notifications.getNotifications();
@@ -34,7 +34,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const notificationId = 1;
@@ -55,7 +55,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const notification = IDXRestApi.notifications.createNotification({
@@ -69,7 +69,7 @@ const notification = IDXRestApi.notifications.createNotification({
   age_to: 20,
   sex: [1],
   moods: ["fear"],
-  sources: ["webcam"]
+  sources: ["webcam"],
 });
 
 notification.then(notification => {
@@ -86,14 +86,14 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const notificationId = 1;
 
 const notification = IDXRestApi.notifications.updateNotification({
   id: notificationId,
-  is_active: false
+  is_active: false,
 });
 
 notification.then(notification => {
@@ -110,7 +110,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const notificationId = 1;

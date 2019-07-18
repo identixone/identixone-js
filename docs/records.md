@@ -15,7 +15,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const haRecords = IDXRestApi.records.getRecords({ ha: true });
@@ -32,14 +32,14 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const personId = 1;
 
 const records = IDXRestApi.records.getRecordsByPersonId({
   personId,
-  filters: { ha: true }
+  filters: { ha: true },
 });
 
 records.then(records => {
@@ -56,7 +56,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const recordId = 1;

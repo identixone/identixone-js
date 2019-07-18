@@ -5,6 +5,7 @@ import UsersV1 from "./features/users/v1";
 import RecordsV1 from "./features/records/v1";
 import EntriesV1 from "./features/entries/v1";
 import NotificationsV1 from "./features/notifications/v1";
+import PersonsListsV1 from "./features/persons-lists/v1";
 import SourcesV1 from "./features/sources/v1";
 import UtilitiesV1 from "./features/utilities/v1";
 import PersonsV1 from "./features/persons/v1";
@@ -42,6 +43,7 @@ export const createIDXRestApi = ({ token, version } = {}) => {
         Records: RecordsV1,
         Entries: EntriesV1,
         Notifications: NotificationsV1,
+        PersonsLists: PersonsListsV1,
         Sources: SourcesV1,
         Utilities: UtilitiesV1,
         Persons: PersonsV1,
