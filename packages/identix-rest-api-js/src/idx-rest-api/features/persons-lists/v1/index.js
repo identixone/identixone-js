@@ -43,9 +43,16 @@ export default class PersonsLists extends Api {
     return this.httpClient.delete(`${PERSONS_LISTS}${id}/`);
   };
 
-  getPersonsListPersons = ({ listId, isExtended }) => {
+  getPersonsListPersons = ({ listId, isExtended, ...filters }) => {
+    const getFiltersData = ({ q, limit, offset } = {}) => ({
+      q,
+      limit,
+      offset,
+    });
+
     return this.httpClient.get(
-      `${PERSONS_LISTS}${listId}/idxids/${isExtended ? "extended/" : ""}`
+      `${PERSONS_LISTS}${listId}/idxids/${isExtended ? "extended/" : ""}`,
+      getFiltersData(filters)
     );
   };
 
