@@ -20,7 +20,7 @@ const ENTRIES = "entries/";
 
 export default class Entries extends Api {
   getEntries = filters => {
-    const getFiltersData = ({
+    const getEntriesFiltersData = ({
       idxid,
       conf,
       liveness,
@@ -50,7 +50,21 @@ export default class Entries extends Api {
       age_to,
     });
 
-    return this.httpClient.get(ENTRIES, getFiltersData(filters));
+    return this.httpClient.get(ENTRIES, getEntriesFiltersData(filters));
+  };
+
+  getEntriesLive = filters => {
+    const getEntriesFiltersData = ({ id_from, conf, source, limit } = {}) => ({
+      id_from,
+      conf,
+      source,
+      limit,
+    });
+
+    return this.httpClient.get(
+      `${ENTRIES}live/`,
+      getEntriesFiltersData(filters)
+    );
   };
 
   getEntriesStatsByPersonId = personId => {
