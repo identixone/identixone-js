@@ -19,7 +19,7 @@
     "query"
   ],
   "dependencies": {
-    "@identixone/rest-api": "^1.7.2",
+    "@identixone/rest-api": "^1.8.0",
     "@identixone/websocket": "^1.0.2"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@
     "dotenv": "^6.2.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-jest": "^22.7.1",
+    "eslint-plugin-jest": "^22.13.0",
     "eslint-plugin-prettier": "^3.1.0",
     "parallel-webpack": "^2.4.0",
     "prettier": "^1.18.2",
