@@ -1,4 +1,5 @@
 import { removeEmpty, isEmpty } from "./utils";
+import qs from "qs";
 
 function getUrlWithParams(url, params = {}) {
   const preparedParams = removeEmpty(params);
@@ -24,6 +25,9 @@ export default ({ client }) =>
         headers: {
           "Content-Type": "application/json",
           Authorization: token && `Token ${token}`,
+        },
+        paramsSerializer: function(params) {
+          return qs.stringify(params);
         },
       });
     }
