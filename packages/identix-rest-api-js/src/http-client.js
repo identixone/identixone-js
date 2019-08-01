@@ -27,7 +27,7 @@ export default ({ client }) =>
           Authorization: token && `Token ${token}`,
         },
         paramsSerializer: function(params) {
-          return qs.stringify(params);
+          return qs.stringify(params, { arrayFormat: "comma" });
         },
       });
     }

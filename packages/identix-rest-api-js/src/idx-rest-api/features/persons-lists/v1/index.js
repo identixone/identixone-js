@@ -44,8 +44,7 @@ export default class PersonsLists extends Api {
   };
 
   getPersonsListPersons = ({ listId, isExtended, ...filters }) => {
-    const getFiltersData = ({ q, limit, offset, idxids } = {}) => ({
-      q,
+    const getFiltersData = ({ limit, offset, idxids } = {}) => ({
       limit,
       offset,
       idxids,
