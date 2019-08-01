@@ -56,16 +56,16 @@ export default class PersonsLists extends Api {
     );
   };
 
-  addPersonsToPersonsList = ({ listId, persons }) => {
-    return this.httpClient.post(`${PERSONS_LISTS}${listId}/idxids/`, {
-      idxids: persons,
-    });
+  addPersonsToPersonsList = ({ listId, persons = [] }) => {
+    return this.httpClient.post(`${PERSONS_LISTS}${listId}/idxids/`, persons);
   };
 
-  removePersonsFromPersonsList = ({ listId, persons }) => {
-    return this.httpClient.delete(`${PERSONS_LISTS}${listId}/idxids/`, null, {
-      idxids: persons,
-    });
+  removePersonsFromPersonsList = ({ listId, persons = [] }) => {
+    return this.httpClient.delete(
+      `${PERSONS_LISTS}${listId}/idxids/`,
+      null,
+      persons
+    );
   };
 
   addPersonsToPersonsLists = ({ listIds, persons }) => {
