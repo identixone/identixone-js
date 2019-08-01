@@ -44,10 +44,11 @@ export default class PersonsLists extends Api {
   };
 
   getPersonsListPersons = ({ listId, isExtended, ...filters }) => {
-    const getFiltersData = ({ q, limit, offset } = {}) => ({
+    const getFiltersData = ({ q, limit, offset, idxids } = {}) => ({
       q,
       limit,
       offset,
+      idxids,
     });
 
     return this.httpClient.get(
