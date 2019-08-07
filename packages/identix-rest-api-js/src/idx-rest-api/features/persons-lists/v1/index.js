@@ -11,11 +11,18 @@ export default class PersonsLists extends Api {
   });
 
   getPersonsLists = filters => {
-    const getFiltersData = ({ q, limit, offset, idxids } = {}) => ({
+    const getFiltersData = ({
       q,
       limit,
       offset,
       idxids,
+      exclude_idxids,
+    } = {}) => ({
+      q,
+      limit,
+      offset,
+      idxids,
+      exclude_idxids,
     });
 
     return this.httpClient.get(PERSONS_LISTS, getFiltersData(filters));
