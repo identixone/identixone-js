@@ -1,18 +1,21 @@
 const { EventEmitter } = require("../../base/event-emitter");
 
 class IDXWsApiV1 extends EventEmitter {
-  constructor({ token, SocketClient, apiEndpoints }) {
+  constructor({ token, SocketClient, apiEndpoints, endpoint }) {
     super();
 
     Object.assign(this, { token, SocketClient });
 
-    this._endpoint = apiEndpoints.v1;
+    this._endpoint = endpoint || apiEndpoints.v1;
     this._isSocketOpen = false;
   }
 
   setToken(token) {
-    this.disconnect();
     this.token = token;
+
+    if (this._isSocketOpen) {
+      this.disconnect();
+    }
   }
 
   setEndpoint(endpoint) {
@@ -20,10 +23,6 @@ class IDXWsApiV1 extends EventEmitter {
 
     if (this._isSocketOpen) {
       this.disconnect();
-
-      this.on("disconnect", () => {
-        this.connect();
-      });
     }
   }
 
