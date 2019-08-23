@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "@identixone/rest-api": "^1.8.0",
-    "@identixone/websocket": "^1.1.1"
+    "@identixone/websocket": "^1.1.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",

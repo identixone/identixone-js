@@ -9,6 +9,8 @@ const IDXWsApi = createIDXWsApi({
   token: IDENTIXONE_TOKEN,
 });
 
+IDXWsApi.connect();
+
 IDXWsApi.on("connect", () => {
   console.log("🤝 connected!");
 });
