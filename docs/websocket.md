@@ -15,7 +15,7 @@ import { createIDXWsApi } from "@identixone/api";
 
 const IDXWsApi = createIDXWsApi({
   version: 1,
-  token: "YOUR_IDENTIXONE_TOKEN"
+  token: "YOUR_IDENTIXONE_TOKEN",
 });
 
 IDXWsApi.on("connect", () => {
@@ -34,7 +34,7 @@ import { createIDXWsApi } from "@identixone/api";
 
 const IDXWsApi = createIDXWsApi({
   version: 1,
-  token: "YOUR_IDENTIXONE_TOKEN"
+  token: "YOUR_IDENTIXONE_TOKEN",
 });
 
 IDXWsApi.on("connect", () => {
@@ -47,3 +47,5 @@ IDXWsApi.on("message", message => {
 
 IDXWsApi.connect();
 ```
+
+!> if you want to update token or api endpoint you should connect to socket again all previos listeners will remain
