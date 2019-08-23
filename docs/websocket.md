@@ -47,3 +47,5 @@ IDXWsApi.on("message", message => {
 
 IDXWsApi.connect();
 ```
+
+!> if you want to update token or api endpoint you should connect to socket again all previos listeners will remain
