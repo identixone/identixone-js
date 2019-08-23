@@ -4,7 +4,10 @@ class IDXWsApiV1 extends EventEmitter {
   constructor({ token, SocketClient, apiEndpoints }) {
     super();
 
-    Object.assign(this, { token, SocketClient, apiEndpoints });
+    Object.assign(this, { token, SocketClient });
+
+    this._endpoint = apiEndpoints.v1;
+    this._isSocketOpen = false;
   }
 
   setToken(token) {
@@ -12,10 +15,24 @@ class IDXWsApiV1 extends EventEmitter {
     this.token = token;
   }
 
+  setEndpoint(endpoint) {
+    this._endpoint = endpoint;
+
+    if (this._isSocketOpen) {
+      this.disconnect();
+
+      this.on("disconnect", () => {
+        this.connect();
+      });
+    }
+  }
+
   connect() {
-    this.socket = new this.SocketClient(this.apiEndpoints.v1);
+    this.socket = new this.SocketClient(this._endpoint);
 
     this.socket.onopen = () => {
+      this._isSocketOpen = true;
+
       this.socket.send(
         JSON.stringify({
           action: "AUTH",
@@ -40,6 +57,8 @@ class IDXWsApiV1 extends EventEmitter {
         const { wasClean, reason, code } = data;
 
         this.emit("disconnect", { wasClean, reason, code });
+
+        this._isSocketOpen = false;
       };
 
       this.emit("connect");
