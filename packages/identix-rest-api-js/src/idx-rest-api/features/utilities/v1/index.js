@@ -57,4 +57,8 @@ export default class Utilities extends Api {
   findOutCustomer = ({ source, offset } = {}) => {
     return this.httpClient.get("utility/customer/", { source, offset });
   };
+
+  getApiVersion = () => {
+    return this.httpClient.get("version/");
+  };
 }
