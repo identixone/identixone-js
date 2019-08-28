@@ -69,14 +69,12 @@ const IDXRestApi = createIDXRestApi({
 
 const verifyingResult = IDXRestApi.utilities.verifyPersonPhotoWithDocumentPhoto(
   {
-    photo1: "dataURIPhoto",
-    photo2: "dataURIPhoto",
-    conf: "ha",
-    photo1_facesize: 2000,
-    photo2_facesize: 2000,
-    id_type: cze.drvlic.type1,
+    photo_face: "dataURIPhoto",
+    photo_face_facesize: 2000,
+    photo_id: "dataURIPhoto",
+    photo_id_facesize: 2000,
+    id_code: "ru",
     conf: "exact",
-    liveness_photo1: false,
   }
 );
 
