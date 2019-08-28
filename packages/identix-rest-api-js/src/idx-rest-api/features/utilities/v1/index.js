@@ -30,25 +30,23 @@ export default class Utilities extends Api {
   };
 
   verifyPersonPhotoWithDocumentPhoto = ({
-    photo1,
-    photo2,
-    photo1_facesize,
-    photo2_facesize,
-    id_type,
+    photo_face,
+    photo_face_facesize,
+    photo_id,
+    photo_id_facesize,
+    id_code,
     conf,
-    liveness_photo1,
   } = {}) => {
     const fieldsData = {
-      photo1_facesize,
-      photo2_facesize,
-      id_type,
+      photo_face_facesize,
+      photo_id_facesize,
+      id_code,
       conf,
-      liveness_photo1,
     };
     const data = new FormData();
 
-    addFileToFormData(data, photo1, "photo1");
-    addFileToFormData(data, photo2, "photo2");
+    addFileToFormData(data, photo_face, "photo_face");
+    addFileToFormData(data, photo_id, "photo_id");
     addDataToFormData(data, fieldsData);
 
     return this.httpClient.post("faceid/verification/", data);
@@ -56,5 +54,9 @@ export default class Utilities extends Api {
 
   findOutCustomer = ({ source, offset } = {}) => {
     return this.httpClient.get("utility/customer/", { source, offset });
+  };
+
+  getApiVersion = () => {
+    return this.httpClient.get("version/");
   };
 }
