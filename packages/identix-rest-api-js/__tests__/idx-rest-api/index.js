@@ -16,6 +16,7 @@ import Notifications from "../../src/idx-rest-api/features/notifications/v1";
 import Sources from "../../src/idx-rest-api/features/sources/v1";
 import Utilities from "../../src/idx-rest-api/features/utilities/v1";
 import Persons from "../../src/idx-rest-api/features/persons/v1";
+import PersonsLists from "../../src/idx-rest-api/features/persons-lists/v1";
 
 const endpoint = "https://api.mocked.com";
 const pathToMockedImage = path.resolve(__dirname, "../__mocks__/mock.jpg");
@@ -37,6 +38,7 @@ describe("IdxApi test", () => {
     Utilities,
     Persons,
     HttpClient,
+    PersonsLists,
   });
 
   api.httpClient._client.defaults = {
@@ -736,21 +738,27 @@ describe("IdxApi test", () => {
 
     test("verifyPersonPhotoWithDocumentPhoto: should send POST request with correct data", () => {
       const mockedDataToVerify = {
-        photo1: mockedFile,
-        photo2: mockedFile,
-        id_type: "some.id.type",
+        photo_face: mockedFile,
+        photo_face_facesize: 2000,
+        photo_id: mockedFile,
+        photo_id_facesize: 2000,
+        id_code: "ru",
+        conf: "exact",
       };
 
       const expectedData = {
-        photo1: {
+        photo_face: {
           filename: "handsome.jpg",
           value: mockedFile,
         },
-        photo2: {
+        photo_face_facesize: 2000,
+        photo_id: {
           filename: "handsome.jpg",
           value: mockedFile,
         },
-        id_type: "some.id.type",
+        id_code: "ru",
+        photo_id_facesize: 2000,
+        conf: "exact",
       };
 
       api.utilities

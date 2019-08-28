@@ -89,8 +89,13 @@ export default ({ client }) =>
         preparedData = removeEmpty(data);
       }
 
+      const resultParams = [
+        ...getUrlWithParams(url, params),
+        preparedData ? { data: preparedData } : undefined,
+      ].filter(Boolean);
+
       return this._client
-        .delete(...getUrlWithParams(url, params), { data: preparedData })
+        .delete(...resultParams)
         .then(({ data }) => ({ data }));
     }
   };
