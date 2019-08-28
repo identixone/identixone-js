@@ -736,21 +736,27 @@ describe("IdxApi test", () => {
 
     test("verifyPersonPhotoWithDocumentPhoto: should send POST request with correct data", () => {
       const mockedDataToVerify = {
-        photo1: mockedFile,
-        photo2: mockedFile,
-        id_type: "some.id.type",
+        photo_face: mockedFile,
+        photo_face_facesize: 2000,
+        photo_id: mockedFile,
+        photo_id_facesize: 2000,
+        id_code: "ru",
+        conf: "exact",
       };
 
       const expectedData = {
-        photo1: {
+        photo_face: {
           filename: "handsome.jpg",
           value: mockedFile,
         },
-        photo2: {
+        photo_face_facesize: 2000,
+        photo_id: {
           filename: "handsome.jpg",
           value: mockedFile,
         },
-        id_type: "some.id.type",
+        id_code: "ru",
+        photo_id_facesize: 2000,
+        conf: "exact",
       };
 
       api.utilities
