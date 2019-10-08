@@ -15,6 +15,7 @@ const personsLists = IDXRestApi.personsLists.getPersonsLists({
   limit: 20,
   offset: 0,
   idxids: ["749c9583-5ae9-4b72-a8f9-e1018d99af7e"],
+  ids: [2, 7]
 });
 
 personsLists.then(personsLists => {
