@@ -10,12 +10,12 @@ import { IDXRestApi } from "../../src/idx-rest-api/idx-rest-api";
 
 import Auth from "../../src/idx-rest-api/features/auth/v1";
 import Users from "../../src/idx-rest-api/features/users/v1";
-import Records from "../../src/idx-rest-api/features/records/v1";
 import Entries from "../../src/idx-rest-api/features/entries/v1";
 import Notifications from "../../src/idx-rest-api/features/notifications/v1";
 import Sources from "../../src/idx-rest-api/features/sources/v1";
 import Utilities from "../../src/idx-rest-api/features/utilities/v1";
 import Persons from "../../src/idx-rest-api/features/persons/v1";
+import PersonsLists from "../../src/idx-rest-api/features/persons-lists/v1";
 
 const endpoint = "https://api.mocked.com";
 const pathToMockedImage = path.resolve(__dirname, "../__mocks__/mock.jpg");
@@ -30,13 +30,13 @@ describe("IdxApi test", () => {
     token: "mocked token",
     Auth,
     Users,
-    Records,
     Entries,
     Notifications,
     Sources,
     Utilities,
     Persons,
     HttpClient,
+    PersonsLists,
   });
 
   api.httpClient._client.defaults = {
@@ -364,60 +364,6 @@ describe("IdxApi test", () => {
       axios.mockResponse({ data: mockedPerson });
 
       expect(thenFn).toHaveBeenCalledWith(mockedPerson);
-    });
-  });
-
-  describe("Records module test", () => {
-    const mockedRecord = {
-      id: 1,
-      initial_photo: "https://mocked.com/records/initial/1",
-      detected_photo: "https://mocked.com/records/detected/1",
-      facesize: 10,
-      conf: "ha",
-      detected: "2008-09-15T15:53:00",
-      created: "2008-09-15T15:53:00",
-      age: 12,
-      sex: 0,
-      mood: "fear",
-      source: "webcam",
-    };
-
-    test("getRecords: should return correct array of records", () => {
-      const mockedRecords = [mockedRecord];
-
-      api.records.getRecords().then(thenFn);
-
-      expect(axios.get).toHaveBeenCalledWith("records/");
-
-      axios.mockResponse({ data: mockedRecords });
-
-      expect(thenFn).toHaveBeenCalledWith(mockedRecords);
-    });
-
-    test("getRecordsByPersonId: should return correct array of records", () => {
-      const personId = 1;
-
-      api.records
-        .getRecordsByPersonId({ personId, filters: { exact: true } })
-        .then(thenFn);
-
-      expect(axios.get).toHaveBeenCalledWith(`records/${personId}/`, {
-        params: {
-          exact: true,
-        },
-      });
-
-      axios.mockResponse({ data: mockedRecord });
-
-      expect(thenFn).toHaveBeenCalledWith(mockedRecord);
-    });
-
-    test("deleteRecord: should send DELETE request with correct data", () => {
-      const recordId = 1;
-
-      api.records.deleteRecord(recordId).then(thenFn);
-
-      expect(axios.delete).toHaveBeenCalledWith(`entry/${recordId}/`);
     });
   });
 

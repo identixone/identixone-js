@@ -1,5 +1,6 @@
 export function removeEmpty(obj) {
-  if (typeof obj !== "object" || obj === null) return obj;
+  if (typeof obj !== "object" || obj === null || obj instanceof Array)
+    return obj;
 
   return Object.keys(obj)
     .filter(key => obj[key] !== undefined)

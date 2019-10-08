@@ -15,7 +15,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const person = IDXRestApi.persons.createPerson({
@@ -24,7 +24,7 @@ const person = IDXRestApi.persons.createPerson({
   facesize: 10,
   create_on_ha: true,
   create_on_junk: false,
-  asm: true
+  asm: true,
 });
 
 person.then(person => {
@@ -41,7 +41,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const personId = 1;
@@ -62,13 +62,13 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const person = IDXRestApi.persons.searchPersonByImage({
   photo: "dataURIPhoto",
   asm: true,
-  liveness: false
+  liveness: false,
 });
 
 person.then(person => {
@@ -85,14 +85,14 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const recordId = 1;
 
 const person = IDXRestApi.persons.reinitializePersonByRecord({
   recordId,
-  facesize: 100
+  facesize: 100,
 });
 
 person.then(person => {
@@ -109,7 +109,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const personId = 1;
@@ -119,7 +119,7 @@ const person = IDXRestApi.persons.reinitializePersonByImage({
   photo: "dataURIPhoto",
   source: "webcam",
   facesize: 100,
-  conf: "ha"
+  conf: "ha",
 });
 
 person.then(person => {

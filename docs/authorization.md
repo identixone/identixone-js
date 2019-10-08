@@ -11,7 +11,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const username = "Jane Doe";
@@ -33,7 +33,7 @@ import { createIDXRestApi } from "@identixone/api";
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: IDENTIXONE_TOKEN
+  token: IDENTIXONE_TOKEN,
 });
 
 const tokenId = 12;

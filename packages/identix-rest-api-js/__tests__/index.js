@@ -5,7 +5,6 @@ import { apiVersions, apiEndpoints } from "../src/constants";
 // Api version 1
 import AuthV1 from "../src/idx-rest-api/features/auth/v1";
 import UsersV1 from "../src/idx-rest-api/features/users/v1";
-import RecordsV1 from "../src/idx-rest-api/features/records/v1";
 import NotificationsV1 from "../src/idx-rest-api/features/notifications/v1";
 import SourcesV1 from "../src/idx-rest-api/features/sources/v1";
 import UtilitiesV1 from "../src/idx-rest-api/features/utilities/v1";
@@ -53,7 +52,6 @@ describe("createIDXRestApi test", () => {
 
     expect(IDXRestApiInstanse.auth).toBeInstanceOf(AuthV1);
     expect(IDXRestApiInstanse.users).toBeInstanceOf(UsersV1);
-    expect(IDXRestApiInstanse.records).toBeInstanceOf(RecordsV1);
     expect(IDXRestApiInstanse.notifications).toBeInstanceOf(NotificationsV1);
     expect(IDXRestApiInstanse.sources).toBeInstanceOf(SourcesV1);
     expect(IDXRestApiInstanse.utilities).toBeInstanceOf(UtilitiesV1);

@@ -1,4 +1,5 @@
 import { removeEmpty, isEmpty } from "./utils";
+import qs from "qs";
 
 function getUrlWithParams(url, params = {}) {
   const preparedParams = removeEmpty(params);
@@ -24,6 +25,9 @@ export default ({ client }) =>
         headers: {
           "Content-Type": "application/json",
           Authorization: token && `Token ${token}`,
+        },
+        paramsSerializer: function(params) {
+          return qs.stringify(params, { arrayFormat: "comma" });
         },
       });
     }
@@ -55,6 +59,10 @@ export default ({ client }) =>
     }
 
     get(url, params = {}) {
+      if (!params) {
+        params = {};
+      }
+
       return this._client
         .get(...getUrlWithParams(url, params))
         .then(({ data }) => data);
@@ -70,9 +78,24 @@ export default ({ client }) =>
       return this._client.put(url, preparedData).then(({ data }) => data);
     }
 
-    delete(url, params = {}) {
+    delete(url, params = {}, data) {
+      let preparedData = data;
+
+      if (!params) {
+        params = {};
+      }
+
+      if (!(data instanceof FormData)) {
+        preparedData = removeEmpty(data);
+      }
+
+      const resultParams = [
+        ...getUrlWithParams(url, params),
+        preparedData ? { data: preparedData } : undefined,
+      ].filter(Boolean);
+
       return this._client
-        .delete(...getUrlWithParams(url, params))
+        .delete(...resultParams)
         .then(({ data }) => ({ data }));
     }
   };
