@@ -17,12 +17,14 @@ export default class PersonsLists extends Api {
       offset,
       idxids,
       exclude_idxids,
+      ids,
     } = {}) => ({
       q,
       limit,
       offset,
       idxids,
       exclude_idxids,
+      ids,
     });
 
     return this.httpClient.get(PERSONS_LISTS, getFiltersData(filters));
