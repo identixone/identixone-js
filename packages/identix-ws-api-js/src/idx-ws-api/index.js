@@ -11,7 +11,7 @@ const createIDXWsApi = ({ token, version, endpoint } = {}) => {
     );
   }
 
-  const numVersion = +version;
+  const numVersion = Number(version);
 
   if (!apiVersions.includes(numVersion)) {
     throw new Error(

@@ -1,6 +1,6 @@
 {
   "name": "@identixone/rest-api",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Library for work with identix-one REST API",
   "main": "./dist/IDXApi.node.js",
   "browser": {
@@ -16,31 +16,30 @@
   "dependencies": {
     "axios": "^0.19.0",
     "isomorphic-form-data": "^2.0.0",
-    "qs": "^6.7.0"
+    "qs": "^6.9.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-eslint": "^10.0.2",
-    "babel-jest": "^24.8.0",
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
-    "clean-webpack-plugin": "^3.0.0",
     "codacy-coverage": "^3.4.0",
-    "eslint": "^6.1.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-jest": "^22.15.1",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-jest": "^23.1.1",
+    "eslint-plugin-prettier": "^3.1.1",
     "file-api": "^0.10.4",
-    "jest": "^24.8.0",
-    "jest-mock-axios": "^3.1.0",
+    "jest": "^24.9.0",
+    "jest-mock-axios": "^3.2.0",
     "parallel-webpack": "^2.4.0",
-    "prettier": "^1.18.2",
-    "prettier-eslint": "^9.0.0",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
   "jest": {
     "testPathIgnorePatterns": [

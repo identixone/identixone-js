@@ -2,8 +2,7 @@ const { createIDXWsApi } = require("../src");
 
 const IDXWsApi = createIDXWsApi({
   version: 1,
-  token: "IDX_TOKEN",
-  endpoint: "IDX_ENDPOINT",
+  token: "TOKEN",
 });
 
 IDXWsApi.connect();
