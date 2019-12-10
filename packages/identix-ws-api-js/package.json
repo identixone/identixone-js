@@ -22,6 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "isomorphic-ws": "^4.0.1",
+    "lodash": "^4.17.15",
     "ws": "^7.2.0"
   },
   "devDependencies": {
