@@ -1,7 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
 const createVariants = require("parallel-webpack").createVariants;
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const PATHS = {
   src: path.resolve(__dirname, "src"),
@@ -67,8 +66,6 @@ const createConfig = ({ target }) => {
           NODE_ENV: JSON.stringify(NODE_ENV),
         },
       }),
-
-      new CleanWebpackPlugin(),
     ],
 
     optimization: {
