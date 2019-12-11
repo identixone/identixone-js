@@ -11,6 +11,6 @@ IDXWsApi.on("connect", () => {
   console.log("🤝 connected!");
 });
 
-IDXWsApi.on("message", message => {
+IDXWsApi.on("message", (message: string) => {
   console.log("✉️ message received!", { message });
 });

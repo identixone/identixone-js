@@ -24,8 +24,17 @@ const createConfig = ({ target }) => {
 
     target,
 
+    resolve: {
+      extensions: [".ts", ".js"],
+    },
+
     module: {
       rules: [
+        {
+          test: /\.ts$/,
+          use: "ts-loader",
+          include: PATHS.src,
+        },
         {
           test: /\.js$/,
           include: PATHS.src,

@@ -1,3 +1,7 @@
+/**
+ * uses for jest
+ */
+
 module.exports = {
   presets: [
     [

@@ -6,15 +6,23 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: ["eslint:recommended", "prettier", "plugin:jest/recommended"],
-  parser: "babel-eslint",
-  parserOptions: {
-    sourceType: "module",
-    ecmaFeatures: {
-      modules: true,
-    },
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
   },
-  plugins: ["prettier", "jest"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:jest/recommended",
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: "module",
+  },
+  plugins: ["prettier", "jest", "@typescript-eslint"],
   rules: {
     "prettier/prettier": [
       "error",
