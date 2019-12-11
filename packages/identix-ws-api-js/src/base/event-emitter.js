@@ -1,39 +1,11 @@
-class EventEmitter {
-  constructor() {
-    this._events = {};
-  }
+const { isNode } = require("browser-or-node");
 
-  _getEventCurrentListeners(event) {
-    return this._events[event] || [];
-  }
+const NodeEventEmitter = require("events");
+const ee = require("event-emitter");
 
-  on(event, listener) {
-    const currentListeners = this._getEventCurrentListeners(event);
-
-    this._events[event] = currentListeners.concat(listener);
-
-    return () => {
-      this.unsubscribe(event, listener);
-    };
-  }
-
-  unsubscribe(event, listener) {
-    const currentListeners = this._getEventCurrentListeners(event);
-
-    if (currentListeners.includes(listener)) {
-      this._events[event] = currentListeners.filter(l => l !== listener);
-    }
-  }
-
-  emit(event, data) {
-    const currentListeners = this._getEventCurrentListeners(event);
-
-    if (currentListeners.length) {
-      currentListeners.forEach(l => l(data));
-    }
-  }
-}
+class EventEmitter {}
+ee(EventEmitter.prototype);
 
 module.exports = {
-  EventEmitter,
+  EventEmitter: isNode ? NodeEventEmitter : EventEmitter,
 };

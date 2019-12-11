@@ -1,7 +1,7 @@
 {
   "name": "@identixone/websocket",
   "version": "1.2.0",
-  "description": "Library for work with identix-one WebSocket API",
+  "description": "Library for work with Identixone WebSocket API",
   "main": "./dist/IDXApi.node.js",
   "browser": {
     "./dist/IDXApi.node.js": "./dist/IDXApi.web.js"
@@ -21,6 +21,8 @@
   "author": "Dmitriy Balashov <mockedcat@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "browser-or-node": "^1.2.1",
+    "event-emitter": "^0.3.5",
     "isomorphic-ws": "^4.0.1",
     "lodash": "^4.17.15",
     "ws": "^7.2.0"
