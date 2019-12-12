@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
     "noImplicitAny": true,
-    "moduleResolution": "node",
     "module": "ES6",
-    "target": "ES2015",
-    "declaration": true,
-    "declarationDir": "./dist/@types"
-  }
+    "target": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    // Don't emit; allow Babel to transform files.
+    "noEmit": true,
+    "strict": true,
+    // Disallow features that require cross-file information for emit.
+    "isolatedModules": true,
+    "esModuleInterop": true
+  },
+  "include": ["src"]
 }

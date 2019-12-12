@@ -23,7 +23,7 @@ interface IDXWsApiV1SettingsInterface {
   SocketClient: new (endpoint: string) => SocketClientInterface;
 }
 
-interface IDXWsApiV1Interface extends EventEmitterInterface {
+export interface IDXWsApiV1Interface extends EventEmitterInterface {
   setToken(token: string): void;
   setEndpoint(endpoint: string): void;
   connect(): void;
@@ -33,14 +33,14 @@ interface IDXWsApiV1Interface extends EventEmitterInterface {
 
 class IDXWsApiV1 extends EventEmitter implements IDXWsApiV1Interface {
   private SocketClient: new (endpoint: string) => SocketClientInterface;
-  socket: SocketClientInterface;
+  socket?: SocketClientInterface;
   private isSocketOpen = false;
 
-  private token: string;
+  private token?: string;
   private endpoint: string;
 
-  private reconnectTimeout: ReturnType<typeof setTimeout> = null;
-  private pingTimeout: ReturnType<typeof setTimeout> = null;
+  private reconnectTimeout?: ReturnType<typeof setTimeout>;
+  private pingTimeout?: ReturnType<typeof setTimeout>;
   private pingBackOffDelay = 1000;
   private reconnectTime = 30000;
 
@@ -58,8 +58,14 @@ class IDXWsApiV1 extends EventEmitter implements IDXWsApiV1Interface {
   }
 
   private heartbeat(): void {
-    clearTimeout(this.reconnectTimeout);
-    clearTimeout(this.pingTimeout);
+    if (!this.socket) return;
+
+    if (this.reconnectTimeout) {
+      clearTimeout(this.reconnectTimeout);
+    }
+    if (this.pingTimeout) {
+      clearTimeout(this.pingTimeout);
+    }
 
     this.socket.send(JSON.stringify({ action: "PING" }));
 
@@ -83,8 +89,12 @@ class IDXWsApiV1 extends EventEmitter implements IDXWsApiV1Interface {
   }
 
   private resetPing(): void {
-    clearTimeout(this.reconnectTimeout);
-    clearTimeout(this.pingTimeout);
+    if (this.reconnectTimeout) {
+      clearTimeout(this.reconnectTimeout);
+    }
+    if (this.pingTimeout) {
+      clearTimeout(this.pingTimeout);
+    }
 
     this.pingBackOffDelay = 1000;
   }
@@ -109,6 +119,8 @@ class IDXWsApiV1 extends EventEmitter implements IDXWsApiV1Interface {
     this.socket = new this.SocketClient(this.endpoint);
 
     this.socket.onopen = (): void => {
+      if (!this.socket) return;
+
       this.isSocketOpen = true;
 
       this.resetPing();
@@ -144,7 +156,6 @@ class IDXWsApiV1 extends EventEmitter implements IDXWsApiV1Interface {
       };
 
       this.socket.onclose = (data): void => {
-        console.log({ data });
         this.resetPing();
 
         this.emit("disconnect", data);
@@ -157,12 +168,16 @@ class IDXWsApiV1 extends EventEmitter implements IDXWsApiV1Interface {
   }
 
   disconnect(): void {
-    this.socket.close();
+    if (this.socket) {
+      this.socket.close();
+    }
   }
 
   terminate(): void {
-    this.socket.terminate();
+    if (this.socket) {
+      this.socket.terminate();
+    }
   }
 }
 
-export { IDXWsApiV1Interface, IDXWsApiV1 };
+export { IDXWsApiV1 };

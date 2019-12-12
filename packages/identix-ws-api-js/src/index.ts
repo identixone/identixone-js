@@ -10,7 +10,7 @@ interface IDXWsApiSettingsInterface {
 
 function createIDXWsApi(
   settings: IDXWsApiSettingsInterface = {}
-): IDXWsApiV1Interface {
+): IDXWsApiV1Interface | undefined {
   const { token, version, endpoint } = settings;
 
   if (!version) {

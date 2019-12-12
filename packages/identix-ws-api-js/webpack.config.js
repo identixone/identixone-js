@@ -15,10 +15,10 @@ const createConfig = ({ target }) => {
 
     output: {
       path: PATHS.dist,
-      filename: "IDXApi." + target + ".js",
+      filename: `./index.${target}.js`,
       pathinfo: false,
       globalObject: "this",
-      library: "IDXApi",
+      library: "IDXWS",
       libraryTarget: "umd",
       umdNamedDefine: true,
     },
@@ -34,7 +34,25 @@ const createConfig = ({ target }) => {
         {
           test: /\.ts$/,
           include: PATHS.src,
-          use: "ts-loader",
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/typescript",
+              [
+                "@babel/preset-env",
+                {
+                  targets:
+                    target === "node"
+                      ? "maintained node versions"
+                      : "last 1 version, > 1%, not dead",
+                },
+              ],
+            ],
+            plugins: [
+              "@babel/proposal-class-properties",
+              "@babel/proposal-object-rest-spread",
+            ],
+          },
         },
       ],
     },
