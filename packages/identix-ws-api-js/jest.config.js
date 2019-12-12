@@ -1,5 +1,5 @@
 module.exports = {
-  testPathIgnorePatterns: ["/node_modules/", "/__mocks__/", "__helpers__"],
+  testPathIgnorePatterns: ["/__mocks__/", "/__helpers__/", "/node_modules/"],
   globals: {
     "ts-jest": {
       tsconfig: "tsconfig.json",

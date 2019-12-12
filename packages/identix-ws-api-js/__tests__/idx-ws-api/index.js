@@ -1,7 +1,7 @@
 import WebSocket from "isomorphic-ws";
 
-import { createIDXWsApi } from "../../src/idx-ws-api";
-import { IDXWsApiV1 } from "../../src/idx-ws-api/v1";
+import { createIDXWsApi } from "../../src";
+import { IDXWsApiV1 } from "../../src/v1";
 import { apiVersions } from "../../src/constants";
 
 describe("createIDXWsApi test", () => {

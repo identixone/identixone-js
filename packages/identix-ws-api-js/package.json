@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "description": "Library for work with Identixone WebSocket API",
   "main": "./dist/IDXApi.node.js",
+  "types": "./dist/@types/index.d.ts",
   "browser": {
     "./dist/IDXApi.node.js": "./dist/IDXApi.web.js"
   },
@@ -21,27 +22,22 @@
   "author": "Dmitriy Balashov <mockedcat@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "browser-or-node": "^1.2.1",
-    "event-emitter": "^0.3.5",
     "isomorphic-ws": "^4.0.1",
-    "lodash": "^4.17.15",
+    "lodash.debounce": "^4.0.8",
     "ws": "^7.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
-    "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
-    "@babel/preset-env": "^7.7.6",
-    "@types/event-emitter": "^0.3.3",
     "@types/jest": "^24.0.23",
-    "@types/lodash": "^4.14.149",
+    "@types/lodash-es": "^4.17.3",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/node": "^12.12.17",
     "@types/ws": "^6.0.4",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
     "@typescript-eslint/parser": "^2.11.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
-    "babel-loader": "^8.0.6",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-jest": "^23.1.1",
@@ -53,7 +49,6 @@
     "prettier-eslint": "^9.0.1",
     "ts-jest": "^24.2.0",
     "ts-loader": "^6.2.1",
-    "ts-node": "^8.5.4",
     "typescript": "^3.7.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"

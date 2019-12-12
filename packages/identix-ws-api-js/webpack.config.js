@@ -20,51 +20,21 @@ const createConfig = ({ target }) => {
       globalObject: "this",
       library: "IDXApi",
       libraryTarget: "umd",
+      umdNamedDefine: true,
     },
 
     target,
 
     resolve: {
-      extensions: [".ts", ".js"],
+      extensions: [".js", ".ts"],
     },
 
     module: {
       rules: [
         {
           test: /\.ts$/,
+          include: PATHS.src,
           use: "ts-loader",
-          include: PATHS.src,
-        },
-        {
-          test: /\.js$/,
-          include: PATHS.src,
-          use: [
-            {
-              loader: "babel-loader",
-              options: {
-                presets: [
-                  [
-                    "@babel/preset-env",
-                    {
-                      modules: false,
-                      targets: {
-                        browsers: [
-                          "last 2 versions",
-                          "safari >= 7",
-                          "ie > 10",
-                          "not op_mini all",
-                        ],
-                      },
-                    },
-                  ],
-                ],
-                plugins: [
-                  "@babel/plugin-proposal-object-rest-spread",
-                  "@babel/plugin-proposal-class-properties",
-                ],
-              },
-            },
-          ],
         },
       ],
     },
@@ -79,8 +49,6 @@ const createConfig = ({ target }) => {
 
     optimization: {
       removeAvailableModules: false,
-      removeEmptyChunks: false,
-      splitChunks: false,
     },
   };
 };

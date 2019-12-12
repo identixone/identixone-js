@@ -6,23 +6,15 @@ module.exports = {
     node: true,
     jest: true,
   },
-  globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly",
-  },
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "plugin:jest/recommended",
-  ],
-  parser: "@typescript-eslint/parser",
+  extends: ["eslint:recommended", "prettier", "plugin:jest/recommended"],
+  plugins: ["prettier", "jest"],
+  parser: "babel-eslint",
   parserOptions: {
-    ecmaVersion: 2018,
     sourceType: "module",
+    ecmaFeatures: {
+      modules: true,
+    },
   },
-  plugins: ["prettier", "jest", "@typescript-eslint"],
   rules: {
     "prettier/prettier": [
       "error",
@@ -31,4 +23,26 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ["*.ts"],
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: "module",
+      },
+      plugins: ["prettier", "jest", "@typescript-eslint"],
+      extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:jest/recommended",
+      ],
+      rules: {
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
+      },
+    },
+  ],
 };
