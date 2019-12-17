@@ -4,7 +4,7 @@ import AuthV1 from "./features/auth/v1";
 import UsersV1 from "./features/users/v1";
 import EntriesV1 from "./features/entries/v1";
 import NotificationsV1 from "./features/notifications/v1";
-import PersonsGroupsV1 from "./features/persons-goups/v1";
+import PersonsGroupsV1 from "./features/persons-groups/v1";
 import SourcesV1 from "./features/sources/v1";
 import UtilitiesV1 from "./features/utilities/v1";
 import PersonsV1 from "./features/persons/v1";
