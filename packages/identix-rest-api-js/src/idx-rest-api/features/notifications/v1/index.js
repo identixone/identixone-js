@@ -19,6 +19,7 @@ export default class Notifications extends Api {
     moods,
     sources,
     persons_groups,
+    persons_lists,
     liveness,
   } = {}) => ({
     name,
@@ -33,6 +34,7 @@ export default class Notifications extends Api {
     moods,
     sources,
     persons_groups,
+    persons_lists,
     liveness,
   });
 
