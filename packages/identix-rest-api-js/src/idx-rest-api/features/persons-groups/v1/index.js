@@ -65,29 +65,17 @@ export default class PersonsGroups extends Api {
     );
   };
 
-  addPersonsToPersonsGroups = ({ groupIds, persons }) => {
+  addPersonsToPersonsGroups = ({ groupsIds, persons }) => {
     return this.httpClient.post(`${PERSONS_GROUPS}idxids/`, {
-      groups_ids: groupIds,
+      groups_ids: groupsIds,
       idxids: persons,
     });
   };
 
-  removePersonsFromPersonsGroups = ({ groupIds, persons }) => {
+  removePersonsFromPersonsGroups = ({ groupsIds, persons }) => {
     return this.httpClient.delete(`${PERSONS_GROUPS}idxids/`, null, {
-      groups_ids: groupIds,
+      groups_ids: groupsIds,
       idxids: persons,
     });
   };
-
-  // addPersonsToPersonsGroup = ({ groupId, persons = [] }) => {
-  //   return this.httpClient.post(`${PERSONS_GROUPS}${groupId}/idxids/`, {
-  //     idxids: persons,
-  //   });
-  // };
-
-  // removePersonsFromPersonsGroup = ({ groupId, persons = [] }) => {
-  //   return this.httpClient.delete(`${PERSONS_GROUPS}${groupId}/idxids/`, null, {
-  //     idxids: persons,
-  //   });
-  // };
 }
