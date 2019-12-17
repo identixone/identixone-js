@@ -15,7 +15,7 @@ import Notifications from "../../src/idx-rest-api/features/notifications/v1";
 import Sources from "../../src/idx-rest-api/features/sources/v1";
 import Utilities from "../../src/idx-rest-api/features/utilities/v1";
 import Persons from "../../src/idx-rest-api/features/persons/v1";
-import PersonsLists from "../../src/idx-rest-api/features/persons-lists/v1";
+import PersonsGroups from "../../src/idx-rest-api/features/persons-lists/v1";
 
 const endpoint = "https://api.mocked.com";
 const pathToMockedImage = path.resolve(__dirname, "../__mocks__/mock.jpg");
@@ -36,7 +36,7 @@ describe("IdxApi test", () => {
     Utilities,
     Persons,
     HttpClient,
-    PersonsLists,
+    PersonsGroups,
   });
 
   api.httpClient._client.defaults = {
