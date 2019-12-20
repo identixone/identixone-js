@@ -172,7 +172,7 @@ describe("IdxApi test", () => {
       sex: 1,
       moods: [0],
       sources: ["webcam"],
-      persons_lists: ["some", "persons lists"],
+      persons_groups: ["some", "persons groups"],
     };
 
     test("getNotifications: should return correct array of notifications", () => {

@@ -22,6 +22,7 @@ class Notifications extends Api implements NotificationsInterface {
     sex,
     moods,
     sources,
+    persons_groups,
     persons_lists,
     liveness,
   }: NotificationInterface = {}): {} => ({
@@ -36,6 +37,7 @@ class Notifications extends Api implements NotificationsInterface {
     sex,
     moods,
     sources,
+    persons_groups,
     persons_lists,
     liveness,
   });
