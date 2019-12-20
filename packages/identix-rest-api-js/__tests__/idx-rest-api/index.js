@@ -311,6 +311,29 @@ describe("IdxApi test", () => {
       expect(thenFn).toHaveBeenCalledWith(mockedPerson);
     });
 
+    test("createPersonFromEntry: should send POST request with correct data", () => {
+      const entryId = 42;
+      const facesize = 100;
+      const create_on_ha = false;
+      const create_on_junk = false;
+
+      api.persons
+        .createPersonFromEntry({
+          entryId,
+          facesize,
+          create_on_ha,
+          create_on_junk,
+        })
+        .then(thenFn);
+
+      expect(axios.post).toHaveBeenCalledWith("persons/entry/", {
+        id: entryId,
+        facesize,
+        create_on_ha,
+        create_on_junk,
+      });
+    });
+
     test("deletePerson: should send DELETE request with correct URL", () => {
       const personId = 42;
 

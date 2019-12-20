@@ -1,6 +1,6 @@
 export type numeric = number | string;
 
-export type id = numeric;
+export type id = number;
 
 export enum SexEnum {
   Male = 0,

@@ -1,4 +1,12 @@
-import { id, Conf } from "../../../../base/types";
+import { id, Conf, Sex, Mood } from "../../../../base/types";
+
+export interface PersonResponseIterface {
+  conf: Conf;
+  idxid: string;
+  age: number;
+  sex: Sex;
+  mood: Mood;
+}
 
 export interface SearchPersonByImageParamsInterface {
   photo: File;
@@ -41,8 +49,12 @@ export interface ReinitializePersonByImageParamsInterface {
 }
 
 export interface PersonsInterface {
-  searchPersonByImage(params: SearchPersonByImageParamsInterface): Promise<{}>;
-  createPerson(person: CreatePersonParamsInterface): Promise<{}>;
+  searchPersonByImage(
+    params: SearchPersonByImageParamsInterface
+  ): Promise<PersonResponseIterface>;
+  createPerson(
+    person: CreatePersonParamsInterface
+  ): Promise<PersonResponseIterface>;
   createPersonFromEntry(
     person: CreatePersonFromEntryParamsInterface
   ): Promise<{}>;

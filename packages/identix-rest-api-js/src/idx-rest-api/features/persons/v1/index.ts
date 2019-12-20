@@ -8,6 +8,7 @@ import {
   ReinitializePersonByEntryParamsInterface,
   ReinitializePersonByImageParamsInterface,
   CreatePersonFromEntryParamsInterface,
+  PersonResponseIterface,
 } from "../../../api-facade/v1/persons";
 
 class Persons extends Api implements PersonsInterface {
@@ -17,7 +18,7 @@ class Persons extends Api implements PersonsInterface {
     photo,
     asm,
     liveness,
-  }: SearchPersonByImageParamsInterface): Promise<{}> {
+  }: SearchPersonByImageParamsInterface): Promise<PersonResponseIterface> {
     if (!photo) return Promise.reject("No photo provided");
 
     const fieldsData = { asm, liveness };
@@ -36,7 +37,7 @@ class Persons extends Api implements PersonsInterface {
     create_on_ha,
     create_on_junk,
     asm,
-  }: CreatePersonParamsInterface): Promise<{}> {
+  }: CreatePersonParamsInterface): Promise<PersonResponseIterface> {
     const fieldsData = {
       source,
       facesize,

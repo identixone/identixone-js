@@ -13,11 +13,10 @@ import { Users as UsersV1 } from "./features/users/v1";
 import { Utilities as UtilitiesV1 } from "./features/utilities/v1";
 
 import { apiEndpoints, apiVersions } from "../constants";
-import { numeric } from "../base/types";
 
 interface IDXRestApiSettingsInterface {
   token?: string;
-  version?: numeric;
+  version?: number;
 }
 
 function createIDXRestApiV1({
