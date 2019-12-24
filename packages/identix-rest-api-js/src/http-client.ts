@@ -21,6 +21,7 @@ interface RequestClientInterface {
     url: string,
     config?: {
       params?: {};
+      data?: {};
     }
   ): Promise<ResponseData>;
 }
@@ -127,11 +128,21 @@ function createHttpClient({
       return this.client.put(url, preparedData).then(({ data }) => data);
     }
 
-    delete(url: string, params?: {}): Promise<{}> {
-      const config: { params?: {} } = {};
+    delete(url: string, params?: {}, data?: RequestData): Promise<{}> {
+      const config: { params?: {}; data?: {} } = {};
 
       if (params) {
         config.params = prepareUrlParams(params);
+      }
+
+      let preparedData = data;
+
+      if (data && !(data instanceof FormData)) {
+        preparedData = removeEmpty(data);
+      }
+
+      if (preparedData) {
+        config.data = preparedData;
       }
 
       if (!isEmpty(config)) {

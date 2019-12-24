@@ -1,5 +1,4 @@
 import {
-  numeric,
   Liveness,
   Sex,
   Mood,
@@ -23,7 +22,7 @@ export interface NotificationInterface {
   sex?: Array<Sex>;
   moods?: Array<Mood>;
   sources?: Array<string>;
-  persons_lists?: Array<numeric>;
+  persons_groups?: Array<id>;
   liveness?: Array<Liveness>;
 }
 

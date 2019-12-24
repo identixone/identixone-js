@@ -86,7 +86,9 @@ class Sources extends Api implements SourcesInterface {
     );
   }
 
-  updateSource({ id, ...restData }: SourceInterface): Promise<SourceInterface> {
+  updateSource({ id, ...restData }: SourceInterface = {}): Promise<
+    SourceInterface
+  > {
     return this.httpClient.put(
       `${Sources.apiEndpoint}${id}/`,
       Sources.getSourceData(restData)

@@ -23,7 +23,6 @@ class Notifications extends Api implements NotificationsInterface {
     moods,
     sources,
     persons_groups,
-    persons_lists,
     liveness,
   }: NotificationInterface = {}): {} => ({
     name,
@@ -38,7 +37,6 @@ class Notifications extends Api implements NotificationsInterface {
     moods,
     sources,
     persons_groups,
-    persons_lists,
     liveness,
   });
 
@@ -74,10 +72,9 @@ class Notifications extends Api implements NotificationsInterface {
     );
   }
 
-  updateNotification({
-    id,
-    ...restData
-  }: NotificationInterface): Promise<NotificationInterface> {
+  updateNotification({ id, ...restData }: NotificationInterface = {}): Promise<
+    NotificationInterface
+  > {
     return this.httpClient.put(
       `${Notifications.apiEndpoint}${id}/`,
       Notifications.getNotificationData(restData)
