@@ -18,7 +18,7 @@ const createConfig = ({ target }) => {
       filename: `./index.${target}.js`,
       pathinfo: false,
       globalObject: "this",
-      library: "IDXWS",
+      library: "IDXREST",
       libraryTarget: "umd",
       umdNamedDefine: true,
     },
