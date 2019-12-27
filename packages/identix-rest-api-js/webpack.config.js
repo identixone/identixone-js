@@ -16,7 +16,6 @@ const createConfig = ({ target }) => {
     output: {
       path: PATHS.dist,
       filename: `./index.${target}.js`,
-      pathinfo: false,
       globalObject: "this",
       library: "IDXREST",
       libraryTarget: "umd",
@@ -64,10 +63,6 @@ const createConfig = ({ target }) => {
         },
       }),
     ],
-
-    optimization: {
-      removeAvailableModules: false,
-    },
   };
 };
 

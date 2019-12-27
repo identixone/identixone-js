@@ -29,7 +29,7 @@ export interface RemovePersonsFromPersonsGroupsParamsInterface {
   persons?: Array<string>;
 }
 
-export interface PersonGroupsInterface {
+export interface PersonsGroupsInterface {
   getPersonsGroups(params: GetPersonsGroupsFiltersInterface): Promise<{}>;
   getPersonsGroup(personsGroupId: id): Promise<PersonsGroupInterface>;
   createPersonsGroup(

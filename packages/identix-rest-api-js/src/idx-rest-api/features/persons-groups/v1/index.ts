@@ -1,7 +1,7 @@
 import { Api } from "../../../../base/api";
 
 import {
-  PersonGroupsInterface,
+  PersonsGroupsInterface,
   GetPersonsGroupsFiltersInterface,
   PersonsGroupInterface,
   GetPersonsGroupPersonsFiltersInterface,
@@ -10,7 +10,7 @@ import {
 } from "../../../api-facade/v1/persons-groups";
 import { id } from "../../../../base/types";
 
-class PersonsGroups extends Api implements PersonGroupsInterface {
+class PersonsGroups extends Api implements PersonsGroupsInterface {
   static apiEndpoint = "groups/persons/";
 
   static getPersonsGroupData = ({ name }: PersonsGroupInterface = {}): {} => ({
