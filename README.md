@@ -20,10 +20,10 @@ yarn add @identixone/api
 
 ```js
 // ES2015 module import:
-import { createIDXRestApi, createIDXRestApi } from "@identixone/api";
+import { createIDXRestApi, createIDXWsApi } from "@identixone/api";
 
 // CommonJS module require:
-const { createIDXRestApi, createIDXRestApi } = require("@identixone/api");
+const { createIDXRestApi, createIDXWsApi } = require("@identixone/api");
 
 // REST
 const IDXRestApi = createIDXRestApi({
@@ -32,7 +32,7 @@ const IDXRestApi = createIDXRestApi({
 });
 
 // WebSocket
-const IDXWsApi = createIDXRestApi({
+const IDXWsApi = createIDXWsApi({
   version: 1,
   token: "YOUR_IDENTIXONE_TOKEN",
 });
