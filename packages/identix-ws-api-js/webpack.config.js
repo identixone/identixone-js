@@ -15,47 +15,44 @@ const createConfig = ({ target }) => {
 
     output: {
       path: PATHS.dist,
-      filename: "IDXApi." + target + ".js",
+      filename: `./index.${target}.js`,
       pathinfo: false,
       globalObject: "this",
-      library: "IDXApi",
+      library: "IDXWS",
       libraryTarget: "umd",
+      umdNamedDefine: true,
     },
 
     target,
 
+    resolve: {
+      extensions: [".js", ".ts"],
+    },
+
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.ts$/,
           include: PATHS.src,
-          use: [
-            {
-              loader: "babel-loader",
-              options: {
-                presets: [
-                  [
-                    "@babel/preset-env",
-                    {
-                      modules: false,
-                      targets: {
-                        browsers: [
-                          "last 2 versions",
-                          "safari >= 7",
-                          "ie > 10",
-                          "not op_mini all",
-                        ],
-                      },
-                    },
-                  ],
-                ],
-                plugins: [
-                  "@babel/plugin-proposal-object-rest-spread",
-                  "@babel/plugin-proposal-class-properties",
-                ],
-              },
-            },
-          ],
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/typescript",
+              [
+                "@babel/preset-env",
+                {
+                  targets:
+                    target === "node"
+                      ? "maintained node versions"
+                      : "last 1 version, > 1%, not dead",
+                },
+              ],
+            ],
+            plugins: [
+              "@babel/proposal-class-properties",
+              "@babel/proposal-object-rest-spread",
+            ],
+          },
         },
       ],
     },
@@ -70,8 +67,6 @@ const createConfig = ({ target }) => {
 
     optimization: {
       removeAvailableModules: false,
-      removeEmptyChunks: false,
-      splitChunks: false,
     },
   };
 };

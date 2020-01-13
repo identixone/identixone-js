@@ -7,6 +7,7 @@ module.exports = {
     jest: true,
   },
   extends: ["eslint:recommended", "prettier", "plugin:jest/recommended"],
+  plugins: ["prettier", "jest"],
   parser: "babel-eslint",
   parserOptions: {
     sourceType: "module",
@@ -14,7 +15,6 @@ module.exports = {
       modules: true,
     },
   },
-  plugins: ["prettier", "jest"],
   rules: {
     "prettier/prettier": [
       "error",
@@ -23,4 +23,26 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ["*.ts"],
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: "module",
+      },
+      plugins: ["prettier", "jest", "@typescript-eslint"],
+      extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:jest/recommended",
+      ],
+      rules: {
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
+      },
+    },
+  ],
 };

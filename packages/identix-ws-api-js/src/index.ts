@@ -1,9 +1,18 @@
-const { IDXWsApiV1 } = require("./v1");
-const { apiVersions, apiEndpoints } = require("../constants");
+import { IDXWsApiV1, IDXWsApiV1Interface } from "./v1";
+import { apiVersions, apiEndpoints } from "./constants";
+import WebSocket from "isomorphic-ws";
 
-const WebSocket = require("isomorphic-ws");
+interface IDXWsApiSettingsInterface {
+  token?: string;
+  version?: number | string;
+  endpoint?: string;
+}
 
-const createIDXWsApi = ({ token, version, endpoint } = {}) => {
+function createIDXWsApi(
+  settings: IDXWsApiSettingsInterface = {}
+): IDXWsApiV1Interface | undefined {
+  const { token, version, endpoint } = settings;
+
   if (!version) {
     throw new Error(
       `You did not specify Identix API version.
@@ -29,8 +38,6 @@ const createIDXWsApi = ({ token, version, endpoint } = {}) => {
         apiEndpoints,
       });
   }
-};
+}
 
-module.exports = {
-  createIDXWsApi,
-};
+export { createIDXWsApi };
