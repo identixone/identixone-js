@@ -1,6 +1,6 @@
 {
   "name": "@identixone/rest-api",
-  "version": "4.0.0-beta.5",
+  "version": "4.0.0-beta.6",
   "description": "Library for work with identixone REST API",
   "main": "./dist/index.node.js",
   "types": "./dist/@types/index.d.ts",
