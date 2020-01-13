@@ -12,7 +12,7 @@
   - [Entries](entries.md)
   - [Persons](persons.md)
   - [Notifications](notifications.md)
-  - [Persons Lists](persons-lists.md)
+  - [Persons Groups](persons-groups.md)
   - [Utilities](utilities.md)
 
   - [Websocket](websocket.md)
