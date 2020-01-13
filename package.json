@@ -1,6 +1,6 @@
 {
   "name": "@identixone/api",
-  "version": "1.12.0",
+  "version": "1.12.1",
   "description": "Library for work with identix server api",
   "source": "index.js",
   "main": "./dist/IDXApi.node.js",
