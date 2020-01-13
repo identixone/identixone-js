@@ -1,14 +1,15 @@
 import { createIDXRestApi } from "../src/idx-rest-api";
-import { IDXRestApi } from "../src/idx-rest-api/idx-rest-api";
-import { apiVersions, apiEndpoints } from "../src/constants";
+import { apiVersions } from "../src/constants";
 
-// Api version 1
-import AuthV1 from "../src/idx-rest-api/features/auth/v1";
-import UsersV1 from "../src/idx-rest-api/features/users/v1";
-import NotificationsV1 from "../src/idx-rest-api/features/notifications/v1";
-import SourcesV1 from "../src/idx-rest-api/features/sources/v1";
-import UtilitiesV1 from "../src/idx-rest-api/features/utilities/v1";
-import PersonsV1 from "../src/idx-rest-api/features/persons/v1";
+import { ApiFacadeV1 } from "../src/idx-rest-api/api-facade/v1";
+
+import { Auth as AuthV1 } from "../src/idx-rest-api/features/auth/v1";
+import { Users as UsersV1 } from "../src/idx-rest-api/features/users/v1";
+import { Entries as EntriesV1 } from "../src/idx-rest-api/features/entries/v1";
+import { Notifications as NotificationsV1 } from "../src/idx-rest-api/features/notifications/v1";
+import { Sources as SourcesV1 } from "../src/idx-rest-api/features/sources/v1";
+import { Utilities as UtilitiesV1 } from "../src/idx-rest-api/features/utilities/v1";
+import { Persons as PersonsV1 } from "../src/idx-rest-api/features/persons/v1";
 
 describe("createIDXRestApi test", () => {
   const mockedToken = "token";
@@ -45,12 +46,10 @@ describe("createIDXRestApi test", () => {
       version: existedVersions[0],
     });
 
-    expect(IDXRestApiInstanse).toBeInstanceOf(IDXRestApi);
-
-    expect(IDXRestApiInstanse.httpClient.token).toBe(mockedToken);
-    expect(IDXRestApiInstanse.endpoint).toBe(apiEndpoints.v1);
+    expect(IDXRestApiInstanse).toBeInstanceOf(ApiFacadeV1);
 
     expect(IDXRestApiInstanse.auth).toBeInstanceOf(AuthV1);
+    expect(IDXRestApiInstanse.entries).toBeInstanceOf(EntriesV1);
     expect(IDXRestApiInstanse.users).toBeInstanceOf(UsersV1);
     expect(IDXRestApiInstanse.notifications).toBeInstanceOf(NotificationsV1);
     expect(IDXRestApiInstanse.sources).toBeInstanceOf(SourcesV1);

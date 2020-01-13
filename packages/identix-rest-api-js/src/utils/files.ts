@@ -1,8 +1,8 @@
 import { removeEmpty } from "./index";
 
-function dataURItoBlob(dataURI) {
-  // convert base64/URLEncoded data component to raw binary data held in a string
-  var byteString;
+// convert base64/URLEncoded data component to raw binary data held in a string
+function dataURItoBlob(dataURI: string): Blob {
+  let byteString;
 
   if (dataURI.split(",")[0].indexOf("base64") >= 0) {
     byteString = atob(dataURI.split(",")[1]);
@@ -11,50 +11,60 @@ function dataURItoBlob(dataURI) {
   }
 
   // separate out the mime component
-  var mimeString = dataURI
+  const mimeString = dataURI
     .split(",")[0]
     .split(":")[1]
     .split(";")[0];
   // write the bytes of the string to a typed array
-  var ia = new Uint8Array(byteString.length);
+  const ia = new Uint8Array(byteString.length);
 
-  for (var i = 0; i < byteString.length; i++) {
+  for (let i = 0; i < byteString.length; i++) {
     ia[i] = byteString.charCodeAt(i);
   }
 
   return new Blob([ia], { type: mimeString });
 }
 
-function isBinaryFile(file) {
-  return Boolean(file.type);
-}
-
-function getFileExtensionFromBase64String(base64) {
+function getFileExtensionFromBase64String(base64: string): string {
   return base64.substring("data:image/".length, base64.indexOf(";base64"));
 }
 
-export function addFileToFormData(formData, file, fieldName, fileName) {
+export function addFileToFormData(
+  formData: FormData,
+  file: File | string,
+  fieldName: string,
+  fileName?: string
+): FormData {
   if (!file) return formData;
 
-  if (isBinaryFile(file)) {
-    const formFieldName = fileName || file.name;
-
-    formData.append(fieldName, file, formFieldName);
-  } else {
+  if (typeof file === "string") {
     const formFieldName =
       fileName || `${fieldName}.${getFileExtensionFromBase64String(file)}`;
 
     formData.append(fieldName, dataURItoBlob(file), formFieldName);
+  } else {
+    const formFieldName = fileName || file.name;
+
+    formData.append(fieldName, file, formFieldName);
   }
 
   return formData;
 }
 
-export function addDataToFormData(formData, fieldsData) {
+interface FieldsData {
+  [key: string]: any;
+}
+
+export function addDataToFormData(
+  formData: FormData,
+  fieldsData: FieldsData
+): FormData {
   if (!formData) return formData;
 
   Object.keys(removeEmpty(fieldsData)).forEach(key => {
-    formData.append(key, fieldsData[key]);
+    const value = fieldsData[key];
+
+    formData.append(key, value);
   });
 
   return formData;

@@ -1,21 +1,24 @@
 import path from "path";
 import { File } from "file-api";
-import { FormData } from "../__mocks__/form-data";
 import { readFile } from "../__helpers__";
 
-import axios from "../__mocks__/axios";
-import createHttpCilent from "../../src/http-client";
+import axios from "axios";
+import { FormData } from "form-data";
 
-import { IDXRestApi } from "../../src/idx-rest-api/idx-rest-api";
+import { createHttpClient } from "../../src/http-client";
 
-import Auth from "../../src/idx-rest-api/features/auth/v1";
-import Users from "../../src/idx-rest-api/features/users/v1";
-import Entries from "../../src/idx-rest-api/features/entries/v1";
-import Notifications from "../../src/idx-rest-api/features/notifications/v1";
-import Sources from "../../src/idx-rest-api/features/sources/v1";
-import Utilities from "../../src/idx-rest-api/features/utilities/v1";
-import Persons from "../../src/idx-rest-api/features/persons/v1";
-import PersonsLists from "../../src/idx-rest-api/features/persons-lists/v1";
+import { ApiFacadeV1 } from "../../src/idx-rest-api/api-facade/v1";
+
+import { Auth as AuthV1 } from "../../src/idx-rest-api/features/auth/v1";
+import { Users as UsersV1 } from "../../src/idx-rest-api/features/users/v1";
+import { Entries as EntriesV1 } from "../../src/idx-rest-api/features/entries/v1";
+import { Notifications as NotificationsV1 } from "../../src/idx-rest-api/features/notifications/v1";
+import { Sources as SourcesV1 } from "../../src/idx-rest-api/features/sources/v1";
+import { Utilities as UtilitiesV1 } from "../../src/idx-rest-api/features/utilities/v1";
+import { Persons as PersonsV1 } from "../../src/idx-rest-api/features/persons/v1";
+
+jest.mock("axios");
+jest.mock("form-data");
 
 const endpoint = "https://api.mocked.com";
 const pathToMockedImage = path.resolve(__dirname, "../__mocks__/mock.jpg");
@@ -23,27 +26,22 @@ const pathToMockedImage = path.resolve(__dirname, "../__mocks__/mock.jpg");
 global.FormData = FormData;
 
 describe("IdxApi test", () => {
-  const HttpClient = createHttpCilent({ client: axios });
-
-  const api = new IDXRestApi({
-    endpoint,
-    token: "mocked token",
-    Auth,
-    Users,
-    Entries,
-    Notifications,
-    Sources,
-    Utilities,
-    Persons,
-    HttpClient,
-    PersonsLists,
+  const HttpClient = createHttpClient({ client: axios });
+  const httpClient = new HttpClient({
+    baseURL: endpoint,
+    token: "mocked_token",
   });
 
-  api.httpClient._client.defaults = {
-    headers: {
-      Authorization: null,
-    },
-  };
+  const api = new ApiFacadeV1({
+    httpClient,
+    auth: new AuthV1({ httpClient }),
+    notifications: new NotificationsV1({ httpClient }),
+    entries: new EntriesV1({ httpClient }),
+    persons: new PersonsV1({ httpClient }),
+    sources: new SourcesV1({ httpClient }),
+    users: new UsersV1({ httpClient }),
+    utilities: new UtilitiesV1({ httpClient }),
+  });
 
   let thenFn;
   let mockedFile;
@@ -97,7 +95,7 @@ describe("IdxApi test", () => {
 
       api.setToken(mockedToken);
 
-      expect(api.httpClient._client.defaults.headers.Authorization).toEqual(
+      expect(api.httpClient.client.defaults.headers.Authorization).toEqual(
         `Token ${mockedToken}`
       );
     });
@@ -174,7 +172,7 @@ describe("IdxApi test", () => {
       sex: 1,
       moods: [0],
       sources: ["webcam"],
-      persons_lists: ["some", "persons lists"],
+      persons_groups: ["some", "persons groups"],
     };
 
     test("getNotifications: should return correct array of notifications", () => {
@@ -313,6 +311,29 @@ describe("IdxApi test", () => {
       expect(thenFn).toHaveBeenCalledWith(mockedPerson);
     });
 
+    test("createPersonFromEntry: should send POST request with correct data", () => {
+      const entryId = 42;
+      const facesize = 100;
+      const create_on_ha = false;
+      const create_on_junk = false;
+
+      api.persons
+        .createPersonFromEntry({
+          entryId,
+          facesize,
+          create_on_ha,
+          create_on_junk,
+        })
+        .then(thenFn);
+
+      expect(axios.post).toHaveBeenCalledWith("persons/entry/", {
+        id: entryId,
+        facesize,
+        create_on_ha,
+        create_on_junk,
+      });
+    });
+
     test("deletePerson: should send DELETE request with correct URL", () => {
       const personId = 42;
 
@@ -321,16 +342,14 @@ describe("IdxApi test", () => {
       expect(axios.delete).toHaveBeenCalledWith(`persons/${personId}/`);
     });
 
-    test("reinitializePersonByRecord: should send POST request with correct data", () => {
-      const recordId = 42;
+    test("reinitializePersonByEntry: should send POST request with correct data", () => {
+      const entryId = 42;
       const facesize = 100;
 
-      api.persons
-        .reinitializePersonByRecord({ recordId, facesize })
-        .then(thenFn);
+      api.persons.reinitializePersonByEntry({ entryId, facesize }).then(thenFn);
 
       expect(axios.post).toHaveBeenCalledWith("persons/reinit/", {
-        id: recordId,
+        id: entryId,
         facesize,
       });
     });
@@ -597,12 +616,11 @@ describe("IdxApi test", () => {
     test("updateToken: should send PUT request with correct data", () => {
       const tokenId = 1;
 
-      api.users.updateToken({ id: tokenId, ...mockedToken }).then(thenFn);
+      api.users.updateToken({ id: tokenId, is_active: false }).then(thenFn);
 
-      expect(axios.put).toHaveBeenCalledWith(
-        `users/tokens/${tokenId}/`,
-        mockedToken
-      );
+      expect(axios.put).toHaveBeenCalledWith(`users/tokens/${tokenId}/`, {
+        is_active: false,
+      });
 
       axios.mockResponse({ data: mockedToken });
 
