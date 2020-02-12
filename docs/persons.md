@@ -2,13 +2,13 @@
 
 ## Identix API references
 
-[Identix API](https://kb.identix.one/#/personas)
+[Identix API](https://kb.identix.one/#/persons)
 
 !> Note that parameters documentation available on the links to Identix API references below.
 
 ## Create person
 
-[Identix API](https://kb.identix.one/#/personas?id=persona-creation-with-an-image)
+[Identix API](https://kb.identix.one/#/persons?id=person-creation-with-an-image)
 
 ```js
 import { createIDXRestApi } from "@identixone/api";
@@ -32,9 +32,32 @@ person.then(person => {
 });
 ```
 
+## Create person from entry
+
+[Identix API](https://kb.identix.one/#/persons?id=creating-a-persona-from-a-nm-junk-ha-entry)
+
+```js
+import { createIDXRestApi } from "@identixone/api";
+
+const IDXRestApi = createIDXRestApi({
+  version: 1,
+  token: IDENTIXONE_TOKEN,
+});
+
+const person = IDXRestApi.persons.createPersonFromEntry({
+  entryId: 1,
+  create_on_ha: true,
+  create_on_junk: false,
+});
+
+person.then(person => {
+  console.log({ person });
+});
+```
+
 ## Delete person
 
-[Identix API](https://kb.identix.one/#/personas?id=persona-removal-from-the-database)
+[Identix API](https://kb.identix.one/#/persons?id=person-removal-from-the-database)
 
 ```js
 import { createIDXRestApi } from "@identixone/api";
@@ -55,7 +78,7 @@ person.then(() => {
 
 ## Search person by image
 
-[Identix API](https://kb.identix.one/#/personas?id=persona-search-by-image)
+[Identix API](https://kb.identix.one/#/persons?id=person-search-by-image)
 
 ```js
 import { createIDXRestApi } from "@identixone/api";
@@ -76,9 +99,9 @@ person.then(person => {
 });
 ```
 
-## Reinitialize person by record
+## Reinitialize person by entry
 
-[Identix API](https://kb.identix.one/#/personas?id=reinitialization-by-record)
+[Identix API](https://kb.identix.one/#/persons?id=re-initialization-from-a-entry)
 
 ```js
 import { createIDXRestApi } from "@identixone/api";
@@ -92,7 +115,6 @@ const recordId = 1;
 
 const person = IDXRestApi.persons.reinitializePersonByRecord({
   recordId,
-  facesize: 100,
 });
 
 person.then(person => {
@@ -102,7 +124,7 @@ person.then(person => {
 
 ## Reinitialize person by image
 
-[Identix API](https://kb.identix.one/#/personas?id=reinitialization-by-image)
+[Identix API](https://kb.identix.one/#/persons?id=re-initialization-by-image)
 
 ```js
 import { createIDXRestApi } from "@identixone/api";

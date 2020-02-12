@@ -53,16 +53,13 @@ class Persons extends Api implements PersonsInterface {
     return this.httpClient.post(Persons.apiEndpoint, data);
   }
 
-  // Added
   createPersonFromEntry({
     entryId,
-    facesize,
     create_on_ha,
     create_on_junk,
   }: CreatePersonFromEntryParamsInterface): Promise<{}> {
     return this.httpClient.post(`${Persons.apiEndpoint}entry/`, {
       id: entryId,
-      facesize,
       create_on_ha,
       create_on_junk,
     });
@@ -74,13 +71,11 @@ class Persons extends Api implements PersonsInterface {
 
   reinitializePersonByEntry({
     entryId,
-    facesize,
   }: ReinitializePersonByEntryParamsInterface): Promise<{}> {
-    if (!entryId) return Promise.reject("No record id provided");
+    if (!entryId) return Promise.reject("No entry id provided");
 
     return this.httpClient.post(`${Persons.apiEndpoint}reinit/`, {
       id: entryId,
-      facesize,
     });
   }
 

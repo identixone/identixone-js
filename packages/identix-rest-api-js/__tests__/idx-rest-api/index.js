@@ -313,14 +313,12 @@ describe("IdxApi test", () => {
 
     test("createPersonFromEntry: should send POST request with correct data", () => {
       const entryId = 42;
-      const facesize = 100;
       const create_on_ha = false;
       const create_on_junk = false;
 
       api.persons
         .createPersonFromEntry({
           entryId,
-          facesize,
           create_on_ha,
           create_on_junk,
         })
@@ -328,7 +326,6 @@ describe("IdxApi test", () => {
 
       expect(axios.post).toHaveBeenCalledWith("persons/entry/", {
         id: entryId,
-        facesize,
         create_on_ha,
         create_on_junk,
       });
@@ -344,13 +341,11 @@ describe("IdxApi test", () => {
 
     test("reinitializePersonByEntry: should send POST request with correct data", () => {
       const entryId = 42;
-      const facesize = 100;
 
-      api.persons.reinitializePersonByEntry({ entryId, facesize }).then(thenFn);
+      api.persons.reinitializePersonByEntry({ entryId }).then(thenFn);
 
       expect(axios.post).toHaveBeenCalledWith("persons/reinit/", {
         id: entryId,
-        facesize,
       });
     });
 

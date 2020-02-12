@@ -21,22 +21,16 @@ export interface CreatePersonParamsInterface {
   create_on_ha?: boolean;
   create_on_junk?: boolean;
   asm?: boolean;
-  // TODO: узнать про эти параметры
-  // liveness;
-  // create_liveness_only;
 }
 
 export interface CreatePersonFromEntryParamsInterface {
   entryId: number;
-  facesize?: number;
   create_on_ha?: boolean;
   create_on_junk?: boolean;
 }
 
-// Change (reinitializePersonByEntry --> reinitializePersonByEntry)
 export interface ReinitializePersonByEntryParamsInterface {
   entryId: id;
-  facesize?: number;
 }
 
 export interface ReinitializePersonByImageParamsInterface {
