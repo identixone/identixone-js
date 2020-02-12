@@ -1,12 +1,15 @@
 {
   "name": "@identixone/rest-api",
-  "version": "3.0.1",
-  "description": "Library for work with identix-one REST API",
-  "main": "./dist/IDXApi.node.js",
+  "version": "4.1.0",
+  "description": "Library for work with identixone REST API",
+  "main": "./dist/index.node.js",
+  "types": "./dist/@types/index.d.ts",
   "browser": {
-    "./dist/IDXApi.node.js": "./dist/IDXApi.web.js"
+    "./dist/index.node.js": "./dist/index.web.js"
   },
   "scripts": {
+    "check-types": "tsc",
+    "create-declaration": "tsc --noEmit false --emitDeclarationOnly --declarationDir ./dist/@types --declaration true",
     "build": "NODE_ENV=production webpack",
     "prepublishOnly": "npm run build",
     "test": "jest",
@@ -19,34 +22,36 @@
     "qs": "^6.9.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-typescript": "^7.7.7",
+    "@types/axios": "^0.14.0",
+    "@types/isomorphic-form-data": "^2.0.0",
+    "@types/jest": "^24.0.24",
+    "@types/qs": "^6.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.13.0",
+    "@typescript-eslint/parser": "^2.13.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
-    "codacy-coverage": "^3.4.0",
-    "eslint": "^6.7.2",
-    "eslint-config-prettier": "^6.7.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.8.0",
     "eslint-plugin-jest": "^23.1.1",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "file-api": "^0.10.4",
     "jest": "^24.9.0",
     "jest-mock-axios": "^3.2.0",
     "parallel-webpack": "^2.4.0",
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.1",
-    "webpack": "^4.41.2",
+    "ts-jest": "^24.2.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.0",
     "webpack-cli": "^3.3.10"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "__helpers__",
-      "__mocks__"
-    ]
   },
   "keywords": [],
   "author": "Dmitriy Balashov <mockedcat@gmail.com>",
