@@ -163,7 +163,6 @@ describe("IdxApi test", () => {
     const SETTINGS_NOTIFICATIONS = "settings/notifications/";
     const mockedNotification = {
       is_active: false,
-      transport: 0,
       http_method: 0,
       destination_url: "https://mocked.com",
       conf_thresholds: [1],
