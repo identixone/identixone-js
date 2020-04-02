@@ -2,9 +2,6 @@ import { Conf, Paginatable, Searchable, id } from "../../../../base/types";
 import { License } from "./types";
 
 export interface SourceInterface {
-  // TODO: узнать про этот проп
-  manual_create_liveness_only?: boolean;
-
   // General
   id?: id;
   name?: string;
@@ -16,7 +13,6 @@ export interface SourceInterface {
   manual_create_facesize_threshold?: number;
   manual_create_on_ha?: boolean;
   manual_create_on_junk?: boolean;
-  manual_check_liveness?: boolean;
   manual_check_asm?: boolean;
 
   // Processing a video stream
