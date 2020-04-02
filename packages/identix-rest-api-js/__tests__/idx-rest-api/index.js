@@ -462,35 +462,7 @@ describe("IdxApi test", () => {
       expect(thenFn).toHaveBeenCalledWith(mockedEntry);
     });
 
-    test("getEntriesStatsBySources: should return correct array with stats of a sources", () => {
-      const mockedEntries = [mockedEntry];
-      const mockedFilters = {
-        idxid: "1,2",
-        conf: "some_conf",
-        liveness: "some_liveness",
-        source: 2,
-        entry_id_from: 100,
-        date_from: "some_date_from",
-        date_to: "some_date_to",
-        limit: 100,
-        offset: 20,
-        mood: "happiness,fear",
-        age_from: 10,
-        age_to: 13,
-        sex: "0,1",
-      };
-      api.entries.getEntriesStatsBySources(mockedFilters).then(thenFn);
-
-      expect(axios.get).toHaveBeenCalledWith(`entries/stats/sources/`, {
-        params: mockedFilters,
-      });
-
-      axios.mockResponse({ data: mockedEntries });
-
-      expect(thenFn).toHaveBeenCalledWith(mockedEntries);
-    });
-
-    test("deleteRecord: should send DELETE request with correct data", () => {
+    test("deleteEntry: should send DELETE request with correct data", () => {
       const entryId = 1;
 
       api.entries.deleteEntry(entryId).then(thenFn);

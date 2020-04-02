@@ -68,45 +68,6 @@ class Entries extends Api implements EntriesInterface {
     );
   }
 
-  getEntriesStatsBySources(filters: EntriesFiltersInterface = {}): Promise<{}> {
-    const getFiltersData = ({
-      idxid,
-      conf,
-      liveness,
-      source,
-      entry_id_from,
-      date_from,
-      date_to,
-      limit,
-      offset,
-      sex,
-      mood,
-      age_from,
-      age_to,
-      q,
-    }: EntriesFiltersInterface = {}): {} => ({
-      idxid,
-      conf,
-      liveness,
-      source,
-      entry_id_from,
-      date_from,
-      date_to,
-      limit,
-      offset,
-      sex,
-      mood,
-      age_from,
-      age_to,
-      q,
-    });
-
-    return this.httpClient.get(
-      `${Entries.apiEndpoint}stats/sources/`,
-      getFiltersData(filters)
-    );
-  }
-
   deleteEntry(entryId: id): Promise<{}> {
     return this.httpClient.delete(`${Entries.apiEndpoint}${entryId}/`);
   }

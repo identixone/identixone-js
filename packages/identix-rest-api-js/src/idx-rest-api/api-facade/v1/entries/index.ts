@@ -30,6 +30,5 @@ export interface EntriesInterface {
   getEntries(filters: EntriesFiltersInterface): Promise<{}>;
   getEntriesLive(filters: EntriesFiltersInterface): Promise<{}>;
   getEntriesStatsByPersonId(personId: string): Promise<{}>;
-  getEntriesStatsBySources(filters: EntriesFiltersInterface): Promise<{}>;
   deleteEntry(entryId: id): Promise<{}>;
 }
