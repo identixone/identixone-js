@@ -15,9 +15,6 @@ export interface ComparePersonPhotoWithDocumentPhotoParamsInterface {
   photo: File;
   facesize?: number;
   conf?: Conf;
-
-  // TODO: узнать про этот проп
-  // liveness: boolean;
 }
 
 export interface VerifyPersonPhotoWithDocumentPhotoParamsInterface {

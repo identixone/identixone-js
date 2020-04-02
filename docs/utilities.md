@@ -46,7 +46,6 @@ const comparingResult = IDXRestApi.utilities.comparePersonPhotoWithDocumentPhoto
     photo: "dataURIPhoto",
     conf: "ha",
     facesize: 2000,
-    liveness: false,
   }
 );
 

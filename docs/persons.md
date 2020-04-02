@@ -91,7 +91,6 @@ const IDXRestApi = createIDXRestApi({
 const person = IDXRestApi.persons.searchPersonByImage({
   photo: "dataURIPhoto",
   asm: true,
-  liveness: false,
 });
 
 person.then(person => {

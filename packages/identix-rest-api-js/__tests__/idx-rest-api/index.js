@@ -255,7 +255,6 @@ describe("IdxApi test", () => {
     test("searchPersonByImage: should return correct person object", () => {
       const personData = {
         photo: mockedFile,
-        liveness: undefined,
         asm: true,
       };
 
@@ -382,25 +381,6 @@ describe("IdxApi test", () => {
   });
 
   describe("Entries module test", () => {
-    /**
-     *  "id": integer, //порядковый идентификатор данной записи в бд
-        "created": ISO8601, //время детекции персоны время создания карточки персоны (первой детекции) 
-        "photo": url, //путь до фото, произведенного в момент детекции персоны
-        "source": {
-            "id": integer, //id источника данных
-            "name": string //имя источника данных
-        },
-        "facesize": integer, //размер площади лица в пикселях
-        "age": num, //возраст персоны
-        "sex": integer, //пол персоны, 0 (male) или 1 (female)
-        "mood": string, //настроение персоны
-        "liveness": string, //статус проверки изображения на liveness
-        "idxid": string, //уникальный идентификатор персоны в платформе
-        "conf": string, //точность идентификации и результата
-        "idxid_created": ISO8601, //время создания карточки персоны/первой детекции персоны
-        "initial_photo": url //путь до первичного фото
-     */
-
     const mockedEntry = {
       id: 1,
       created: "2008-09-15T15:53:00",
