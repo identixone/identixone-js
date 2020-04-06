@@ -428,26 +428,6 @@ describe("IdxApi test", () => {
       expect(thenFn).toHaveBeenCalledWith(mockedEntries);
     });
 
-    test("getEntriesLive: should return correct array of entries", () => {
-      const mockedEntries = [mockedEntry];
-      const mockedFilters = {
-        conf: "some_conf",
-        source: 2,
-        id_from: 100,
-        limit: 100,
-      };
-
-      api.entries.getEntriesLive(mockedFilters).then(thenFn);
-
-      expect(axios.get).toHaveBeenCalledWith("entries/live/", {
-        params: mockedFilters,
-      });
-
-      axios.mockResponse({ data: mockedEntries });
-
-      expect(thenFn).toHaveBeenCalledWith(mockedEntries);
-    });
-
     test("getEntriesStatsByPersonId: should return correct object with stats of a person", () => {
       const personId = 1;
 
