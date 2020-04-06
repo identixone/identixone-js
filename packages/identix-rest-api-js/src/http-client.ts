@@ -2,8 +2,14 @@ import { removeEmpty, isEmpty } from "./utils";
 import qs from "qs";
 import { HttpClientInterface } from "./idx-rest-api/api-facade/auth";
 
-function prepareUrlParams(params: {}): {} {
+function prepareUrlParams(params: { q?: string }): {} {
   const paramsWithValues = removeEmpty(params);
+
+  if (Object.prototype.hasOwnProperty.call(params, "q")) {
+    if (params.q === "") {
+      delete paramsWithValues.q;
+    }
+  }
 
   return !isEmpty(paramsWithValues) ? paramsWithValues : {};
 }
