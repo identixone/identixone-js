@@ -19,7 +19,7 @@
     "query"
   ],
   "dependencies": {
-    "@identixone/rest-api": "^4.1.1",
+    "@identixone/rest-api": "^4.2.0",
     "@identixone/websocket": "^1.2.1"
   },
   "devDependencies": {
