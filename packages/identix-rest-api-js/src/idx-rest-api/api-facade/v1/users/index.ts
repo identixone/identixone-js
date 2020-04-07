@@ -23,6 +23,13 @@ export interface DeleteTokensInterface {
   permanent?: boolean;
 }
 
+export interface ChangePasswordInterface {
+  old_password: string;
+  password: string;
+  password2: string;
+  reset_tokens?: boolean;
+}
+
 export interface UsersInterface {
   getUser(): Promise<UserInterface>;
 
@@ -31,4 +38,6 @@ export interface UsersInterface {
   updateToken(params: UpdateTokenParamsInterface): Promise<TokenInterface>;
   deleteToken(tokenId: string | number): Promise<{}>;
   deleteTokens(params: DeleteTokensInterface): Promise<{}>;
+
+  changePassword(params: ChangePasswordInterface): Promise<{}>;
 }

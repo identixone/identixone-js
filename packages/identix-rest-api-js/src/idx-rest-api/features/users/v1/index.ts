@@ -5,6 +5,7 @@ import {
   CreateTokenParamsInterface,
   UpdateTokenParamsInterface,
   DeleteTokensInterface,
+  ChangePasswordInterface,
 } from "../../../api-facade/v1/users";
 import {
   UserInterface,
@@ -47,6 +48,10 @@ class Users extends Api implements UsersInterface {
     const { permanent } = data || {};
 
     return this.httpClient.delete(USERS_TOKENS, { permanent });
+  }
+
+  changePassword(data: ChangePasswordInterface): Promise<{}> {
+    return this.httpClient.post("users/password/change/", data);
   }
 }
 

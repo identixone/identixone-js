@@ -652,6 +652,25 @@ describe("IdxApi test", () => {
 
       expect(thenFn).toHaveBeenCalledWith(mockedUserData);
     });
+
+    test("changePassword: should send correct password data", () => {
+      const mockedPasswordData = {
+        old_password: "old_pass",
+        password: "new_pass",
+        password2: "new_pass",
+      };
+
+      api.users.changePassword(mockedPasswordData).then(thenFn);
+
+      expect(axios.post).toHaveBeenCalledWith(
+        "users/password/change/",
+        mockedPasswordData
+      );
+
+      axios.mockResponse({ data: { success: true } });
+
+      expect(thenFn).toHaveBeenCalledWith({ success: true });
+    });
   });
 
   describe("Utilities module test", () => {
