@@ -12,6 +12,7 @@ import { Sources as SourcesV1 } from "./features/sources/v1";
 import { Users as UsersV1 } from "./features/users/v1";
 import { Utilities as UtilitiesV1 } from "./features/utilities/v1";
 import { PersonsGroups as PersonsGroupsV1 } from "./features/persons-groups/v1";
+import { Thresholds as ThresholdsV1 } from "./features/thresholds/v1";
 
 import { apiEndpoints, apiVersions } from "../constants";
 
@@ -41,6 +42,7 @@ function createIDXRestApiV1({
     users: new UsersV1({ httpClient }),
     utilities: new UtilitiesV1({ httpClient }),
     personsGroups: new PersonsGroupsV1({ httpClient }),
+    thresholds: new ThresholdsV1({ httpClient }),
   });
 }
 

@@ -11,6 +11,7 @@ import { SourcesInterface } from "./sources";
 import { UsersInterface } from "./users";
 import { UtilitiesInterface } from "./utilities";
 import { PersonsGroupsInterface } from "./persons-groups";
+import { ThresholdsClassInterface } from "./thresholds";
 
 interface ApiFacadeV1SettingsInterface extends ApiFacadeSettingsInterface {
   notifications: NotificationsInterface;
@@ -20,6 +21,7 @@ interface ApiFacadeV1SettingsInterface extends ApiFacadeSettingsInterface {
   users: UsersInterface;
   utilities: UtilitiesInterface;
   personsGroups: PersonsGroupsInterface;
+  thresholds: ThresholdsClassInterface;
 }
 
 export interface ApiFacadeV1Interface extends ApiFacadeInterface {
@@ -30,6 +32,7 @@ export interface ApiFacadeV1Interface extends ApiFacadeInterface {
   users: UsersInterface;
   utilities: UtilitiesInterface;
   personsGroups: PersonsGroupsInterface;
+  thresholds: ThresholdsClassInterface;
 }
 
 class ApiFacadeV1 extends ApiFacade {
@@ -40,6 +43,7 @@ class ApiFacadeV1 extends ApiFacade {
   users: UsersInterface;
   utilities: UtilitiesInterface;
   personsGroups: PersonsGroupsInterface;
+  thresholds: ThresholdsClassInterface;
 
   constructor({
     httpClient,
@@ -51,6 +55,7 @@ class ApiFacadeV1 extends ApiFacade {
     users,
     utilities,
     personsGroups,
+    thresholds,
   }: ApiFacadeV1SettingsInterface) {
     super({
       auth,
@@ -64,6 +69,7 @@ class ApiFacadeV1 extends ApiFacade {
     this.users = users;
     this.utilities = utilities;
     this.personsGroups = personsGroups;
+    this.thresholds = thresholds;
   }
 }
 
