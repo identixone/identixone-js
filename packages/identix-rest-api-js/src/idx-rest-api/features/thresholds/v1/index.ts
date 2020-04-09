@@ -5,7 +5,7 @@ import {
 } from "../../../api-facade/v1/thresholds";
 
 class Thresholds extends Api implements ThresholdsClassInterface {
-  static apiEndpoint = "settings/thresholds";
+  static apiEndpoint = "settings/thresholds/";
 
   getThresholds(): Promise<ThresholdsInterface> {
     return this.httpClient.get(Thresholds.apiEndpoint);

@@ -16,6 +16,7 @@ import { Notifications as NotificationsV1 } from "../../src/idx-rest-api/feature
 import { Sources as SourcesV1 } from "../../src/idx-rest-api/features/sources/v1";
 import { Utilities as UtilitiesV1 } from "../../src/idx-rest-api/features/utilities/v1";
 import { Persons as PersonsV1 } from "../../src/idx-rest-api/features/persons/v1";
+import { Thresholds as ThresholdsV1 } from "../../src/idx-rest-api/features/thresholds/v1";
 
 jest.mock("axios");
 jest.mock("form-data");
@@ -41,6 +42,7 @@ describe("IdxApi test", () => {
     sources: new SourcesV1({ httpClient }),
     users: new UsersV1({ httpClient }),
     utilities: new UtilitiesV1({ httpClient }),
+    thresholds: new ThresholdsV1({ httpClient }),
   });
 
   let thenFn;
@@ -137,7 +139,7 @@ describe("IdxApi test", () => {
       test("generateToken: should send POST request to API server on correct endpoint", () => {
         api.auth.generateToken().then(thenFn);
 
-        expect(axios.post).toHaveBeenCalledWith("login/", undefined);
+        expect(axios.post).toHaveBeenCalledWith("login/");
 
         axios.mockResponse({ data: mockedData });
 
@@ -601,6 +603,53 @@ describe("IdxApi test", () => {
       axios.mockResponse({ data: { success: true } });
 
       expect(thenFn).toHaveBeenCalledWith({ success: true });
+    });
+  });
+
+  describe("Thresholds module test", () => {
+    test("getThresholds: should send GET to correct url and return correct data", () => {
+      const mockedThresholds = {
+        exact: 0.12,
+        ha: 0.1,
+        junk: 1,
+      };
+
+      api.thresholds.getThresholds().then(thenFn);
+      expect(axios.get).toHaveBeenCalledWith("settings/thresholds/");
+
+      axios.mockResponse({ data: mockedThresholds });
+      expect(thenFn).toHaveBeenCalledWith(mockedThresholds);
+    });
+
+    test("updateThresholds: should send PUT to correct url and return correct data", () => {
+      const mockedThresholds = {
+        exact: 0.12,
+        ha: 0.1,
+        junk: 1,
+      };
+
+      api.thresholds.updateThresholds(mockedThresholds).then(thenFn);
+      expect(axios.put).toHaveBeenCalledWith(
+        "settings/thresholds/",
+        mockedThresholds
+      );
+
+      axios.mockResponse({ data: mockedThresholds });
+      expect(thenFn).toHaveBeenCalledWith(mockedThresholds);
+    });
+
+    test("resetThresholds: should send POST to correct url and return correct data", () => {
+      const mockedThresholds = {
+        exact: 0.12,
+        ha: 0.1,
+        junk: 1,
+      };
+
+      api.thresholds.resetThresholds().then(thenFn);
+      expect(axios.post).toHaveBeenCalledWith("settings/thresholds/reset/");
+
+      axios.mockResponse({ data: mockedThresholds });
+      expect(thenFn).toHaveBeenCalledWith(mockedThresholds);
     });
   });
 
