@@ -6,6 +6,7 @@
 - REST API reference
 
   - [Authorization](authorization.md)
+  - [Users](users.md)
   - [User tokens](user-tokens.md)
 
   - [Sources](sources.md)
