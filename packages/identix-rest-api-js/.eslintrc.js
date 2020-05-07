@@ -15,14 +15,6 @@ module.exports = {
       modules: true,
     },
   },
-  rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        trailingComma: "es5",
-      },
-    ],
-  },
   overrides: [
     {
       files: ["*.ts"],
@@ -40,12 +32,6 @@ module.exports = {
         "plugin:jest/recommended",
       ],
       rules: {
-        "prettier/prettier": [
-          "error",
-          {
-            trailingComma: "es5",
-          },
-        ],
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/interface-name-prefix": "off",
         "@typescript-eslint/camelcase": 0,
