@@ -15,14 +15,6 @@ module.exports = {
       modules: true,
     },
   },
-  rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        trailingComma: "es5",
-      },
-    ],
-  },
   overrides: [
     {
       files: ["*.ts"],
