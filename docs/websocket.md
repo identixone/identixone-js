@@ -15,7 +15,7 @@ import { createIDXWsApi } from "@identixone/api";
 
 const IDXWsApi = createIDXWsApi({
   version: 1,
-  token: "YOUR_IDENTIXONE_TOKEN",
+  token: IDENTIXONE_TOKEN,
 });
 
 IDXWsApi.on("connect", () => {
@@ -34,14 +34,14 @@ import { createIDXWsApi } from "@identixone/api";
 
 const IDXWsApi = createIDXWsApi({
   version: 1,
-  token: "YOUR_IDENTIXONE_TOKEN",
+  token: IDENTIXONE_TOKEN,
 });
 
 IDXWsApi.on("connect", () => {
   console.log("🤝 connected!");
 });
 
-IDXWsApi.on("message", message => {
+IDXWsApi.on("message", (message) => {
   console.log("✉️ message received!", { message });
 });
 

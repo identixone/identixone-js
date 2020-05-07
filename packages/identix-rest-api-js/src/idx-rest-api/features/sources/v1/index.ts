@@ -17,8 +17,6 @@ class Sources extends Api implements SourcesInterface {
     manual_create_facesize_threshold,
     manual_create_on_ha,
     manual_create_on_junk,
-    manual_check_liveness,
-    manual_create_liveness_only,
     manual_check_asm,
 
     auto_create_persons,
@@ -42,8 +40,6 @@ class Sources extends Api implements SourcesInterface {
     manual_create_facesize_threshold,
     manual_create_on_ha,
     manual_create_on_junk,
-    manual_check_liveness,
-    manual_create_liveness_only,
     manual_check_asm,
 
     auto_create_persons,

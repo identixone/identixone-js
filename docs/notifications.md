@@ -61,7 +61,6 @@ const IDXRestApi = createIDXRestApi({
 const notification = IDXRestApi.notifications.createNotification({
   name: "My new awesome notification",
   is_active: 7000,
-  transport: 0,
   http_method: 0,
   destination_url: "https://destination-url.com/",
   conf_thresholds: ["new", "ha", "junk"],

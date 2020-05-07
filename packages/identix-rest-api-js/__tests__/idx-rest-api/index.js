@@ -16,6 +16,7 @@ import { Notifications as NotificationsV1 } from "../../src/idx-rest-api/feature
 import { Sources as SourcesV1 } from "../../src/idx-rest-api/features/sources/v1";
 import { Utilities as UtilitiesV1 } from "../../src/idx-rest-api/features/utilities/v1";
 import { Persons as PersonsV1 } from "../../src/idx-rest-api/features/persons/v1";
+import { Thresholds as ThresholdsV1 } from "../../src/idx-rest-api/features/thresholds/v1";
 
 jest.mock("axios");
 jest.mock("form-data");
@@ -41,6 +42,7 @@ describe("IdxApi test", () => {
     sources: new SourcesV1({ httpClient }),
     users: new UsersV1({ httpClient }),
     utilities: new UtilitiesV1({ httpClient }),
+    thresholds: new ThresholdsV1({ httpClient }),
   });
 
   let thenFn;
@@ -137,7 +139,7 @@ describe("IdxApi test", () => {
       test("generateToken: should send POST request to API server on correct endpoint", () => {
         api.auth.generateToken().then(thenFn);
 
-        expect(axios.post).toHaveBeenCalledWith("login/", undefined);
+        expect(axios.post).toHaveBeenCalledWith("login/");
 
         axios.mockResponse({ data: mockedData });
 
@@ -163,7 +165,6 @@ describe("IdxApi test", () => {
     const SETTINGS_NOTIFICATIONS = "settings/notifications/";
     const mockedNotification = {
       is_active: false,
-      transport: 0,
       http_method: 0,
       destination_url: "https://mocked.com",
       conf_thresholds: [1],
@@ -256,7 +257,6 @@ describe("IdxApi test", () => {
     test("searchPersonByImage: should return correct person object", () => {
       const personData = {
         photo: mockedFile,
-        liveness: undefined,
         asm: true,
       };
 
@@ -383,25 +383,6 @@ describe("IdxApi test", () => {
   });
 
   describe("Entries module test", () => {
-    /**
-     *  "id": integer, //порядковый идентификатор данной записи в бд
-        "created": ISO8601, //время детекции персоны время создания карточки персоны (первой детекции) 
-        "photo": url, //путь до фото, произведенного в момент детекции персоны
-        "source": {
-            "id": integer, //id источника данных
-            "name": string //имя источника данных
-        },
-        "facesize": integer, //размер площади лица в пикселях
-        "age": num, //возраст персоны
-        "sex": integer, //пол персоны, 0 (male) или 1 (female)
-        "mood": string, //настроение персоны
-        "liveness": string, //статус проверки изображения на liveness
-        "idxid": string, //уникальный идентификатор персоны в платформе
-        "conf": string, //точность идентификации и результата
-        "idxid_created": ISO8601, //время создания карточки персоны/первой детекции персоны
-        "initial_photo": url //путь до первичного фото
-     */
-
     const mockedEntry = {
       id: 1,
       created: "2008-09-15T15:53:00",
@@ -449,26 +430,6 @@ describe("IdxApi test", () => {
       expect(thenFn).toHaveBeenCalledWith(mockedEntries);
     });
 
-    test("getEntriesLive: should return correct array of entries", () => {
-      const mockedEntries = [mockedEntry];
-      const mockedFilters = {
-        conf: "some_conf",
-        source: 2,
-        id_from: 100,
-        limit: 100,
-      };
-
-      api.entries.getEntriesLive(mockedFilters).then(thenFn);
-
-      expect(axios.get).toHaveBeenCalledWith("entries/live/", {
-        params: mockedFilters,
-      });
-
-      axios.mockResponse({ data: mockedEntries });
-
-      expect(thenFn).toHaveBeenCalledWith(mockedEntries);
-    });
-
     test("getEntriesStatsByPersonId: should return correct object with stats of a person", () => {
       const personId = 1;
 
@@ -483,35 +444,7 @@ describe("IdxApi test", () => {
       expect(thenFn).toHaveBeenCalledWith(mockedEntry);
     });
 
-    test("getEntriesStatsBySources: should return correct array with stats of a sources", () => {
-      const mockedEntries = [mockedEntry];
-      const mockedFilters = {
-        idxid: "1,2",
-        conf: "some_conf",
-        liveness: "some_liveness",
-        source: 2,
-        entry_id_from: 100,
-        date_from: "some_date_from",
-        date_to: "some_date_to",
-        limit: 100,
-        offset: 20,
-        mood: "happiness,fear",
-        age_from: 10,
-        age_to: 13,
-        sex: "0,1",
-      };
-      api.entries.getEntriesStatsBySources(mockedFilters).then(thenFn);
-
-      expect(axios.get).toHaveBeenCalledWith(`entries/stats/sources/`, {
-        params: mockedFilters,
-      });
-
-      axios.mockResponse({ data: mockedEntries });
-
-      expect(thenFn).toHaveBeenCalledWith(mockedEntries);
-    });
-
-    test("deleteRecord: should send DELETE request with correct data", () => {
+    test("deleteEntry: should send DELETE request with correct data", () => {
       const entryId = 1;
 
       api.entries.deleteEntry(entryId).then(thenFn);
@@ -670,6 +603,53 @@ describe("IdxApi test", () => {
       axios.mockResponse({ data: { success: true } });
 
       expect(thenFn).toHaveBeenCalledWith({ success: true });
+    });
+  });
+
+  describe("Thresholds module test", () => {
+    test("getThresholds: should send GET to correct url and return correct data", () => {
+      const mockedThresholds = {
+        exact: 0.12,
+        ha: 0.1,
+        junk: 1,
+      };
+
+      api.thresholds.getThresholds().then(thenFn);
+      expect(axios.get).toHaveBeenCalledWith("settings/thresholds/");
+
+      axios.mockResponse({ data: mockedThresholds });
+      expect(thenFn).toHaveBeenCalledWith(mockedThresholds);
+    });
+
+    test("updateThresholds: should send PUT to correct url and return correct data", () => {
+      const mockedThresholds = {
+        exact: 0.12,
+        ha: 0.1,
+        junk: 1,
+      };
+
+      api.thresholds.updateThresholds(mockedThresholds).then(thenFn);
+      expect(axios.put).toHaveBeenCalledWith(
+        "settings/thresholds/",
+        mockedThresholds
+      );
+
+      axios.mockResponse({ data: mockedThresholds });
+      expect(thenFn).toHaveBeenCalledWith(mockedThresholds);
+    });
+
+    test("resetThresholds: should send POST to correct url and return correct data", () => {
+      const mockedThresholds = {
+        exact: 0.12,
+        ha: 0.1,
+        junk: 1,
+      };
+
+      api.thresholds.resetThresholds().then(thenFn);
+      expect(axios.post).toHaveBeenCalledWith("settings/thresholds/reset/");
+
+      axios.mockResponse({ data: mockedThresholds });
+      expect(thenFn).toHaveBeenCalledWith(mockedThresholds);
     });
   });
 

@@ -91,7 +91,6 @@ const IDXRestApi = createIDXRestApi({
 const person = IDXRestApi.persons.searchPersonByImage({
   photo: "dataURIPhoto",
   asm: true,
-  liveness: false,
 });
 
 person.then(person => {
@@ -111,10 +110,10 @@ const IDXRestApi = createIDXRestApi({
   token: IDENTIXONE_TOKEN,
 });
 
-const recordId = 1;
+const entryId = 1;
 
-const person = IDXRestApi.persons.reinitializePersonByRecord({
-  recordId,
+const person = IDXRestApi.persons.reinitializePersonByEntry({
+  entryId,
 });
 
 person.then(person => {
