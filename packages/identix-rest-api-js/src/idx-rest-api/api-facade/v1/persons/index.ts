@@ -11,7 +11,6 @@ export interface PersonResponseIterface {
 export interface SearchPersonByImageParamsInterface {
   photo: File;
   asm?: boolean;
-  liveness?: boolean;
 }
 
 export interface CreatePersonParamsInterface {

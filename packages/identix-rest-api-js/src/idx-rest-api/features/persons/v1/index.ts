@@ -17,11 +17,10 @@ class Persons extends Api implements PersonsInterface {
   searchPersonByImage({
     photo,
     asm,
-    liveness,
   }: SearchPersonByImageParamsInterface): Promise<PersonResponseIterface> {
     if (!photo) return Promise.reject("No photo provided");
 
-    const fieldsData = { asm, liveness };
+    const fieldsData = { asm };
     const data = new FormData();
 
     addFileToFormData(data, photo, "photo");

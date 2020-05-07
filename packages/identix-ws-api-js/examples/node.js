@@ -5,6 +5,8 @@ const IDXWsApi = createIDXWsApi({
   token: "IDENTIXONE_TOKEN",
 });
 
+IDXWsApi.setEndpoint("ws://ws.identix.local/");
+
 IDXWsApi.connect();
 
 IDXWsApi.on("connect", () => {

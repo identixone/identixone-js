@@ -25,6 +25,6 @@ const { createIDXRestApi } = require("@identixone/rest-api");
 
 const IDXRestApi = createIDXRestApi({
   version: 1,
-  token: "YOUR_IDENTIXONE_TOKEN"
+  token: IDENTIXONE_TOKEN,
 });
 ```

@@ -107,7 +107,11 @@ function createHttpClient({
         preparedData = removeEmpty(data);
       }
 
-      return this.client.post(url, preparedData).then(({ data }) => data);
+      if (preparedData) {
+        return this.client.post(url, preparedData).then(({ data }) => data);
+      } else {
+        return this.client.post(url).then(({ data }) => data);
+      }
     }
 
     get(url: string, params?: {}): Promise<{}> {

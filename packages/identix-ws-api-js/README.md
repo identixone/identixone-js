@@ -25,7 +25,7 @@ const { createIDXWsApi } = require("@identixone/websocket");
 
 const IDXWsApi = createIDXWsApi({
   version: 1,
-  token: "YOUR_IDENTIXONE_TOKEN"
+  token: IDENTIXONE_TOKEN,
 });
 
 IDXWsApi.connect();

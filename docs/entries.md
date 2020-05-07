@@ -55,25 +55,6 @@ entriesStats.then(entriesStats => {
 });
 ```
 
-## Get entries stats by sources
-
-```js
-import { createIDXRestApi } from "@identixone/api";
-
-const IDXRestApi = createIDXRestApi({
-  version: 1,
-  token: IDENTIXONE_TOKEN,
-});
-
-const entriesStats = IDXRestApi.entries.getEntriesStatsBySources({
-  liveness: "passed",
-});
-
-entriesStats.then(entriesStats => {
-  console.log({ entriesStats });
-});
-```
-
 ## Delete entry
 
 ```js
