@@ -10,6 +10,10 @@ FormData.prototype.append = function(key, value, filename) {
   }
 };
 
+FormData.prototype.entries = function () {
+  return [];
+};
+
 FormData.prototype.clear = function() {
   this._data = {};
 };
