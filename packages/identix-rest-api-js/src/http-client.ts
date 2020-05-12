@@ -1,6 +1,20 @@
-import { removeEmpty, isEmpty } from "./utils";
 import qs from "qs";
 import { HttpClientInterface } from "./idx-rest-api/api-facade/auth";
+import sizeof from "object-sizeof";
+import { removeEmpty, isEmpty, getFormDataSize } from "./utils";
+
+function getPayloadSize(payload: object | FormData): number {
+  if (payload instanceof FormData) {
+    return getFormDataSize(payload);
+  } else {
+    return sizeof(payload);
+  }
+}
+
+const payloadIsTooLargeError = new Error("Payload is too large");
+
+// 6mb
+const MAX_PAYLOAD_SIZE = 6291456;
 
 function prepareUrlParams(params: { q?: string }): {} {
   const paramsWithValues = removeEmpty(params);
@@ -107,6 +121,10 @@ function createHttpClient({
         preparedData = removeEmpty(data);
       }
 
+      if (data && getPayloadSize(data) >= MAX_PAYLOAD_SIZE) {
+        return Promise.reject(payloadIsTooLargeError);
+      }
+
       if (preparedData) {
         return this.client.post(url, preparedData).then(({ data }) => data);
       } else {
@@ -135,6 +153,10 @@ function createHttpClient({
         preparedData = removeEmpty(data);
       }
 
+      if (data && getPayloadSize(data) >= MAX_PAYLOAD_SIZE) {
+        return Promise.reject(payloadIsTooLargeError);
+      }
+
       return this.client.put(url, preparedData).then(({ data }) => data);
     }
 
@@ -153,6 +175,10 @@ function createHttpClient({
 
       if (preparedData) {
         config.data = preparedData;
+      }
+
+      if (data && getPayloadSize(data) >= MAX_PAYLOAD_SIZE) {
+        return Promise.reject(payloadIsTooLargeError);
       }
 
       if (!isEmpty(config)) {
