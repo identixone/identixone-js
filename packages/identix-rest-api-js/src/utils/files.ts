@@ -69,3 +69,18 @@ export function addDataToFormData(
 
   return formData;
 }
+
+export function getFormDataSize(formData: FormData): number {
+  if (!formData) return 0;
+
+  return Array.from(formData.entries(), ([_, prop]) => {
+    if (typeof prop === "string") {
+      return prop.length;
+    }
+    if (prop.size) {
+      return prop.size;
+    }
+
+    return 0;
+  }).reduce((resultLength, length) => resultLength + length, 0);
+}
