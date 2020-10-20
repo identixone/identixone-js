@@ -13,6 +13,7 @@ class Notifications extends Api implements NotificationsInterface {
   static getNotificationData = ({
     name,
     is_active,
+    transport,
     http_method,
     destination_url,
     conf_thresholds,
@@ -26,6 +27,7 @@ class Notifications extends Api implements NotificationsInterface {
   }: NotificationInterface = {}): {} => ({
     name,
     is_active,
+    transport,
     http_method,
     destination_url,
     conf_thresholds,

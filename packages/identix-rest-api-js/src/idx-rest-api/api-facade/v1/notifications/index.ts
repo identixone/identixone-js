@@ -7,11 +7,13 @@ import {
   Searchable,
   id,
 } from "../../../../base/types";
+import { Transport } from "./types";
 
 export interface NotificationInterface {
   id?: id;
   name?: string;
   is_active?: boolean;
+  transport?: Transport;
   http_method?: number;
   destination_url?: string;
   conf_thresholds?: Array<Conf>;
